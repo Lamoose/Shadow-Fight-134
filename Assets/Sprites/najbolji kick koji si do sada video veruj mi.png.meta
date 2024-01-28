@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,196 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: najbolji kick koji si do sada video veruj mi_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 6
+        width: 22
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a135a534bb29ef49a28e4218187afac
+      internalID: 944876427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: najbolji kick koji si do sada video veruj mi_1
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 7
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43b36cc1ef4ac54ab295a725c393783
+      internalID: -516059719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: najbolji kick koji si do sada video veruj mi_2
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 6
+        width: 30
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49314d760fdc29946a0095f405b98589
+      internalID: 1918840074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: najbolji kick koji si do sada video veruj mi_3
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 7
+        width: 28
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e09465b483c57ad4d8a7aec10fee905a
+      internalID: -598847729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: najbolji kick koji si do sada video veruj mi_4
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 7
+        width: 28
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a7e9dfb67e119a40a6f4e1fe59764c7
+      internalID: 1658059238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: najbolji kick koji si do sada video veruj mi_5
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 7
+        width: 29
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64452bd78da4b564f9d8575306317500
+      internalID: -1750823379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: najbolji kick koji si do sada video veruj mi_6
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 6
+        width: 32
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cf2d308db97b3749a6a1f2c030578b7
+      internalID: -1952003366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: najbolji kick koji si do sada video veruj mi_7
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 7
+        width: 33
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d84f3bd7b17314ebf5baf67abc41bd
+      internalID: -377345562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: najbolji kick koji si do sada video veruj mi_8
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 6
+        width: 38
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ce0c6a24522cc948b1e0488fecfbff9
+      internalID: 1746334992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +308,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      najbolji kick koji si do sada video veruj mi_0: 944876427
+      najbolji kick koji si do sada video veruj mi_1: -516059719
+      najbolji kick koji si do sada video veruj mi_10: -912192518
+      najbolji kick koji si do sada video veruj mi_11: 352323037
+      najbolji kick koji si do sada video veruj mi_12: -1135776705
+      najbolji kick koji si do sada video veruj mi_13: 916632023
+      najbolji kick koji si do sada video veruj mi_14: 2110442928
+      najbolji kick koji si do sada video veruj mi_15: -164790354
+      najbolji kick koji si do sada video veruj mi_16: 611658552
+      najbolji kick koji si do sada video veruj mi_2: 1918840074
+      najbolji kick koji si do sada video veruj mi_3: -598847729
+      najbolji kick koji si do sada video veruj mi_4: 1658059238
+      najbolji kick koji si do sada video veruj mi_5: -1750823379
+      najbolji kick koji si do sada video veruj mi_6: -1952003366
+      najbolji kick koji si do sada video veruj mi_7: -377345562
+      najbolji kick koji si do sada video veruj mi_8: 1746334992
+      najbolji kick koji si do sada video veruj mi_9: 373685938
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -108,7 +108,238 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: punch al jos malko bolje_0
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 6
+        width: 22
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b07a9290f454a49baccfd029a1a268
+      internalID: -1781647176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: punch al jos malko bolje_1
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 6
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecdee0dcf8cb58748b5dd6d6dd9dbdb7
+      internalID: -139963484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: punch al jos malko bolje_2
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 6
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2acc1f9ab0408845992e09b3f8a3a0d
+      internalID: 1649125539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: punch al jos malko bolje_3
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 6
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fe7c6c54fc341d4a8b4ee53ada236ae
+      internalID: -1526229274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: punch al jos malko bolje_4
+      rect:
+        serializedVersion: 2
+        x: 397
+        y: 6
+        width: 26
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac06bcd97292d2418df5fb361bf25ed
+      internalID: -1727130568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: punch al jos malko bolje_5
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 6
+        width: 28
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdcbe1375782c54489c7a3b5904292a4
+      internalID: 1032929143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: punch al jos malko bolje_6
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 6
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7709bc052292064b8e9637b143b289f
+      internalID: 308550490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: punch al jos malko bolje_7
+      rect:
+        serializedVersion: 2
+        x: 687
+        y: 6
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9066a488fc23ec4d8c41728e3cb2c05
+      internalID: 1437265088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: punch al jos malko bolje_8
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 6
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d242f6522aa22d342a5ba33252aa71fe
+      internalID: 837011020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: punch al jos malko bolje_9
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 6
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89f33422d5150054da5a38c5390fd07c
+      internalID: 2141106319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: punch al jos malko bolje_12
+      rect:
+        serializedVersion: 2
+        x: 1169
+        y: 6
+        width: 36
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b66d3635a7bf6c45b0864ffde5c83ed
+      internalID: -2027865724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -119,7 +350,21 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      punch al jos malko bolje_0: -1781647176
+      punch al jos malko bolje_1: -139963484
+      punch al jos malko bolje_10: 203500321
+      punch al jos malko bolje_11: 1747729655
+      punch al jos malko bolje_12: -2027865724
+      punch al jos malko bolje_13: 1181977797
+      punch al jos malko bolje_2: 1649125539
+      punch al jos malko bolje_3: -1526229274
+      punch al jos malko bolje_4: -1727130568
+      punch al jos malko bolje_5: 1032929143
+      punch al jos malko bolje_6: 308550490
+      punch al jos malko bolje_7: 1437265088
+      punch al jos malko bolje_8: 837011020
+      punch al jos malko bolje_9: 2141106319
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -20,6 +20,7 @@ public class Player1 : MonoBehaviour
     [SerializeField] private float TimeSinceDash;
     #endregion
 
+    [SerializeField]private AnimCon anim;
     public GameObject player2;
     public Rigidbody2D rb;
     public int speed;
@@ -33,54 +34,56 @@ public class Player1 : MonoBehaviour
 
     void Update()
     {
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
-        float verticalInput = Input.GetAxisRaw("Vertical");
-        TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
+        
+            float horizontalInput = Input.GetAxisRaw("Horizontal");
+            float verticalInput = Input.GetAxisRaw("Vertical");
+            TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
 
-        if (player2.transform.position.x < gameObject.transform.position.x)
-        {
-            flip();
-        }
+            if (player2.transform.position.x < gameObject.transform.position.x)
+            {
+                flip();
+            }
 
-        if (player2.transform.position.x > gameObject.transform.position.x)
-        {
-            flip(125.692f, -137.341f);
-        }
+            if (player2.transform.position.x > gameObject.transform.position.x)
+            {
+                flip(0, 180f);
+            }
 
-        if (horizontalInput == 0 && isGrounded && !isDashing)
-        {
-            rb.velocity = new Vector2(0f, rb.velocity.y);
-        }
+            if (horizontalInput == 0 && isGrounded && !isDashing || !anim.canMove)
+            {
+                rb.velocity = new Vector2(0f, rb.velocity.y);
+            }
 
-        if (horizontalInput == 0 && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
-        {
-            rb.velocity = new Vector2(0f, rb.velocity.y);
-        }
+            if (horizontalInput == 0 && !isGrounded || !anim.canMove && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
+            {
+                rb.velocity = new Vector2(0f, rb.velocity.y);
+            }
 
-
-        if (horizontalInput != 0 && !isDashing)
-        {
-
-
-            rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
-            //rb.velocity = movement;
-
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
-        {
-            StartCoroutine(Dash(horizontalInput));
-
-            TimeSinceDash = 0f; //resetuje dash poslednje dash vreme
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space) && !isDashing && isGrounded)
-        {
-            StartCoroutine(Jump());
-
-        }
+            if (anim.canMove)   
+            {
+                 if (horizontalInput != 0 && !isDashing)
+                 {
 
 
+                     rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+                     //rb.velocity = movement;
+
+                 }
+
+                 if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
+                 {
+                     StartCoroutine(Dash(horizontalInput));
+
+                     TimeSinceDash = 0f; //resetuje dash poslednje dash vreme
+                 }
+
+                 if (Input.GetKeyDown(KeyCode.Space) && !isDashing && isGrounded)
+                 {
+                    StartCoroutine(Jump());
+
+                 }
+
+            }
     }
 
     //dash funkcija
@@ -146,7 +149,7 @@ public class Player1 : MonoBehaviour
         }
     }
 
-    void flip(float p1Rotate = 225.692f, float p2Rotate = -227.341f)
+    void flip(float p1Rotate = 180f, float p2Rotate = 0)
     {
         gameObject.transform.rotation = Quaternion.Euler(0f, p1Rotate, 0f);
         player2.transform.rotation = Quaternion.Euler(0f, p2Rotate, 0f);
