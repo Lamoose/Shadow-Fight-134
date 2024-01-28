@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEditor.Experimental.GraphView.GraphView;
 using static UnityEditor.PlayerSettings;
 
 public class Player2 : MonoBehaviour
@@ -20,12 +21,15 @@ public class Player2 : MonoBehaviour
     [SerializeField] private float TimeSinceDash;
     #endregion
 
+    [SerializeField] AnimCon2 anim;
     public Rigidbody2D rb;
     public int speed;
 
 
     void Start()
+
     {
+        anim.GetComponent<AnimCon2>();
         rb = GetComponent<Rigidbody2D>();
         Physics2D.IgnoreLayerCollision(6, 7); //ignorise koliziju od drugog igraca da bi mogao da prolazis kroz njega
     }
@@ -37,39 +41,41 @@ public class Player2 : MonoBehaviour
         TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
 
 
-        if (horizontalInput == 0 && isGrounded && !isDashing)
+        if (horizontalInput == 0 && isGrounded && !isDashing || !anim.canMove)
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
         }
 
-        if (horizontalInput == 0 && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
+        if (horizontalInput == 0 && !isGrounded || !anim.canMove && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
         }
 
-
-        if (horizontalInput != 0 && !isDashing)
+        if (anim.canMove)
         {
+            if (horizontalInput != 0 && !isDashing)
+            {
 
 
-            rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
-            //rb.velocity = movement;
+                rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+                //rb.velocity = movement;
+
+            }
+
+            if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
+            {
+                StartCoroutine(Dash(horizontalInput));
+
+                TimeSinceDash = 0f; //resetuje dash poslednje dash vreme
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space) && !isDashing && isGrounded)
+            {
+                StartCoroutine(Jump());
+
+            }
 
         }
-
-        if (Input.GetKeyDown(KeyCode.M) && !isDashing && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
-        {
-            StartCoroutine(Dash(horizontalInput));
-
-            TimeSinceDash = 0f; //resetuje dash poslednje dash vreme
-        }
-
-        if (Input.GetKeyDown(KeyCode.UpArrow) && !isDashing && isGrounded)
-        {
-            StartCoroutine(Jump());
-
-        }
-
 
     }
 
