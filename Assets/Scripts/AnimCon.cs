@@ -11,6 +11,7 @@ public class AnimCon : MonoBehaviour
     Animator anim;
     public bool canMove = true;
     public bool canLAtk = true;
+    public bool isMoving = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,19 +23,25 @@ public class AnimCon : MonoBehaviour
     void Update()
     {
         
-            if (Input.GetKeyDown(KeyCode.G) && !p1.isDashing && p1.isGrounded && canLAtk)
-            {
-                anim.SetTrigger("Kick");
-                canMove= false;
-                canLAtk = false;
-            }
-            if (Input.GetKeyDown(KeyCode.F) && !p1.isDashing && p1.isGrounded && canLAtk)
-            {
-                anim.SetTrigger("Punch");
-                canMove = false;
-                canLAtk = false;
-            }
-        
+        if (Input.GetKeyDown(KeyCode.G) && !p1.isDashing && p1.isGrounded && canLAtk)
+        {
+            anim.SetTrigger("Kick");
+            canMove= false;
+            canLAtk = false;
+        }
+        if (Input.GetKeyDown(KeyCode.F) && !p1.isDashing && p1.isGrounded && canLAtk)
+        {
+             anim.SetTrigger("Punch");
+             canMove = false;
+             canLAtk = false;
+        }
+        if (isMoving)
+        {
+            anim.SetBool("Move", true);
+        }
+        else anim.SetBool("Move", false);
+
+
     }
 
 

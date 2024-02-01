@@ -52,6 +52,7 @@ public class Player1 : MonoBehaviour
             if (horizontalInput == 0 && isGrounded && !isDashing || !anim.canMove)
             {
                 rb.velocity = new Vector2(0f, rb.velocity.y);
+                anim.isMoving = false;
             }
 
             if (horizontalInput == 0 && !isGrounded || !anim.canMove && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
@@ -66,7 +67,9 @@ public class Player1 : MonoBehaviour
 
 
                      rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+                     
                      //rb.velocity = movement;
+                     anim.isMoving = true;
 
                  }
 
