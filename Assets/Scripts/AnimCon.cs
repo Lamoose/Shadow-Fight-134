@@ -6,7 +6,7 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class AnimCon : MonoBehaviour
 {
-    [SerializeField]private Player1 p1;
+    [SerializeField]private Player1 p;
     Rigidbody2D rb;
     Animator anim;
     public bool canMove = true;
@@ -23,19 +23,19 @@ public class AnimCon : MonoBehaviour
     void Update()
     {
         
-        if (Input.GetKeyDown(KeyCode.G) && !p1.isDashing && p1.isGrounded && canLAtk)
+        if (Input.GetKeyDown(KeyCode.G) && !p.isDashing && p.isGrounded && canLAtk)
         {
             anim.SetTrigger("Kick");
             canMove= false;
             canLAtk = false;
         }
-        if (Input.GetKeyDown(KeyCode.F) && !p1.isDashing && p1.isGrounded && canLAtk)
+        if (Input.GetKeyDown(KeyCode.F) && !p.isDashing && p.isGrounded && canLAtk)
         {
              anim.SetTrigger("Punch");
              canMove = false;
              canLAtk = false;
         }
-        if (isMoving)
+        if (isMoving && !p.isDashing && p.isGrounded)
         {
             anim.SetBool("Move", true);
         }

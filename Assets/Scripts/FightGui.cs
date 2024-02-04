@@ -46,7 +46,7 @@ public class FightGui : MonoBehaviour
 
         {
             GUI.Label(new Rect(Screen.width / 2
-           - (TimerSize.x / 2), GUIHightPos, TimerSize.x, TimerSize.y), returnedTimeValue.ToString(), skin);
+           - (TimerSize.x / 2), GUIHightPos, TimerSize.x, TimerSize.y), "0" + returnedTimeValue.ToString(), skin);
 
         }
 

@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,12 +113,12 @@ TextureImporter:
       name: gojo_idle_0
       rect:
         serializedVersion: 2
-        x: 115
-        y: 1918
-        width: 27
-        height: 72
+        x: 100
+        y: 1919
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +134,12 @@ TextureImporter:
       name: gojo_idle_1
       rect:
         serializedVersion: 2
-        x: 371
-        y: 1918
-        width: 27
-        height: 72
+        x: 356
+        y: 1919
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +155,12 @@ TextureImporter:
       name: gojo_idle_2
       rect:
         serializedVersion: 2
-        x: 627
-        y: 1918
-        width: 27
-        height: 72
+        x: 612
+        y: 1919
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +176,12 @@ TextureImporter:
       name: gojo_idle_3
       rect:
         serializedVersion: 2
-        x: 883
-        y: 1918
-        width: 27
-        height: 72
+        x: 868
+        y: 1919
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +197,12 @@ TextureImporter:
       name: gojo_idle_4
       rect:
         serializedVersion: 2
-        x: 1139
-        y: 1918
-        width: 27
-        height: 72
+        x: 1124
+        y: 1919
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +218,12 @@ TextureImporter:
       name: gojo_idle_5
       rect:
         serializedVersion: 2
-        x: 1395
-        y: 1918
-        width: 27
-        height: 72
+        x: 1380
+        y: 1919
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,12 +239,12 @@ TextureImporter:
       name: gojo_idle_6
       rect:
         serializedVersion: 2
-        x: 1651
-        y: 1918
-        width: 27
-        height: 72
+        x: 1636
+        y: 1919
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,12 +260,12 @@ TextureImporter:
       name: gojo_idle_7
       rect:
         serializedVersion: 2
-        x: 1907
-        y: 1918
-        width: 27
-        height: 72
+        x: 1892
+        y: 1919
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -281,12 +281,12 @@ TextureImporter:
       name: gojo_idle_8
       rect:
         serializedVersion: 2
-        x: 115
-        y: 1662
-        width: 27
-        height: 71
+        x: 100
+        y: 1663
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,12 +302,12 @@ TextureImporter:
       name: gojo_idle_9
       rect:
         serializedVersion: 2
-        x: 371
-        y: 1662
-        width: 27
-        height: 71
+        x: 356
+        y: 1663
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -323,12 +323,12 @@ TextureImporter:
       name: gojo_idle_10
       rect:
         serializedVersion: 2
-        x: 627
-        y: 1662
-        width: 27
-        height: 71
+        x: 612
+        y: 1663
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -344,12 +344,12 @@ TextureImporter:
       name: gojo_idle_11
       rect:
         serializedVersion: 2
-        x: 883
-        y: 1662
-        width: 27
-        height: 71
+        x: 868
+        y: 1663
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -365,12 +365,12 @@ TextureImporter:
       name: gojo_idle_12
       rect:
         serializedVersion: 2
-        x: 1139
-        y: 1662
-        width: 27
-        height: 71
+        x: 1124
+        y: 1663
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -386,12 +386,12 @@ TextureImporter:
       name: gojo_idle_13
       rect:
         serializedVersion: 2
-        x: 1395
-        y: 1662
-        width: 27
-        height: 71
+        x: 1380
+        y: 1663
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -407,12 +407,12 @@ TextureImporter:
       name: gojo_idle_14
       rect:
         serializedVersion: 2
-        x: 1651
-        y: 1662
-        width: 27
-        height: 71
+        x: 1636
+        y: 1663
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -428,12 +428,12 @@ TextureImporter:
       name: gojo_idle_15
       rect:
         serializedVersion: 2
-        x: 1907
-        y: 1662
-        width: 27
-        height: 71
+        x: 1892
+        y: 1663
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -449,12 +449,12 @@ TextureImporter:
       name: gojo_idle_16
       rect:
         serializedVersion: 2
-        x: 115
-        y: 1406
-        width: 27
-        height: 71
+        x: 100
+        y: 1407
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -470,12 +470,12 @@ TextureImporter:
       name: gojo_idle_17
       rect:
         serializedVersion: 2
-        x: 371
-        y: 1406
-        width: 27
-        height: 71
+        x: 356
+        y: 1407
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -491,12 +491,12 @@ TextureImporter:
       name: gojo_idle_18
       rect:
         serializedVersion: 2
-        x: 627
-        y: 1406
-        width: 27
-        height: 71
+        x: 612
+        y: 1407
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -512,12 +512,12 @@ TextureImporter:
       name: gojo_idle_19
       rect:
         serializedVersion: 2
-        x: 883
-        y: 1406
-        width: 27
-        height: 71
+        x: 868
+        y: 1407
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -533,12 +533,12 @@ TextureImporter:
       name: gojo_idle_20
       rect:
         serializedVersion: 2
-        x: 1139
-        y: 1406
-        width: 27
-        height: 71
+        x: 1124
+        y: 1407
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -554,12 +554,12 @@ TextureImporter:
       name: gojo_idle_21
       rect:
         serializedVersion: 2
-        x: 1395
-        y: 1406
-        width: 27
-        height: 71
+        x: 1380
+        y: 1407
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -575,12 +575,12 @@ TextureImporter:
       name: gojo_idle_22
       rect:
         serializedVersion: 2
-        x: 1651
-        y: 1406
-        width: 27
-        height: 71
+        x: 1636
+        y: 1407
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -596,12 +596,12 @@ TextureImporter:
       name: gojo_idle_23
       rect:
         serializedVersion: 2
-        x: 1907
-        y: 1406
-        width: 27
-        height: 71
+        x: 1892
+        y: 1407
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -617,12 +617,12 @@ TextureImporter:
       name: gojo_idle_24
       rect:
         serializedVersion: 2
-        x: 115
-        y: 1150
-        width: 27
+        x: 100
+        y: 1151
+        width: 60
         height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -638,12 +638,12 @@ TextureImporter:
       name: gojo_idle_25
       rect:
         serializedVersion: 2
-        x: 371
-        y: 1150
-        width: 27
-        height: 71
+        x: 356
+        y: 1151
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -659,12 +659,12 @@ TextureImporter:
       name: gojo_idle_26
       rect:
         serializedVersion: 2
-        x: 627
-        y: 1150
-        width: 27
-        height: 71
+        x: 612
+        y: 1151
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -680,12 +680,12 @@ TextureImporter:
       name: gojo_idle_27
       rect:
         serializedVersion: 2
-        x: 883
-        y: 1150
-        width: 27
-        height: 71
+        x: 868
+        y: 1151
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -701,12 +701,12 @@ TextureImporter:
       name: gojo_idle_28
       rect:
         serializedVersion: 2
-        x: 1139
-        y: 1150
-        width: 27
-        height: 71
+        x: 1124
+        y: 1151
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -722,12 +722,12 @@ TextureImporter:
       name: gojo_idle_29
       rect:
         serializedVersion: 2
-        x: 1395
-        y: 1150
-        width: 27
-        height: 71
+        x: 1380
+        y: 1151
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -743,12 +743,12 @@ TextureImporter:
       name: gojo_idle_30
       rect:
         serializedVersion: 2
-        x: 1651
-        y: 1150
-        width: 27
-        height: 71
+        x: 1636
+        y: 1151
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -764,12 +764,12 @@ TextureImporter:
       name: gojo_idle_31
       rect:
         serializedVersion: 2
-        x: 1907
-        y: 1150
-        width: 27
-        height: 71
+        x: 1892
+        y: 1151
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -785,12 +785,12 @@ TextureImporter:
       name: gojo_idle_32
       rect:
         serializedVersion: 2
-        x: 115
-        y: 894
-        width: 27
-        height: 71
+        x: 100
+        y: 895
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -806,12 +806,12 @@ TextureImporter:
       name: gojo_idle_33
       rect:
         serializedVersion: 2
-        x: 371
-        y: 894
-        width: 27
-        height: 71
+        x: 356
+        y: 895
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -827,12 +827,12 @@ TextureImporter:
       name: gojo_idle_34
       rect:
         serializedVersion: 2
-        x: 627
-        y: 894
-        width: 27
-        height: 71
+        x: 612
+        y: 895
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -848,12 +848,12 @@ TextureImporter:
       name: gojo_idle_35
       rect:
         serializedVersion: 2
-        x: 883
-        y: 894
-        width: 27
-        height: 72
+        x: 868
+        y: 895
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -869,12 +869,12 @@ TextureImporter:
       name: gojo_idle_36
       rect:
         serializedVersion: 2
-        x: 1139
-        y: 894
-        width: 27
-        height: 72
+        x: 1124
+        y: 895
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -890,12 +890,12 @@ TextureImporter:
       name: gojo_idle_37
       rect:
         serializedVersion: 2
-        x: 1395
-        y: 894
-        width: 27
-        height: 72
+        x: 1380
+        y: 895
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -911,12 +911,12 @@ TextureImporter:
       name: gojo_idle_38
       rect:
         serializedVersion: 2
-        x: 1651
-        y: 894
-        width: 27
-        height: 72
+        x: 1636
+        y: 895
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -932,12 +932,12 @@ TextureImporter:
       name: gojo_idle_39
       rect:
         serializedVersion: 2
-        x: 1907
-        y: 894
-        width: 27
-        height: 72
+        x: 1892
+        y: 895
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -953,12 +953,12 @@ TextureImporter:
       name: gojo_idle_40
       rect:
         serializedVersion: 2
-        x: 115
-        y: 638
-        width: 27
-        height: 72
+        x: 100
+        y: 639
+        width: 60
+        height: 70
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -1017,6 +1017,7 @@ TextureImporter:
       gojo_idle_39: -1395794029
       gojo_idle_4: -337812816
       gojo_idle_40: -1975064934
+      gojo_idle_41: -890701573
       gojo_idle_5: -128604627
       gojo_idle_6: 385667472
       gojo_idle_7: 1143328448

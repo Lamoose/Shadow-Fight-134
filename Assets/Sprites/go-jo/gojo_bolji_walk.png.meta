@@ -1,0 +1,1337 @@
+fileFormatVersion: 2
+guid: e9b6a0b99ecc0c84a99dbb66c7fae7e3
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gojo_bolji_walk_0
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 1914
+        width: 24
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e33dce6791100c4db6faeadf87c1b3c
+      internalID: -158598744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_1
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 1915
+        width: 24
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dacea208a6b390e40b53a57b77a7748e
+      internalID: 733212028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_2
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 1915
+        width: 23
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b527a5cc86ce51346a17a9e6fd7ff581
+      internalID: -790977514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_3
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 1916
+        width: 24
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb55357b5d747f241a5058da8199b2b8
+      internalID: -1239986369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_4
+      rect:
+        serializedVersion: 2
+        x: 1140
+        y: 1916
+        width: 23
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a535d7c1c4dbd9546ad91f3e0794ae32
+      internalID: 2039410704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_5
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 1916
+        width: 23
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d80b6a9c962e8646b4d0361e5545f3d
+      internalID: -460660063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_6
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 1916
+        width: 23
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2db0a2704ae8c845aad00a9fcfc2a66
+      internalID: 77777306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_7
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 1916
+        width: 22
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f582eb690ff20742a47c3b14188141e
+      internalID: 1116473063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_8
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 1660
+        width: 22
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49d0e09fd64232247848ef5f285d64b0
+      internalID: -533045976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_9
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 1659
+        width: 22
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1511d82472f0175479e59909327721c2
+      internalID: 984887554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_10
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 1660
+        width: 22
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6003d0d7dd2db0444b600198a7a0a901
+      internalID: 1110663581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_11
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 1660
+        width: 22
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15740f470b5be584ea0f0088e98358f3
+      internalID: -346178267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_12
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 1660
+        width: 22
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343dd6a09d76ee242b9f02723bcef488
+      internalID: -630792905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_13
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 1660
+        width: 22
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fdb7880ebd137a4a989fca1bd7c071a
+      internalID: 1497870168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_14
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 1660
+        width: 22
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25f5502d416d0244a6cf13fee434838
+      internalID: 1623816872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_15
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 1659
+        width: 22
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 820f90db0b5fb6247ac4dbeff7ecf071
+      internalID: -981060340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_16
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 1403
+        width: 22
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29cddeea0bc153949a3ea3a0bc7e0e38
+      internalID: -1371860172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_17
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 1403
+        width: 22
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 933aad2970239ba4a8aea8ef3b784a62
+      internalID: -1826084861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_18
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 1403
+        width: 22
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8484b5e5877d2d34cb1a6592038e5581
+      internalID: -288169204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_19
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 1402
+        width: 22
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a387f59fa89a244bb2d3b12e717c457
+      internalID: -1182973184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_20
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 1402
+        width: 22
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1507922d141713640a31aa65c08796b1
+      internalID: -400180464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_21
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 1403
+        width: 23
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91bc9e1b1c65394f96dc1704355991f
+      internalID: 1586346133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_22
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 1403
+        width: 23
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3fad794db06c547a13807d69a60fbe
+      internalID: -1133778147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_23
+      rect:
+        serializedVersion: 2
+        x: 1908
+        y: 1404
+        width: 23
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb6b6b903c8d45541bba1a1c85dcfe85
+      internalID: 970084673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_24
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 1148
+        width: 24
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9b88911116aa414b8b8ab139a9dfff9
+      internalID: -1793964285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_25
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 1148
+        width: 25
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd94d8c74d0e5994c8f0ef69298b417b
+      internalID: 1954632057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_26
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 1148
+        width: 26
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9321ff375a4d7db41b5439d5af617132
+      internalID: -66887737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_27
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 1149
+        width: 27
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76501ea8cd25534f8d3b4e1decddad9
+      internalID: -14256524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_28
+      rect:
+        serializedVersion: 2
+        x: 1138
+        y: 1149
+        width: 29
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da8d194af5d49d74897b3056fc8dc9d0
+      internalID: -89721087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_29
+      rect:
+        serializedVersion: 2
+        x: 1394
+        y: 1149
+        width: 27
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d6135c734b2187468152799b383c255
+      internalID: -289616056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_30
+      rect:
+        serializedVersion: 2
+        x: 1650
+        y: 1148
+        width: 26
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bf0e7f8f9254c448baf1217002ff97d
+      internalID: -199400998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_31
+      rect:
+        serializedVersion: 2
+        x: 1906
+        y: 1148
+        width: 25
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779579bdb0ca27d46913f19f0542e480
+      internalID: 729753678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_32
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 892
+        width: 25
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7d007adc7a5fee44bf9a093873fc2e1
+      internalID: -1156159860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_33
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 891
+        width: 25
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca428cd29eb51e54ba7aa5d0e6f299c0
+      internalID: 524184412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_34
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 892
+        width: 24
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 690c5a1939e3f5f4ca04d5510f9aa812
+      internalID: 4174257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_35
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 892
+        width: 22
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d028998a5836f48b439de770982a01
+      internalID: 793214205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_36
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 892
+        width: 22
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e5c5cb54a6dd374a96f0152f0d21619
+      internalID: 843828897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_37
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 892
+        width: 22
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56505e5ab98dad648972a82b51323dfd
+      internalID: -1462002057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_38
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 893
+        width: 22
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b6592e323033a64faefb342a48351bd
+      internalID: 502985527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_39
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 893
+        width: 22
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63cc41b88c1455b4882f26228586c32a
+      internalID: -1149455194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_40
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 637
+        width: 22
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7c2197423a281a4886fa5ba87d17aa3
+      internalID: -1097137579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_41
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 636
+        width: 22
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6eb1295bb9c7f4c983d3505483bf50
+      internalID: 999027136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_42
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 636
+        width: 22
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0c3a555859bbb3478e6fa82cbb3028d
+      internalID: -729473557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_43
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 636
+        width: 22
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2c5ce5ab32cd747a978227d12a6dfc
+      internalID: 970894312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_44
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 636
+        width: 22
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0dd12a5d4be2147bf335a88c668adf
+      internalID: 963148220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_45
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 635
+        width: 22
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0485bd8bf4502d94bbc0fbfc51a9eba0
+      internalID: 272861069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_46
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 635
+        width: 22
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25bedcf865da0e479b12bc9f8dd5bfc
+      internalID: 798179826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_47
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 635
+        width: 24
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1db72dbfedcf049b4dce159a7cb843
+      internalID: 1376988197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_48
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 379
+        width: 24
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9e2207a12f34f143a0864c6b686cfd1
+      internalID: -797062668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_49
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 379
+        width: 25
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fb670b5518359f4e9c2d216e65aa276
+      internalID: 179047303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_50
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 380
+        width: 26
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebb8c4b716aaa844e81a30236bbb8fa0
+      internalID: -330271449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_51
+      rect:
+        serializedVersion: 2
+        x: 885
+        y: 380
+        width: 27
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcf490648a0b1a24ebb97bb172879d48
+      internalID: 697812710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_52
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 380
+        width: 27
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df24884eac284c54eae233e1dae656f2
+      internalID: 1853783464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_53
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 379
+        width: 26
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62d9e9f8907ca554793d3701e2711820
+      internalID: -1531946862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_bolji_walk_54
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 378
+        width: 24
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40d58336885cac44cb2b86e7366a1ceb
+      internalID: -2101370093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      gojo_bolji_walk_0: -158598744
+      gojo_bolji_walk_1: 733212028
+      gojo_bolji_walk_10: 1110663581
+      gojo_bolji_walk_11: -346178267
+      gojo_bolji_walk_12: -630792905
+      gojo_bolji_walk_13: 1497870168
+      gojo_bolji_walk_14: 1623816872
+      gojo_bolji_walk_15: -981060340
+      gojo_bolji_walk_16: -1371860172
+      gojo_bolji_walk_17: -1826084861
+      gojo_bolji_walk_18: -288169204
+      gojo_bolji_walk_19: -1182973184
+      gojo_bolji_walk_2: -790977514
+      gojo_bolji_walk_20: -400180464
+      gojo_bolji_walk_21: 1586346133
+      gojo_bolji_walk_22: -1133778147
+      gojo_bolji_walk_23: 970084673
+      gojo_bolji_walk_24: -1793964285
+      gojo_bolji_walk_25: 1954632057
+      gojo_bolji_walk_26: -66887737
+      gojo_bolji_walk_27: -14256524
+      gojo_bolji_walk_28: -89721087
+      gojo_bolji_walk_29: -289616056
+      gojo_bolji_walk_3: -1239986369
+      gojo_bolji_walk_30: -199400998
+      gojo_bolji_walk_31: 729753678
+      gojo_bolji_walk_32: -1156159860
+      gojo_bolji_walk_33: 524184412
+      gojo_bolji_walk_34: 4174257
+      gojo_bolji_walk_35: 793214205
+      gojo_bolji_walk_36: 843828897
+      gojo_bolji_walk_37: -1462002057
+      gojo_bolji_walk_38: 502985527
+      gojo_bolji_walk_39: -1149455194
+      gojo_bolji_walk_4: 2039410704
+      gojo_bolji_walk_40: -1097137579
+      gojo_bolji_walk_41: 999027136
+      gojo_bolji_walk_42: -729473557
+      gojo_bolji_walk_43: 970894312
+      gojo_bolji_walk_44: 963148220
+      gojo_bolji_walk_45: 272861069
+      gojo_bolji_walk_46: 798179826
+      gojo_bolji_walk_47: 1376988197
+      gojo_bolji_walk_48: -797062668
+      gojo_bolji_walk_49: 179047303
+      gojo_bolji_walk_5: -460660063
+      gojo_bolji_walk_50: -330271449
+      gojo_bolji_walk_51: 697812710
+      gojo_bolji_walk_52: 1853783464
+      gojo_bolji_walk_53: -1531946862
+      gojo_bolji_walk_54: -2101370093
+      gojo_bolji_walk_6: 77777306
+      gojo_bolji_walk_7: 1116473063
+      gojo_bolji_walk_8: -533045976
+      gojo_bolji_walk_9: 984887554
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

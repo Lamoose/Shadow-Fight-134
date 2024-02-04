@@ -9,46 +9,40 @@ public class Player2 : MonoBehaviour
 {
     #region jump
     public bool isGrounded = true;
-    [SerializeField] private float JumpTime = 0.2f;
     [SerializeField] private float JumpForce = 12f;
     #endregion
 
     #region dash
     public bool isDashing = false;
+    private bool dashed = false;
     [SerializeField] private float dashTime = 0.2f;
     [SerializeField] private float dashSpeed = 10f;
     [SerializeField] private float dashCooldown = 0.3f;
     [SerializeField] private float TimeSinceDash;
     #endregion
 
-    [SerializeField] AnimCon2 anim;
+    [SerializeField] private AnimCon2 anim;
     public Rigidbody2D rb;
     public int speed;
 
 
     void Start()
-
     {
-        anim.GetComponent<AnimCon2>();
         rb = GetComponent<Rigidbody2D>();
         Physics2D.IgnoreLayerCollision(6, 7); //ignorise koliziju od drugog igraca da bi mogao da prolazis kroz njega
     }
 
     void Update()
     {
+
         float horizontalInput = Input.GetAxisRaw("HorizontalS");
         float verticalInput = Input.GetAxisRaw("VerticalS");
         TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
 
-
         if (horizontalInput == 0 && isGrounded && !isDashing || !anim.canMove)
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
-        }
-
-        if (horizontalInput == 0 && !isGrounded || !anim.canMove && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
-        {
-            rb.velocity = new Vector2(0f, rb.velocity.y);
+            anim.isMoving = false;
         }
 
         if (anim.canMove)
@@ -58,25 +52,23 @@ public class Player2 : MonoBehaviour
 
 
                 rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
-                //rb.velocity = movement;
+                anim.isMoving = true;
 
             }
 
-            if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
+            if (Input.GetKeyDown(KeyCode.U) && !isDashing && !dashed && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
             {
                 StartCoroutine(Dash(horizontalInput));
 
                 TimeSinceDash = 0f; //resetuje dash poslednje dash vreme
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) && !isDashing && isGrounded)
+            if (Input.GetKeyDown(KeyCode.I) && !isDashing && isGrounded)
             {
-                StartCoroutine(Jump());
-
+                Jump();
             }
 
         }
-
     }
 
     //dash funkcija
@@ -97,39 +89,25 @@ public class Player2 : MonoBehaviour
             yield return null;
 
         }
-        rb.gravityScale = 1;
-
+        rb.gravityScale = 3;
+        if (!isGrounded) dashed = true;
         isDashing = false;
         yield return new WaitForSeconds(dashCooldown);
     }
 
 
-    IEnumerator Jump()
+    void Jump()
     {
-
-        float startTime = Time.time;
         isGrounded = false;
 
-        while (Time.time < startTime + JumpTime)
+        float horizontal = Input.GetAxisRaw("HorizontalS");
+
+        if (!isDashing)
         {
-            float horizontal = Input.GetAxisRaw("HorizontalS");
-
-            if (!isDashing)
-            {
-                Vector2 jumpDirection = new Vector3(horizontal * 5f, 5f).normalized;
-                transform.Translate(jumpDirection * JumpForce * Time.deltaTime, Space.World); //zbog Space.World se lepo krecu nakon sto su rotirani
-
-
-            }
-
-            yield return null;
+            rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
 
         }
 
-
-        //Vector3 JumpDirection = new Vector3(horizontal * 5f, 10f, 0f).normalized;
-        //transform.Translate(JumpDirection * JumpForce * Time.deltaTime);
-        yield return new WaitForSeconds(JumpTime);
 
     }
     //gleda dal je na zemlji
@@ -140,7 +118,7 @@ public class Player2 : MonoBehaviour
         {
             isGrounded = true;
         }
+        dashed = false;
     }
-
 
 }

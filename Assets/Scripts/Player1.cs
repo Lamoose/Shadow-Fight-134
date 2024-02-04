@@ -8,12 +8,12 @@ public class Player1 : MonoBehaviour
 {
     #region jump
     public bool isGrounded = true;
-    [SerializeField] private float JumpTime = 0.2f;
     [SerializeField] private float JumpForce = 12f;
     #endregion
 
     #region dash
     public bool isDashing = false;
+    private bool dashed=false;
     [SerializeField] private float dashTime = 0.2f;
     [SerializeField] private float dashSpeed = 10f;
     [SerializeField] private float dashCooldown = 0.3f;
@@ -55,10 +55,10 @@ public class Player1 : MonoBehaviour
                 anim.isMoving = false;
             }
 
-            if (horizontalInput == 0 && !isGrounded || !anim.canMove && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
+           /* if (horizontalInput == 0 && !isGrounded || !anim.canMove && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
             {
                 rb.velocity = new Vector2(0f, rb.velocity.y);
-            }
+            }*/
 
             if (anim.canMove)   
             {
@@ -73,7 +73,7 @@ public class Player1 : MonoBehaviour
 
                  }
 
-                 if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
+                 if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && !dashed && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
                  {
                      StartCoroutine(Dash(horizontalInput));
 
@@ -82,8 +82,7 @@ public class Player1 : MonoBehaviour
 
                  if (Input.GetKeyDown(KeyCode.Space) && !isDashing && isGrounded)
                  {
-                    StartCoroutine(Jump());
-
+                    Jump();
                  }
 
             }
@@ -107,39 +106,25 @@ public class Player1 : MonoBehaviour
             yield return null;
 
         }
-        rb.gravityScale = 1;
-
+        rb.gravityScale = 3;
+        if(!isGrounded)dashed = true;
         isDashing = false;
         yield return new WaitForSeconds(dashCooldown);
     }
 
 
-    IEnumerator Jump()
-    {
-
-        float startTime = Time.time;
+    void Jump()
+    {  
         isGrounded = false;
 
-        while (Time.time < startTime + JumpTime)
-        {
             float horizontal = Input.GetAxisRaw("Horizontal");
 
             if (!isDashing)
             {
-                Vector2 jumpDirection = new Vector3(horizontal * 5f, 5f).normalized;
-                transform.Translate(jumpDirection * JumpForce * Time.deltaTime, Space.World); //zbog Space.World se lepo krecu nakon sto su rotirani
-
+            rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
 
             }
-
-            yield return null;
-
-        }
-
-
-        //Vector3 JumpDirection = new Vector3(horizontal * 5f, 10f, 0f).normalized;
-        //transform.Translate(JumpDirection * JumpForce * Time.deltaTime);
-        yield return new WaitForSeconds(JumpTime);
+            
 
     }
     //gleda dal je na zemlji
@@ -150,6 +135,7 @@ public class Player1 : MonoBehaviour
         {
             isGrounded = true;
         }
+        dashed = false;
     }
 
     void flip(float p1Rotate = 180f, float p2Rotate = 0)

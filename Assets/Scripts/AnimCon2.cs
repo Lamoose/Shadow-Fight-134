@@ -6,11 +6,12 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class AnimCon2 : MonoBehaviour
 {
-    [SerializeField]private Player2 p2;
+    [SerializeField] private Player2 p;
     Rigidbody2D rb;
     Animator anim;
     public bool canMove = true;
     public bool canLAtk = true;
+    public bool isMoving = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,20 +22,26 @@ public class AnimCon2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-            if (Input.GetKeyDown(KeyCode.O) && !p2.isDashing && p2.isGrounded && canLAtk)
-            {
-                anim.SetTrigger("Kick");
-                canMove= false;
-                canLAtk = false;
-            }
-            if (Input.GetKeyDown(KeyCode.I) && !p2.isDashing && p2.isGrounded && canLAtk)
-            {
-                anim.SetTrigger("Punch");
-                canMove = false;
-                canLAtk = false;
-            }
-        
+
+        if (Input.GetKeyDown(KeyCode.O) && !p.isDashing && p.isGrounded && canLAtk)
+        {
+            anim.SetTrigger("Kick");
+            canMove = false;
+            canLAtk = false;
+        }
+        if (Input.GetKeyDown(KeyCode.P) && !p.isDashing && p.isGrounded && canLAtk)
+        {
+            anim.SetTrigger("Punch");
+            canMove = false;
+            canLAtk = false;
+        }
+        if (isMoving && !p.isDashing && p.isGrounded)
+        {
+            anim.SetBool("Move", true);
+        }
+        else anim.SetBool("Move", false);
+
+
     }
 
 
@@ -49,7 +56,7 @@ public class AnimCon2 : MonoBehaviour
         gameObject.transform.Translate(direction);
     }
 
-    private void ResetLAtk() 
+    private void ResetLAtk()
     {
         canLAtk = true;
     }

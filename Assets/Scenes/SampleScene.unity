@@ -246,7 +246,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrounded: 1
-  JumpTime: 0.2
   JumpForce: 12
   isDashing: 0
   dashTime: 0.2
@@ -296,7 +295,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1320316284, guid: 4be0423149a926a4f8b11b2150836319, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -318,7 +317,7 @@ Animator:
   m_GameObject: {fileID: 113648109}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f3fdeed0c86ce894aa2926710f422bef, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9d61f41e43c9b7c469ecda0c0b0ab089, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -341,9 +340,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f54656ce8f1f3f4c92032f18d4b5f6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p2: {fileID: 113648116}
+  p: {fileID: 113648116}
   canMove: 1
   canLAtk: 1
+  isMoving: 0
 --- !u!1 &115245840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1097,7 +1097,7 @@ Transform:
   m_GameObject: {fileID: 669162429}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.035000086, y: 0.6359999, z: 0}
+  m_LocalPosition: {x: 0.03500009, y: 0.6359999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1165,7 +1165,7 @@ RectTransform:
   m_GameObject: {fileID: 1065267956}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.57497, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1223045498}
@@ -1174,7 +1174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -520.8377, y: 450.55103}
+  m_AnchoredPosition: {x: -531, y: 450.55103}
   m_SizeDelta: {x: 830.3246, y: 178.8979}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1065267958
@@ -1204,7 +1204,7 @@ MonoBehaviour:
     m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
     m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
+    m_FadeDuration: 0
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
     m_PressedSprite: {fileID: 0}
@@ -1463,7 +1463,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 6200000, guid: 8d1dfd6b6f418fc4a96a56899ec80a50, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1533,8 +1533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrounded: 1
-  JumpTime: 0.2
-  JumpForce: 12
+  JumpForce: 15
   isDashing: 0
   dashTime: 0.2
   dashSpeed: 10
@@ -1584,7 +1583,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 6
+  m_SortingOrder: 0
   m_Sprite: {fileID: -1320316284, guid: 4be0423149a926a4f8b11b2150836319, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1605,7 +1604,7 @@ Transform:
   m_GameObject: {fileID: 1509562724}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.815, y: -3.58, z: 0}
+  m_LocalPosition: {x: -3.815, y: -3.568, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1645,7 +1644,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3472ec4fa999ac94f8511a53bcbb58d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p1: {fileID: 1509562727}
+  p: {fileID: 1509562727}
   canMove: 1
   canLAtk: 1
   isMoving: 0
@@ -1934,7 +1933,7 @@ RectTransform:
   m_GameObject: {fileID: 1995168222}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0.57497, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1997547800}
@@ -1943,7 +1942,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 487.16235, y: 450.55103}
+  m_AnchoredPosition: {x: 534, y: 450.55103}
   m_SizeDelta: {x: 830.3246, y: 178.8979}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1995168224
