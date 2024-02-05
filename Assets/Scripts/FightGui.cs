@@ -22,9 +22,9 @@ public class FightGui : MonoBehaviour
     }
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
-        returnedTimeValue = MatchManager.currentTimer;
+        returnedTimeValue = (int)MatchManager.currentTimer;
     }
 
     private void OnGUI()

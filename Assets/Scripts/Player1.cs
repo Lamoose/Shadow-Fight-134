@@ -55,10 +55,10 @@ public class Player1 : MonoBehaviour
                 anim.isMoving = false;
             }
 
-           /* if (horizontalInput == 0 && !isGrounded || !anim.canMove && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
+            if (horizontalInput == 0 && !isGrounded || !anim.canMove && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
             {
                 rb.velocity = new Vector2(0f, rb.velocity.y);
-            }*/
+            }
 
             if (anim.canMove)   
             {
@@ -94,7 +94,6 @@ public class Player1 : MonoBehaviour
     {
         isDashing = true;
         float startTime = Time.time;
-
         while (Time.time < startTime + dashTime)
         {
             rb.velocity = new Vector2(rb.velocity.x, 0f);

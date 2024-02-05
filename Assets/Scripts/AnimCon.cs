@@ -35,13 +35,14 @@ public class AnimCon : MonoBehaviour
              canMove = false;
              canLAtk = false;
         }
-        if (isMoving && !p.isDashing && p.isGrounded)
+        if (isMoving && p.isGrounded && canMove)
         {
             anim.SetBool("Move", true);
         }
         else anim.SetBool("Move", false);
 
-
+        if (p.isDashing) anim.SetBool("Dash", true);
+        else anim.SetBool("Dash", false);
     }
 
 

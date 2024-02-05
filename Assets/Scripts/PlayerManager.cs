@@ -7,7 +7,6 @@ using UnityEngine.SceneManagement;
 public class PlayerManager : MonoBehaviour
 {
 
-
     public Slider p1Slider;
     public Slider p2Slider;
     private int MaxHP=100;
@@ -29,6 +28,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (P1Hp <= 0) StartNextRound();
         if (P2Hp <= 0) StartNextRound();
+        if(MatchManager.currentTimer <= 0) StartNextRound();
     }
 
     public void Hit(string player)

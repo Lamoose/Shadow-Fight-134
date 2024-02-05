@@ -7,7 +7,7 @@ public class MatchManager : MonoBehaviour
 
     private PlayerManager Pm;
     [SerializeField]private int MaxTimer;
-    [SerializeField] public static int currentTimer;
+    [SerializeField] public static float currentTimer;
 
 
     void Start()
@@ -18,6 +18,6 @@ public class MatchManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        currentTimer -= Time.deltaTime;
     }
 }
