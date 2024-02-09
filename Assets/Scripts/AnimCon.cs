@@ -7,6 +7,7 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class AnimCon : MonoBehaviour
 {
     [SerializeField]private Player1 p;
+    [SerializeField]private HitBox Hb;
     Rigidbody2D rb;
     Animator anim;
     public bool canMove = true;
@@ -31,9 +32,9 @@ public class AnimCon : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.F) && !p.isDashing && p.isGrounded && canLAtk)
         {
-             anim.SetTrigger("Punch");
-             canMove = false;
-             canLAtk = false;
+            anim.SetTrigger("Punch");
+            canMove = false;
+            canLAtk = false;
         }
         if (isMoving && p.isGrounded && canMove)
         {
@@ -51,6 +52,11 @@ public class AnimCon : MonoBehaviour
         canMove = true;
     }
 
+    private void DisableMove()
+    {
+        canMove = false;
+    }
+
     private void Move()
     {
         Vector2 direction = new Vector2(0, -1f);
@@ -60,6 +66,11 @@ public class AnimCon : MonoBehaviour
     private void ResetLAtk() 
     {
         canLAtk = true;
+        Hb.ResetHit();
+    }
+    public void Hit()
+    {
+        anim.SetTrigger("Hit");
     }
 
 }

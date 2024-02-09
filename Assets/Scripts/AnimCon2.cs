@@ -7,6 +7,7 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class AnimCon2 : MonoBehaviour
 {
     [SerializeField] private Player2 p;
+    [SerializeField] private HitBox Hb;
     Rigidbody2D rb;
     Animator anim;
     public bool canMove = true;
@@ -59,6 +60,11 @@ public class AnimCon2 : MonoBehaviour
     private void ResetLAtk()
     {
         canLAtk = true;
+        Hb.ResetHit();
     }
 
+    private void DisableMove()
+    {
+        canMove = false;
+    }
 }

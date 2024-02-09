@@ -12,7 +12,8 @@ public class PlayerManager : MonoBehaviour
     private int MaxHP=100;
     [SerializeField]private int P1Hp;
     [SerializeField]private int P2Hp;
-
+    [SerializeField] private AnimCon anim;
+    [SerializeField] private AnimCon2 anim2;
     void Start()
     {
         P1Hp = MaxHP;
@@ -31,18 +32,20 @@ public class PlayerManager : MonoBehaviour
         if(MatchManager.currentTimer <= 0) StartNextRound();
     }
 
-    public void Hit(string player)
+    public void Hit(int player)
     {
+        
+
         Debug.Log(player);
-        if (player == "Player1")
+        if (player == 6)
         {
             P1Hp -= 10;
             p1Slider.value = P1Hp;
-
+            anim.Hit();
         }
 
 
-        if (player == "Player2")
+        if (player == 7)
         {
             P2Hp -= 10;
             p2Slider.value = P2Hp;

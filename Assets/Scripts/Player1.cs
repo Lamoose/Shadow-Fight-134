@@ -9,6 +9,10 @@ public class Player1 : MonoBehaviour
     #region jump
     public bool isGrounded = true;
     [SerializeField] private float JumpForce = 12f;
+    [SerializeField] private float JumpTime =0.2f;
+    [SerializeField] private float TimeSinceJump;
+    [SerializeField] private bool canDoubleJump = false;
+    [SerializeField] private bool Jumped = false;
     #endregion
 
     #region dash
@@ -38,7 +42,7 @@ public class Player1 : MonoBehaviour
             float horizontalInput = Input.GetAxisRaw("Horizontal");
             float verticalInput = Input.GetAxisRaw("Vertical");
             TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
-
+            TimeSinceJump += Time.deltaTime;
             if (player2.transform.position.x < gameObject.transform.position.x)
             {
                 flip();
@@ -80,9 +84,9 @@ public class Player1 : MonoBehaviour
                      TimeSinceDash = 0f; //resetuje dash poslednje dash vreme
                  }
 
-                 if (Input.GetKeyDown(KeyCode.Space) && !isDashing && isGrounded)
+                 if (Input.GetKeyDown(KeyCode.Space) && !isDashing)
                  {
-                    Jump();
+                    if(canDoubleJump)StartCoroutine(Jump());
                  }
 
             }
@@ -108,22 +112,30 @@ public class Player1 : MonoBehaviour
         rb.gravityScale = 3;
         if(!isGrounded)dashed = true;
         isDashing = false;
+
         yield return new WaitForSeconds(dashCooldown);
     }
 
 
-    void Jump()
+    IEnumerator Jump()
     {  
         isGrounded = false;
+        canDoubleJump = false;
+        float startTime = Time.time;
+        while (Time.time < startTime + JumpTime)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0f);
+            Vector2 JumpDirection = new Vector2(rb.velocity.x, 5).normalized;
+            transform.Translate(JumpDirection * JumpForce * Time.deltaTime, Space.World); //zbog Space.World se lepo krecu nakon sto su rotirani
 
-            float horizontal = Input.GetAxisRaw("Horizontal");
 
-            if (!isDashing)
-            {
-            rb.AddForce(Vector2.up * JumpForce, ForceMode2D.Impulse);
+            yield return null;
 
-            }
-            
+        }
+        if (!Jumped) canDoubleJump = true;
+        else if(Jumped) canDoubleJump = false;
+        Jumped = true;
+        yield return new WaitForSeconds(TimeSinceJump);
 
     }
     //gleda dal je na zemlji
@@ -133,6 +145,8 @@ public class Player1 : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
+            Jumped = false;
+            canDoubleJump = true;
         }
         dashed = false;
     }
@@ -141,7 +155,6 @@ public class Player1 : MonoBehaviour
     {
         gameObject.transform.rotation = Quaternion.Euler(0f, p1Rotate, 0f);
         player2.transform.rotation = Quaternion.Euler(0f, p2Rotate, 0f);
-
     }
 
 }

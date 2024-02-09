@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - Player1
   - Player2
+  - high
+  - low
+  - mid
   layers:
   - Default
   - TransparentFX
