@@ -5,18 +5,19 @@ using UnityEngine;
 
 public class HitBox : MonoBehaviour
 {
-    [SerializeField]private PlayerManager pm;
+    [SerializeField] private George george;
+    [SerializeField] private PlayerManager pm;
     [SerializeField] private bool canHit = true;
-    [SerializeField]private float hitCoolDown;
+    [SerializeField] private float hitCoolDown;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "high" || collision.tag == "low" || collision.tag == "mid")
+        if (collision.tag == "Hurtbox")
         {
             if (canHit)
             {
                 int Player = collision.gameObject.layer;
                 Debug.Log(Player);
-                pm.Hit(Player);
+                pm.Hit(Player, george.trenutni.dmg);
                 canHit = false;
             }
         }

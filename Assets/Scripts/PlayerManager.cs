@@ -32,14 +32,12 @@ public class PlayerManager : MonoBehaviour
         if(MatchManager.currentTimer <= 0) StartNextRound();
     }
 
-    public void Hit(int player)
+    public void Hit(int player, int dmg)
     {
-        
-
         Debug.Log(player);
         if (player == 6)
         {
-            P1Hp -= 10;
+            P1Hp -= dmg;
             p1Slider.value = P1Hp;
             anim.Hit();
         }
@@ -47,7 +45,7 @@ public class PlayerManager : MonoBehaviour
 
         if (player == 7)
         {
-            P2Hp -= 10;
+            P2Hp -= dmg;
             p2Slider.value = P2Hp;
         }
 
