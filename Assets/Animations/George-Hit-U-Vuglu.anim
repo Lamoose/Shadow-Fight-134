@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: George-hit
+  m_Name: George-Hit-U-Vuglu
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,9 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1901005883, guid: 605885600fbd6c546ac338c894865200, type: 3}
+      value: {fileID: -1854557279, guid: 03387a2dabcc2dd4fb7e50693ccc9bda, type: 3}
     - time: 0.33333334
-      value: {fileID: -456196114, guid: 605885600fbd6c546ac338c894865200, type: 3}
+      value: {fileID: -1320316284, guid: 4be0423149a926a4f8b11b2150836319, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,8 +46,8 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1901005883, guid: 605885600fbd6c546ac338c894865200, type: 3}
-    - {fileID: -456196114, guid: 605885600fbd6c546ac338c894865200, type: 3}
+    - {fileID: -1854557279, guid: 03387a2dabcc2dd4fb7e50693ccc9bda, type: 3}
+    - {fileID: -1320316284, guid: 4be0423149a926a4f8b11b2150836319, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

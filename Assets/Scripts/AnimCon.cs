@@ -8,6 +8,7 @@ public class AnimCon : MonoBehaviour
 {
     [SerializeField]private Player1 p;
     [SerializeField]private HitBox Hb;
+    [SerializeField] private George G;
     Rigidbody2D rb;
     Animator anim;
     public bool canMove = true;
@@ -23,19 +24,24 @@ public class AnimCon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        if (Input.GetKeyDown(KeyCode.G) && !p.isDashing && p.isGrounded && canLAtk)
+
+        if (canMove)
         {
-            anim.SetTrigger("Kick");
-            canMove= false;
-            canLAtk = false;
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                G.trenutni.kopiraj(G.jab);
+                anim.SetTrigger("Punch");
+                Debug.Log(G.trenutni.pos);
+            }
+
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+                G.trenutni.kopiraj(G.kick);
+                anim.SetTrigger("Kick");
+                Debug.Log(G.trenutni.pos);
+            }
         }
-        if (Input.GetKeyDown(KeyCode.F) && !p.isDashing && p.isGrounded && canLAtk)
-        {
-            anim.SetTrigger("Punch");
-            canMove = false;
-            canLAtk = false;
-        }
+
         if (isMoving && p.isGrounded && canMove)
         {
             anim.SetBool("Move", true);
@@ -68,9 +74,8 @@ public class AnimCon : MonoBehaviour
         canLAtk = true;
         Hb.ResetHit();
     }
-    public void Hit()
+    public void Hit(string pos)
     {
-        anim.SetTrigger("Hit");
+        anim.SetTrigger(pos);
     }
-
 }

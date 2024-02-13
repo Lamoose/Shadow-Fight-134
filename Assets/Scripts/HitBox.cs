@@ -17,7 +17,7 @@ public class HitBox : MonoBehaviour
             {
                 int Player = collision.gameObject.layer;
                 Debug.Log(Player);
-                pm.Hit(Player, george.trenutni.dmg);
+                pm.Hit(Player, george.trenutni.dmg,george.trenutni.pos);
                 canHit = false;
             }
         }
