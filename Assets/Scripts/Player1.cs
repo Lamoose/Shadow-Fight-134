@@ -25,10 +25,10 @@ public class Player1 : MonoBehaviour
     #endregion
 
     [SerializeField]private AnimCon anim;
-    public GameObject player2;
-    public Rigidbody2D rb;
-    public int speed;
-
+    [SerializeField] private GameObject player2;
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private int speed;
+    [SerializeField] public bool isCrouching;
 
     void Start()
     {
@@ -39,57 +39,66 @@ public class Player1 : MonoBehaviour
     void Update()
     {
         
-            float horizontalInput = Input.GetAxisRaw("Horizontal");
-            float verticalInput = Input.GetAxisRaw("Vertical");
-            TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
-            TimeSinceJump += Time.deltaTime;
-            if (player2.transform.position.x < gameObject.transform.position.x)
-            {
-                flip();
-            }
+        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        float verticalInput = Input.GetAxisRaw("Vertical");
+        TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
+        TimeSinceJump += Time.deltaTime;
 
-            if (player2.transform.position.x > gameObject.transform.position.x)
-            {
-                flip(0, 180f);
-            }
+        if (player2.transform.position.x < gameObject.transform.position.x)
+        {
+            flip();
+        }
 
-            if (horizontalInput == 0 && isGrounded && !isDashing || !anim.canMove)
-            {
+        if (player2.transform.position.x > gameObject.transform.position.x)
+        {
+            flip(0, 180f);
+        }
+
+        if (horizontalInput == 0 && isGrounded && !isDashing || !anim.canMove)
+        {
+            rb.velocity = new Vector2(0f, rb.velocity.y);
+            anim.isMoving = false;
+        }
+
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            isCrouching = false;
+        }
+
+        if (horizontalInput == 0 && !isGrounded || !anim.canMove && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
+        {
                 rb.velocity = new Vector2(0f, rb.velocity.y);
-                anim.isMoving = false;
-            }
+        }
 
-            if (horizontalInput == 0 && !isGrounded || !anim.canMove && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
+        if (anim.canMove)   
+        {
+            if (horizontalInput != 0 && !isDashing)
             {
-                rb.velocity = new Vector2(0f, rb.velocity.y);
-            }
 
-            if (anim.canMove)   
+
+                rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
+    
+                anim.isMoving = true;
+
+            }
+            
+            if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && !dashed && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
             {
-                 if (horizontalInput != 0 && !isDashing)
-                 {
+                StartCoroutine(Dash(horizontalInput));
 
-
-                     rb.velocity = new Vector2(horizontalInput * speed, rb.velocity.y);
-                     
-                     //rb.velocity = movement;
-                     anim.isMoving = true;
-
-                 }
-
-                 if (Input.GetKeyDown(KeyCode.LeftShift) && !isDashing && !dashed && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
-                 {
-                     StartCoroutine(Dash(horizontalInput));
-
-                     TimeSinceDash = 0f; //resetuje dash poslednje dash vreme
-                 }
-
-                 if (Input.GetKeyDown(KeyCode.Space) && !isDashing)
-                 {
-                    if(canDoubleJump)StartCoroutine(Jump());
-                 }
-
+                TimeSinceDash = 0f; //resetuje dash poslednje dash vreme
             }
+
+            if (Input.GetKeyDown(KeyCode.Space) && !isDashing)
+            {
+                if(canDoubleJump)StartCoroutine(Jump());
+            }
+
+            if(Input.GetKeyDown(KeyCode.S))
+            { 
+                isCrouching = true;
+            }
+        }
     }
 
     //dash funkcija

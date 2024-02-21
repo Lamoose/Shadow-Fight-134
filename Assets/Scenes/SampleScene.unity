@@ -1718,6 +1718,7 @@ MonoBehaviour:
   player2: {fileID: 113648109}
   rb: {fileID: 1509562725}
   speed: 3
+  isCrouching: 0
 --- !u!212 &1509562728
 SpriteRenderer:
   m_ObjectHideFlags: 0

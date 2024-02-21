@@ -40,16 +40,19 @@ public class AnimCon : MonoBehaviour
                 anim.SetTrigger("Kick");
                 Debug.Log(G.trenutni.pos);
             }
-        }
 
-        if (isMoving && p.isGrounded && canMove)
-        {
-            anim.SetBool("Move", true);
-        }
-        else anim.SetBool("Move", false);
+            if (isMoving && p.isGrounded)
+            {
+                anim.SetBool("Move", true);
+            }
+            else anim.SetBool("Move", false);
 
-        if (p.isDashing) anim.SetBool("Dash", true);
-        else anim.SetBool("Dash", false);
+            if (p.isDashing) anim.SetBool("Dash", true);
+            else anim.SetBool("Dash", false);
+
+        }
+            if (p.isCrouching) anim.SetBool("Crouching", true);
+            else anim.SetBool("Crouching", false);
     }
 
 
@@ -76,6 +79,10 @@ public class AnimCon : MonoBehaviour
     }
     public void Hit(string pos)
     {
-        anim.SetTrigger(pos);
+        if (p.isGrounded)
+        {
+            if (pos == "high" && p.isCrouching) anim.SetTrigger("mid");
+            else anim.SetTrigger(pos);
+        }
     }
 }
