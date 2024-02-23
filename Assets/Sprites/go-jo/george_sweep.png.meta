@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 546405dcfefd7f64eb9c174e2fd4c823
+guid: 8bb31b6047bf8aa4c8fab34e2c72529d
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,337 +110,295 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: george_kick-Sheet_0
+      name: george_sweep_0
       rect:
         serializedVersion: 2
         x: 13
-        y: 6
-        width: 61
-        height: 73
+        y: 29
+        width: 28
+        height: 72
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b53de9f96dcb46342b9a3a3e634ef44c
-      internalID: 594828525
+      spriteID: ae6ba103578bae147a057da2422661cb
+      internalID: -1188767432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_kick-Sheet_1
+      name: george_sweep_1
       rect:
         serializedVersion: 2
-        x: 104
-        y: 8
-        width: 61
-        height: 73
+        x: 57
+        y: 31
+        width: 38
+        height: 70
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50f724447792c9a478ba42a6435de1bc
-      internalID: -695466543
+      spriteID: 3d6ce4320eba55c4eb78110ea840da54
+      internalID: 899050203
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_kick-Sheet_2
+      name: george_sweep_2
       rect:
         serializedVersion: 2
-        x: 206
-        y: 7
-        width: 57
-        height: 75
+        x: 111
+        y: 36
+        width: 43
+        height: 66
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 099c5dc88243d274b9e5943d6222d784
-      internalID: -1393337087
+      spriteID: 0888b1b2366afac479d007651b4fb6e0
+      internalID: 240882913
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_kick-Sheet_3
+      name: george_sweep_3
       rect:
         serializedVersion: 2
-        x: 292
-        y: 7
-        width: 61
-        height: 77
+        x: 174
+        y: 34
+        width: 41
+        height: 56
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 43bb9fc581d47544bba4e2e0f49f2be0
-      internalID: 2010650884
+      spriteID: 2d983f4861e667d45a3b1e444fb7d916
+      internalID: -899024799
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_kick-Sheet_4
+      name: george_sweep_4
       rect:
         serializedVersion: 2
-        x: 383
-        y: 6
-        width: 61
-        height: 77
+        x: 236
+        y: 40
+        width: 25
+        height: 56
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eb9a0c6b1bcbc72468e4ba43e0db5b0c
-      internalID: -1346631481
+      spriteID: 0ebbe4263805b7b479554504f6f9e08a
+      internalID: 166475071
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_kick-Sheet_5
+      name: george_sweep_5
       rect:
         serializedVersion: 2
-        x: 474
-        y: 7
-        width: 62
-        height: 79
+        x: 276
+        y: 38
+        width: 45
+        height: 56
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ef92480f92273ff438fac28b9907eb5d
-      internalID: 1603321881
+      spriteID: f9834ccd3a6d09945a6a1a91b10d9397
+      internalID: -1931227574
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_kick-Sheet_6
+      name: george_sweep_6
       rect:
         serializedVersion: 2
-        x: 553
-        y: 3
-        width: 73
-        height: 79
+        x: 404
+        y: 26
+        width: 55
+        height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 61bacb6bac5fc4c448e9fe2cbb19208d
-      internalID: -1628377861
+      spriteID: dc10f7fbef582eb4a858b6dc0a6c7b12
+      internalID: 1939586189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_kick-Sheet_7
+      name: george_sweep_7
       rect:
         serializedVersion: 2
-        x: 646
-        y: 3
-        width: 71
-        height: 79
+        x: 594
+        y: 27
+        width: 55
+        height: 52
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 047dbd1c000a7a04da6011e8ef5ce577
-      internalID: 2064263031
+      spriteID: 330f0abfffa481e409665224bbefc4c1
+      internalID: -1728016189
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_kick-Sheet_8
+      name: george_sweep_8
       rect:
         serializedVersion: 2
-        x: 736
-        y: 3
-        width: 71
-        height: 79
+        x: 790
+        y: 31
+        width: 53
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4194f36ea3bdc5a42b569463a74407e1
-      internalID: 1154496510
+      spriteID: 1aed9f2661f1e4341a7c04a3a2589072
+      internalID: 126507756
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_kick-Sheet_9
-      rect:
-        serializedVersion: 2
-        x: 831
-        y: 3
-        width: 66
-        height: 79
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5f22b6660165394c9e381fa65d96c2c
-      internalID: 1442004563
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: george_kick-Sheet_10
+      name: george_sweep_9
       rect:
         serializedVersion: 2
         x: 931
-        y: 9
-        width: 50
-        height: 79
+        y: 30
+        width: 42
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0d5bde80639c17b468e675d3c31e022f
-      internalID: 690094580
+      spriteID: 0c03289ee4e202d4e8cc1b592df09678
+      internalID: 394920842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_kick-Sheet_11
+      name: george_sweep_10
       rect:
         serializedVersion: 2
-        x: 1022
-        y: 7
-        width: 29
-        height: 73
+        x: 1088
+        y: 26
+        width: 37
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fdf303eb2832a76479330f910004e467
-      internalID: 823690882
+      spriteID: e408790073f50294394e2b2311b14794
+      internalID: 1112615255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_kick-Sheet_12
+      name: george_sweep_11
       rect:
         serializedVersion: 2
-        x: 1108
-        y: 7
-        width: 35
-        height: 75
+        x: 1180
+        y: 25
+        width: 37
+        height: 50
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9696baa515de57f4098ce747bf2665ea
-      internalID: -748685521
+      spriteID: 8a4d741e7e363994d80bff1e90023075
+      internalID: -904471329
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_kick-Sheet_13
+      name: george_sweep_12
       rect:
         serializedVersion: 2
-        x: 1189
-        y: 6
-        width: 41
-        height: 76
+        x: 1305
+        y: 30
+        width: 36
+        height: 53
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 14e7f0a1330a0ac439699ae6518332c0
-      internalID: 722974308
+      spriteID: be3edc9b777e9e447b24442b2eeec576
+      internalID: -345398751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: george_kick-Sheet_14
+      name: george_sweep_13
       rect:
         serializedVersion: 2
-        x: 1293
-        y: 6
-        width: 35
-        height: 73
+        x: 1378
+        y: 22
+        width: 32
+        height: 67
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 97ea1144ad674be47bfedf5139c8fb7c
-      internalID: -1900890649
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: george_kick-Sheet_15
-      rect:
-        serializedVersion: 2
-        x: 1383
-        y: 6
-        width: 33
-        height: 73
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b6b0ab6b4efbe2f47bfedb57cb98edb8
-      internalID: 1487120868
+      spriteID: 94c17b203bfd21f419bd5567bf6df503
+      internalID: 2121780136
       vertices: []
       indices: 
       edges: []
@@ -456,22 +414,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      george_kick-Sheet_0: 594828525
-      george_kick-Sheet_1: -695466543
-      george_kick-Sheet_10: 690094580
-      george_kick-Sheet_11: 823690882
-      george_kick-Sheet_12: -748685521
-      george_kick-Sheet_13: 722974308
-      george_kick-Sheet_14: -1900890649
-      george_kick-Sheet_15: 1487120868
-      george_kick-Sheet_2: -1393337087
-      george_kick-Sheet_3: 2010650884
-      george_kick-Sheet_4: -1346631481
-      george_kick-Sheet_5: 1603321881
-      george_kick-Sheet_6: -1628377861
-      george_kick-Sheet_7: 2064263031
-      george_kick-Sheet_8: 1154496510
-      george_kick-Sheet_9: 1442004563
+      george_sweep_0: -1188767432
+      george_sweep_1: 899050203
+      george_sweep_10: 1112615255
+      george_sweep_11: -904471329
+      george_sweep_12: -345398751
+      george_sweep_13: 2121780136
+      george_sweep_2: 240882913
+      george_sweep_3: -899024799
+      george_sweep_4: 166475071
+      george_sweep_5: -1931227574
+      george_sweep_6: 1939586189
+      george_sweep_7: -1728016189
+      george_sweep_8: 126507756
+      george_sweep_9: 394920842
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
