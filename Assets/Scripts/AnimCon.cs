@@ -281,8 +281,8 @@ public class AnimCon : MonoBehaviour
     {
         if (p.isGrounded)
         {
-            if (pos == "high" && p.isCrouching) anim.SetTrigger("mid");
-            else anim.SetTrigger(pos);
+            if (pos == "high" && p.isCrouching) anim.Play("George-hit-mid");
+            else anim.Play("George-hit-high");
         }
     }
 
