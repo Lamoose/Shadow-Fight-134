@@ -27,6 +27,26 @@ public class AnimCon : MonoBehaviour
 
         if (canMove)
         {
+            
+            if (isMoving && p.isGrounded)
+            {
+                anim.SetBool("Move", true);
+            }
+            else anim.SetBool("Move", false);
+
+            if (p.isDashing) anim.SetBool("Dash", true);
+            else anim.SetBool("Dash", false);
+
+        }
+        if (p.isCrouching)
+        {
+            anim.SetBool("Crouching", true);
+        }
+        else anim.SetBool("Crouching", false);
+
+
+        if (canLAtk)
+        {
             if (Input.GetKeyDown(KeyCode.F))
             {
                 G.trenutni.kopiraj(G.jab);
@@ -40,19 +60,9 @@ public class AnimCon : MonoBehaviour
                 anim.SetTrigger("Kick");
                 Debug.Log(G.trenutni.pos);
             }
-
-            if (isMoving && p.isGrounded)
-            {
-                anim.SetBool("Move", true);
-            }
-            else anim.SetBool("Move", false);
-
-            if (p.isDashing) anim.SetBool("Dash", true);
-            else anim.SetBool("Dash", false);
-
         }
-            if (p.isCrouching) anim.SetBool("Crouching", true);
-            else anim.SetBool("Crouching", false);
+
+
     }
 
 
@@ -70,6 +80,13 @@ public class AnimCon : MonoBehaviour
     {
         Vector2 direction = new Vector2(0, -1f);
         gameObject.transform.Translate(direction);
+    }
+
+
+    private void disableLatk() 
+    {
+        canLAtk = false;
+        Hb.ResetHit();
     }
 
     private void ResetLAtk() 

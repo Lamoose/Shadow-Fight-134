@@ -1,0 +1,590 @@
+fileFormatVersion: 2
+guid: e64536d24a196504097d291191a41191
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_0
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1918
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27792377531dc6b49bb9fc1fd3ca19b7
+      internalID: 1294367615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_1
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1918
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7248f62a56059c4b865e36ec7a297a4
+      internalID: -182019045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_2
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1918
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 497b32d991db3d54f9b77019ca926e12
+      internalID: -614648318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_3
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 1918
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddfb7f65992aea4681791f33922f17f
+      internalID: 1361599739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_4
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 1918
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10cdc445f27e4304282bc1e524b87074
+      internalID: 1797155610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_5
+      rect:
+        serializedVersion: 2
+        x: 1377
+        y: 1919
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc73e4dbe2fa9d4d92705618a6c255c
+      internalID: -2043293420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_6
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 1919
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964febaea149d0d4f9c09ef94514a3a0
+      internalID: -71586376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_7
+      rect:
+        serializedVersion: 2
+        x: 1889
+        y: 1918
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ad21a97c749cab4494e5eb0088104e8
+      internalID: 2054172527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_8
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 1664
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdae41930b1b3df43a6c31cfd34b6903
+      internalID: 491577725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_9
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 1664
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 284ed49669599fc47b995ae7df8703ef
+      internalID: -2136051374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_10
+      rect:
+        serializedVersion: 2
+        x: 609
+        y: 1664
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab15f1ba803c9e48a23982489d8d7e4
+      internalID: 1649042348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_11
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1664
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99cad4288f41d36479b924bcff54b759
+      internalID: -1782646583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_12
+      rect:
+        serializedVersion: 2
+        x: 1121
+        y: 1664
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ee20d9adcb3ed4fbd38a9c08aaf58b
+      internalID: -990810626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_13
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 1664
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e457fc50ef6c72459bc1098a43b5ac1
+      internalID: -1461212365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_14
+      rect:
+        serializedVersion: 2
+        x: 1632
+        y: 1662
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2f00ab6087c3594496eb7c15bbdda1b
+      internalID: 882915352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_15
+      rect:
+        serializedVersion: 2
+        x: 1889
+        y: 1662
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1afb51f63f5d3f34baddb4e9a09c0345
+      internalID: -364752637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_16
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1408
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7a5144efcd3f4349b7bd3dfc9f4be08
+      internalID: -989449220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_17
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1408
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09c9d453dba28ed4d8a69788957d7d5a
+      internalID: 918033261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_18
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 1407
+        width: 74
+        height: 73
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75560adbf6d3aa14c908044d3c5a958c
+      internalID: -383721013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_triple_kick_opet_19
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 1406
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf69a6ca9fa800f45a67c294d2731c00
+      internalID: -2103109630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      gojo_triple_kick_opet_0: 1294367615
+      gojo_triple_kick_opet_1: -182019045
+      gojo_triple_kick_opet_10: 1649042348
+      gojo_triple_kick_opet_11: -1782646583
+      gojo_triple_kick_opet_12: -990810626
+      gojo_triple_kick_opet_13: -1461212365
+      gojo_triple_kick_opet_14: 882915352
+      gojo_triple_kick_opet_15: -364752637
+      gojo_triple_kick_opet_16: -989449220
+      gojo_triple_kick_opet_17: 918033261
+      gojo_triple_kick_opet_18: -383721013
+      gojo_triple_kick_opet_19: -2103109630
+      gojo_triple_kick_opet_2: -614648318
+      gojo_triple_kick_opet_20: 644689478
+      gojo_triple_kick_opet_21: 2117049081
+      gojo_triple_kick_opet_22: 1953929060
+      gojo_triple_kick_opet_23: 21115918
+      gojo_triple_kick_opet_24: 1238424079
+      gojo_triple_kick_opet_25: 269746744
+      gojo_triple_kick_opet_26: -1385873472
+      gojo_triple_kick_opet_27: -1225549697
+      gojo_triple_kick_opet_28: 2057366921
+      gojo_triple_kick_opet_29: -1401423795
+      gojo_triple_kick_opet_3: 1361599739
+      gojo_triple_kick_opet_30: -230245827
+      gojo_triple_kick_opet_31: 169475618
+      gojo_triple_kick_opet_32: -892676930
+      gojo_triple_kick_opet_33: -1884163147
+      gojo_triple_kick_opet_34: -1811479351
+      gojo_triple_kick_opet_35: -1604031875
+      gojo_triple_kick_opet_36: 557162095
+      gojo_triple_kick_opet_37: -344577208
+      gojo_triple_kick_opet_38: -855157534
+      gojo_triple_kick_opet_39: -1758438263
+      gojo_triple_kick_opet_4: 1797155610
+      gojo_triple_kick_opet_40: 93876405
+      gojo_triple_kick_opet_41: -1097002662
+      gojo_triple_kick_opet_42: 900251424
+      gojo_triple_kick_opet_5: -2043293420
+      gojo_triple_kick_opet_6: -71586376
+      gojo_triple_kick_opet_7: 2054172527
+      gojo_triple_kick_opet_8: 491577725
+      gojo_triple_kick_opet_9: -2136051374
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
