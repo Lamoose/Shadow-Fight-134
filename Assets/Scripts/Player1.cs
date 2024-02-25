@@ -24,7 +24,7 @@ public class Player1 : MonoBehaviour
     [SerializeField] private float TimeSinceDash;
     #endregion
 
-    [SerializeField]private AnimCon anim;
+    [SerializeField] private AnimCon anim;
     [SerializeField] private GameObject player2;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private int speed;

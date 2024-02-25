@@ -28,7 +28,7 @@ public class AnimCon2 : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.P))
             {
-                G.trenutni.kopiraj(G.jab);
+                G.trenutni.kopiraj(G.punch);
                 anim.SetTrigger("Punch");
                 Debug.Log(G.trenutni.pos);
             }

@@ -6,130 +6,270 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class AnimCon : MonoBehaviour
 {
-    [SerializeField]private Player1 p;
-    [SerializeField]private HitBox Hb;
+    [SerializeField] private Player1 p;
+    [SerializeField] private HitBox Hb;
     [SerializeField] private George G;
     Rigidbody2D rb;
     Animator anim;
-    public bool canMove = true;
-    public bool canLAtk = true;
-    public bool isMoving = false;
-    // Start is called before the first frame update
+
+    bool udarioUDashu;
+    bool inAttack;
+    bool canAttack;
+    bool canOnStack;
+    bool disableMove;
+    public bool canMove;
+    public bool isMoving;
+    bool canChain;
+    Stack<Attack> napadi = new Stack<Attack>();
+
+
+
     void Start()
     {
+
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (canLAtk)
+        if (canOnStack)
         {
-            if (p.isGrounded)
+            if (G.trenutni.ime == "punch")
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    jab();
+                    napadi.Push(G.punch);
                 }
+            }
 
+            else if (G.trenutni.ime == "kick")
+            {
                 if (Input.GetKeyDown(KeyCode.G))
                 {
-                    if (p.isCrouching)
-                    {
-                        sweep();
-                    }
-                    else
-                    {
-                        kick();
-                    }
-
+                    napadi.Push(G.triplekick);
                 }
-
             }
-        }
 
-        if (!canMove)
-        {
-            if (p.isGrounded)
+            else if (G.trenutni.ime == "triplekick")
+            {
+                if (Input.GetKeyDown(KeyCode.G))
+                {
+                    napadi.Push(G.kick);
+                }
+            }
+
+            else if (p.isDashing)
             {
                 if (Input.GetKeyDown(KeyCode.F))
                 {
-                    G.insttrenutni.kopiraj(G.jab);
-                    jab();
+                    udarioUDashu = true;
+                    //p.isDashing = false;
+                    napadi.Push(G.punch);
                 }
 
-                if (Input.GetKeyDown(KeyCode.G))
+                if (Input.GetKeyDown(KeyCode.G) && !p.isCrouching)
                 {
-                    G.insttrenutni.kopiraj(G.kick);
-                    kick();
+                    udarioUDashu = true;
+                    //p.isDashing = false;
+                    napadi.Push(G.kick);
                 }
 
+                if (Input.GetKeyDown(KeyCode.G) && p.isCrouching)
+                {
+                    udarioUDashu = true;
+                    //p.isDashing = false;
+                    napadi.Push(G.sweep);
+                }
             }
-        }
-
-
-
-
-
-        if (canMove)
-        {
-            
-            if (isMoving && p.isGrounded)
-            {
-                anim.SetBool("Move", true);
-            }
-            else anim.SetBool("Move", false);
-
-            if (p.isDashing) anim.SetBool("Dash", true);
-            else anim.SetBool("Dash", false);
 
         }
-        if (p.isCrouching && p.isGrounded)
-        {
-            anim.SetBool("Crouching", true);
-        }
-        else anim.SetBool("Crouching", false);
-
-
         
+
+        if(canAttack)
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                napadi.Push(G.punch);
+                punch();
+            }
+
+            if (Input.GetKeyDown(KeyCode.G) && !p.isCrouching)
+            {
+                napadi.Push(G.kick);
+                kick();
+            }
+
+            if (Input.GetKeyDown(KeyCode.G) && p.isCrouching)
+            {
+                napadi.Push(G.sweep);
+                sweep();
+            }
+        }
+
+
+        if (canChain)
+        {
+            if (G.trenutni.ime == "kick")
+            { 
+                if (napadi.Contains(G.triplekick))
+                {
+                    triple_kick();
+                    canChain = false;
+                }
+            }
+
+            if (G.trenutni.ime == "triplekick")
+            {
+                if (napadi.Contains(G.kick))
+                {
+                    kick();
+                    canChain = false;
+                }
+            }
+
+            if (udarioUDashu)
+            {
+                udarioUDashu = false;
+                p.isDashing = false;
+                if (napadi.Contains(G.kick))
+                {
+                    kick();
+                    canChain = false;
+                }
+                if (napadi.Contains(G.punch))
+                {
+                    punch();
+                    canChain = false;
+                }
+                if (napadi.Contains(G.sweep))
+                {
+                    sweep();
+                    canChain = false;
+                }
+            }
+        }
+
+
+
+        if (isMoving && !disableMove && !inAttack && !p.isCrouching && p.isGrounded && !p.isDashing)
+        {
+            anim.Play("walk1");
+        }
+        if (!isMoving && !disableMove && !inAttack && !p.isCrouching && p.isGrounded && !p.isDashing)
+        {
+            anim.Play("idle");
+        }
+        if (p.isCrouching && !disableMove && !inAttack && p.isGrounded && !p.isDashing)
+        {
+            anim.Play("Crouching");
+        }
+        if (p.isDashing && !inAttack)
+        {
+            anim.Play("George-Dash");
+        }
+     
+
+
+
 
 
     }
 
 
-    private void jab()
+    private void punch()
     {
-        G.trenutni.kopiraj(G.jab);
-        anim.SetTrigger("Punch");
-        Debug.Log(G.trenutni.pos);
+        G.trenutni.kopiraj(G.punch);
+        anim.Play("punch");
+        napadi.Clear();  
     }
 
     private void kick()
     {
         G.trenutni.kopiraj(G.kick);
-        anim.SetTrigger("Kick");
-        Debug.Log(G.trenutni.pos);
+        anim.Play("kick");
+        napadi.Clear();
+    }
+
+    private void triple_kick()
+    {
+        G.trenutni.kopiraj(G.triplekick);
+        anim.Play("george-tripe-kick");
+        napadi.Clear();
     }
 
     private void sweep()
     {
         G.trenutni.kopiraj(G.sweep);
-        anim.SetTrigger("Kick");
-        Debug.Log(G.trenutni.pos);
+        anim.Play("George-Sweep");
+        napadi.Clear();
     }
 
 
 
 
-    private void ResetMove()
+
+
+
+
+    private void ClearTrenutni()
     {
-        canMove = true;
+        G.trenutni.kopiraj(new Attack());
     }
 
-    private void DisableMove()
+    void MozeDaChainuje()
     {
-        canMove = false;
+        canChain = true;
+    }
+    void NeMozeDaChainuje()
+    {
+        canChain = false;
+    }
+
+
+
+    void MozeDaNapadne()
+    {
+        canAttack = true;
+    }
+    void NeMozeDaNapadne()
+    {
+        canAttack = false;
+    }
+
+
+
+
+    void MozeNaStack()
+    {
+        canOnStack = true;
+    }
+    void NeMozeNaStack()
+    {
+        canOnStack = false;
+    }
+
+
+
+    void uNapadu()
+    {
+        inAttack = true;
+    }
+    void nijeUNapadu()
+    {
+        inAttack = false;
+    }
+
+
+
+
+    void MozeDaHoda()
+    {
+        disableMove = false;
+    }
+    void NeMozeDaHoda()
+    {
+        disableMove = true;
     }
 
     private void Move()
@@ -138,18 +278,6 @@ public class AnimCon : MonoBehaviour
         gameObject.transform.Translate(direction);
     }
 
-
-    private void disableLatk() 
-    {
-        canLAtk = false;
-        Hb.ResetHit();
-    }
-
-    private void ResetLAtk() 
-    {
-        canLAtk = true;
-        Hb.ResetHit();
-    }
     public void Hit(string pos)
     {
         if (p.isGrounded)
@@ -160,25 +288,6 @@ public class AnimCon : MonoBehaviour
     }
 
 
-
-    private void cancel()
-    {
-        if (G.trenutni.ime == "jab")
-        {
-            jab();
-        }
-
-        if (G.trenutni.ime == "kick")
-        {
-            kick();
-        }
-
-        if (G.trenutni.ime == "sweep")
-        {
-            sweep();
-        }    
-
-    }
 
 
 
