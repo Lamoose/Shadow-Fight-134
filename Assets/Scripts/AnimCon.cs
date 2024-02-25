@@ -24,6 +24,53 @@ public class AnimCon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (canLAtk)
+        {
+            if (p.isGrounded)
+            {
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    jab();
+                }
+
+                if (Input.GetKeyDown(KeyCode.G))
+                {
+                    if (p.isCrouching)
+                    {
+                        sweep();
+                    }
+                    else
+                    {
+                        kick();
+                    }
+
+                }
+
+            }
+        }
+
+        if (!canMove)
+        {
+            if (p.isGrounded)
+            {
+                if (Input.GetKeyDown(KeyCode.F))
+                {
+                    G.insttrenutni.kopiraj(G.jab);
+                    jab();
+                }
+
+                if (Input.GetKeyDown(KeyCode.G))
+                {
+                    G.insttrenutni.kopiraj(G.kick);
+                    kick();
+                }
+
+            }
+        }
+
+
+
+
 
         if (canMove)
         {
@@ -38,32 +85,41 @@ public class AnimCon : MonoBehaviour
             else anim.SetBool("Dash", false);
 
         }
-        if (p.isCrouching)
+        if (p.isCrouching && p.isGrounded)
         {
             anim.SetBool("Crouching", true);
         }
         else anim.SetBool("Crouching", false);
 
 
-        if (canLAtk)
-        {
-            if (Input.GetKeyDown(KeyCode.F))
-            {
-                G.trenutni.kopiraj(G.jab);
-                anim.SetTrigger("Punch");
-                Debug.Log(G.trenutni.pos);
-            }
-
-            if (Input.GetKeyDown(KeyCode.G))
-            {
-                G.trenutni.kopiraj(G.kick);
-                anim.SetTrigger("Kick");
-                Debug.Log(G.trenutni.pos);
-            }
-        }
+        
 
 
     }
+
+
+    private void jab()
+    {
+        G.trenutni.kopiraj(G.jab);
+        anim.SetTrigger("Punch");
+        Debug.Log(G.trenutni.pos);
+    }
+
+    private void kick()
+    {
+        G.trenutni.kopiraj(G.kick);
+        anim.SetTrigger("Kick");
+        Debug.Log(G.trenutni.pos);
+    }
+
+    private void sweep()
+    {
+        G.trenutni.kopiraj(G.sweep);
+        anim.SetTrigger("Kick");
+        Debug.Log(G.trenutni.pos);
+    }
+
+
 
 
     private void ResetMove()
@@ -102,4 +158,28 @@ public class AnimCon : MonoBehaviour
             else anim.SetTrigger(pos);
         }
     }
+
+
+
+    private void cancel()
+    {
+        if (G.trenutni.ime == "jab")
+        {
+            jab();
+        }
+
+        if (G.trenutni.ime == "kick")
+        {
+            kick();
+        }
+
+        if (G.trenutni.ime == "sweep")
+        {
+            sweep();
+        }    
+
+    }
+
+
+
 }
