@@ -9,7 +9,11 @@ public class MatchManager : MonoBehaviour
     [SerializeField]private int MaxTimer;
     [SerializeField] public static float currentTimer;
 
-
+    void Awake()
+    {
+        QualitySettings.vSyncCount = 1;
+        Application.targetFrameRate = 60;
+    }
     void Start()
     {
         currentTimer = MaxTimer;
