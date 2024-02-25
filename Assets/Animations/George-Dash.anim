@@ -113,13 +113,6 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0
-    functionName: NeMozeDaHoda
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0
     functionName: NeMozeNaStack
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -169,14 +162,14 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.35
-    functionName: MozeDaNapadne
+    functionName: MozeDaHoda
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.35
-    functionName: MozeDaHoda
+    functionName: MozeDaNapadne
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

@@ -55,7 +55,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: George-prospe-se
+  m_Name: George-hit-low
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -137,7 +137,7 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -7837431571982704474}
-    m_Position: {x: -200, y: 10, z: 0}
+    m_Position: {x: -730, y: -150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3598087184173863960}
     m_Position: {x: 140, y: -10, z: 0}
@@ -146,31 +146,28 @@ AnimatorStateMachine:
     m_Position: {x: 140, y: -70, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7961882879068775487}
-    m_Position: {x: -220, y: 140, z: 0}
-  - serializedVersion: 1
-    m_State: {fileID: -4585674898867084630}
-    m_Position: {x: -420, y: 340, z: 0}
+    m_Position: {x: -730, y: -90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2661347557191371844}
-    m_Position: {x: -560, y: 130, z: 0}
+    m_Position: {x: -730, y: 30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8600405377934563501}
     m_Position: {x: 140, y: 50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 66040261557211136}
-    m_Position: {x: -200, y: -190, z: 0}
+    m_Position: {x: -730, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6892051940030813872}
-    m_Position: {x: -200, y: 400, z: 0}
+    m_Position: {x: -730, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3376691079034640582}
-    m_Position: {x: -490, y: -80, z: 0}
+    m_Position: {x: -730, y: -30, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7800638929126227414}
-    m_Position: {x: -490, y: 50, z: 0}
+    m_Position: {x: -730, y: 140, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5698126271986584668}
-    m_Position: {x: 370, y: -10, z: 0}
+    m_Position: {x: 360, y: -10, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -181,32 +178,6 @@ AnimatorStateMachine:
   m_ExitPosition: {x: 270, y: -300, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: -7837431571982704474}
---- !u!1102 &-4585674898867084630
-AnimatorState:
-  serializedVersion: 6
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: George-Jab-P1
-  m_Speed: 1
-  m_CycleOffset: 0
-  m_Transitions: []
-  m_StateMachineBehaviours: []
-  m_Position: {x: 50, y: 50, z: 0}
-  m_IKOnFeet: 0
-  m_WriteDefaultValues: 1
-  m_Mirror: 0
-  m_SpeedParameterActive: 0
-  m_MirrorParameterActive: 0
-  m_CycleOffsetParameterActive: 0
-  m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: c5ebf0be61220f7439d2300493762ea9, type: 2}
-  m_Tag: 
-  m_SpeedParameter: 
-  m_MirrorParameter: 
-  m_CycleOffsetParameter: 
-  m_TimeParameter: 
 --- !u!1102 &-3598087184173863960
 AnimatorState:
   serializedVersion: 6
@@ -528,7 +499,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: George-hit
+  m_Name: George-hit-mid
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -706,7 +677,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: George-Hit-U-Vuglu
+  m_Name: George-hit-high
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []

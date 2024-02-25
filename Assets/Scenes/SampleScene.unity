@@ -847,7 +847,7 @@ Transform:
   m_GameObject: {fileID: 433265221}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -42.4, y: 19.6, z: 0}
+  m_LocalPosition: {x: -32.6, y: 19.6, z: 0}
   m_LocalScale: {x: -35.875, y: 50.34353, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -961,6 +961,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 1509562729}
   player2: {fileID: 113648113}
+  yOffset: 0
   cameraSpeed: 5
   minDisatance: 7
 --- !u!114 &519420034
@@ -1824,7 +1825,7 @@ MonoBehaviour:
   p: {fileID: 1509562727}
   Hb: {fileID: 669162431}
   G: {fileID: 1509562732}
-  canMove: 1
+  disableMove: 0
   isMoving: 0
 --- !u!114 &1509562732
 MonoBehaviour:
@@ -2223,7 +2224,7 @@ Transform:
   m_GameObject: {fileID: 1896530217}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 40.9, y: 19.6, z: 0}
+  m_LocalPosition: {x: 30.9, y: 19.6, z: 0}
   m_LocalScale: {x: 32.55, y: 50.343533, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
