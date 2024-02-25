@@ -104,6 +104,11 @@ public class AnimCon : MonoBehaviour
                 napadi.Push(G.sweep);
                 sweep();
             }
+            if (Input.GetKeyDown(KeyCode.F) && p.isCrouching)
+            {
+                napadi.Push(G.uppercut);
+                uppercut();
+            }
         }
 
 
@@ -190,6 +195,13 @@ public class AnimCon : MonoBehaviour
         napadi.Clear();
     }
 
+    private void uppercut()
+    {
+        G.trenutni.kopiraj(G.uppercut);
+        anim.Play("George-Uppercut");
+        napadi.Clear();
+    }
+
     private void triple_kick()
     {
         G.trenutni.kopiraj(G.triplekick);
@@ -271,10 +283,11 @@ public class AnimCon : MonoBehaviour
         disableMove = true;
     }
 
-    private void Move()
+    private void Move(float x)
     {
-        Vector2 direction = new Vector2(0, -1f);
-        gameObject.transform.Translate(direction);
+
+        Vector2 direction = new Vector2(x, 0f);
+        rb.velocity = direction;
     }
 
     public void Hit(string pos)
