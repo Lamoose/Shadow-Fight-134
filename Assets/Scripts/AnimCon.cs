@@ -16,8 +16,7 @@ public class AnimCon : MonoBehaviour
     bool inAttack;
     bool canAttack;
     bool canOnStack;
-    bool disableMove;
-    public bool canMove;
+    public bool disableMove;
     public bool isMoving;
     bool canChain;
     Stack<Attack> napadi = new Stack<Attack>();

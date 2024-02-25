@@ -24,12 +24,13 @@ public class Player1 : MonoBehaviour
     [SerializeField] private float TimeSinceDash;
     #endregion
 
+    #region general
     [SerializeField] private AnimCon anim;
     [SerializeField] private GameObject player2;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private int speed;
     [SerializeField] public bool isCrouching;
-
+    #endregion
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -54,7 +55,7 @@ public class Player1 : MonoBehaviour
             flip(0, 180f);
         }
 
-        if (horizontalInput == 0 && isGrounded && !isDashing || !anim.canMove)
+        if (horizontalInput == 0 && isGrounded && !isDashing || anim.disableMove)
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
             anim.isMoving = false;
@@ -65,12 +66,12 @@ public class Player1 : MonoBehaviour
             isCrouching = false;
         }
 
-        if (horizontalInput == 0 && !isGrounded || !anim.canMove && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
+        if (horizontalInput == 0 && !isGrounded || anim.disableMove && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
         {
                 rb.velocity = new Vector2(0f, rb.velocity.y);
         }
 
-        if (anim.canMove)   
+        if (!anim.disableMove)   
         {
             if (horizontalInput != 0 && !isDashing)
             {
