@@ -12,13 +12,13 @@ public class AnimCon : MonoBehaviour
     Rigidbody2D rb;
     Animator anim;
 
-    bool udarioUDashu;
-    bool inAttack;
-    bool canAttack;
-    bool canOnStack;
+    public bool udarioUDashu;
+    public bool inAttack;
+    public bool canAttack;
+    public bool canOnStack;
     public bool disableMove;
     public bool isMoving;
-    bool canChain;
+    public bool canChain;
     Stack<Attack> napadi = new Stack<Attack>();
 
 
@@ -283,13 +283,41 @@ public class AnimCon : MonoBehaviour
         disableMove = true;
     }
 
-    private void Move(float x)
+    private void Move(string s)
     {
+        int t = 0;
+        string x = "";
+        string y = "";
+        for (int i = 0; i < s.Length; i++)
+        {
+            if (s[i] == ',')
+            {
+                t = i;
+                break;
+            }
+            x = x + s[i];
+        }
+        for (int i = t + 1; i < s.Length; i++)
+        {
+            y = y + s[i];
+        }
 
-        Vector2 direction = new Vector2(x, 0f);
-        rb.velocity = direction;
+
+
+        float xf = float.Parse(x);
+        float yf = float.Parse(y);
+
+
+        Debug.Log(xf + " " + yf);
+
+        Vector2 dir = new Vector2(xf, yf);
+        rb.AddForce(dir);
     }
 
+    private void resetSpeed()
+    {
+        rb.velocity = Vector2.zero;
+    }
     public void Hit(string pos)
     {
         if (p.isGrounded)

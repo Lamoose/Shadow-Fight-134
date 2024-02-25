@@ -44,7 +44,7 @@ public class Player1 : MonoBehaviour
         float verticalInput = Input.GetAxisRaw("Vertical");
         TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
         TimeSinceJump += Time.deltaTime;
-
+        #region flip
         if (player2.transform.position.x < gameObject.transform.position.x)
         {
             flip();
@@ -54,10 +54,17 @@ public class Player1 : MonoBehaviour
         {
             flip(0, 180f);
         }
+        #endregion
 
-        if (horizontalInput == 0 && isGrounded && !isDashing || anim.disableMove)
+        if (horizontalInput == 0 && isGrounded && !isDashing && !anim.inAttack)
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
+            anim.isMoving = false;
+        }
+
+        if (anim.disableMove && anim.inAttack)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
             anim.isMoving = false;
         }
 
@@ -70,7 +77,7 @@ public class Player1 : MonoBehaviour
         {
                 rb.velocity = new Vector2(0f, rb.velocity.y);
         }
-
+        #region kretanje
         if (!anim.disableMove)   
         {
             if (horizontalInput != 0 && !isDashing)
@@ -100,6 +107,7 @@ public class Player1 : MonoBehaviour
                 isCrouching = true;
             }
         }
+        #endregion
     }
 
     //dash funkcija

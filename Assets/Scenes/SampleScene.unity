@@ -1446,7 +1446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3203127d7c36924e8d0e281a197e607, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxTimer: 91
+  MaxTimer: 10000000
 --- !u!1 &1200032619
 GameObject:
   m_ObjectHideFlags: 0
@@ -1825,8 +1825,13 @@ MonoBehaviour:
   p: {fileID: 1509562727}
   Hb: {fileID: 669162431}
   G: {fileID: 1509562732}
+  udarioUDashu: 0
+  inAttack: 0
+  canAttack: 0
+  canOnStack: 0
   disableMove: 0
   isMoving: 0
+  canChain: 0
 --- !u!114 &1509562732
 MonoBehaviour:
   m_ObjectHideFlags: 0
