@@ -29,7 +29,11 @@ public class Player2 : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private int speed;
     [SerializeField] public bool isCrouching;
+    [SerializeField] public bool isTryingToCrouch;
+    [SerializeField] private float horizontalInput;
     #endregion
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -38,13 +42,27 @@ public class Player2 : MonoBehaviour
 
     void Update()
     {
+        #region crouch
+        if (Input.GetButton("down"))
+        {
+            isTryingToCrouch = true;
+        }
+        else
+        {
+            isTryingToCrouch = false;
+        }
+        #endregion
 
-        float horizontalInput = Input.GetAxisRaw("HorizontalS");
+        #region input i vreme
+        if (!anim.disableMove) horizontalInput = Input.GetAxisRaw("HorizontalS");
+        else horizontalInput = 0f;
         float verticalInput = Input.GetAxisRaw("VerticalS");
         TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
         TimeSinceJump += Time.deltaTime;
-        
+        #endregion
 
+
+        #region kretanje kad je horizontal 0 
         if (horizontalInput == 0 && isGrounded && !isDashing || anim.disableMove)
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
@@ -56,7 +74,9 @@ public class Player2 : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
             anim.isMoving = false;
         }
+        #endregion
 
+        #region jump i crouch
         if (Input.GetKeyUp(KeyCode.DownArrow))
         {
             isCrouching = false;
@@ -66,6 +86,8 @@ public class Player2 : MonoBehaviour
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
         }
+        #endregion
+
         #region kretanje
         if (!anim.disableMove && !anim.inAttack)
         {
@@ -79,14 +101,14 @@ public class Player2 : MonoBehaviour
 
             }
 
-            if (Input.GetKeyDown(KeyCode.K) && !isDashing && !dashed && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
+            if (Input.GetKeyDown(KeyCode.I) && !isDashing && !dashed && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
             {
                 StartCoroutine(Dash(horizontalInput));
 
                 TimeSinceDash = 0f; //resetuje dash poslednje dash vreme
             }
 
-            if (Input.GetKeyDown(KeyCode.J) && !isDashing)
+            if (Input.GetKeyDown(KeyCode.U) && !isDashing)
             {
                 if (canDoubleJump) StartCoroutine(Jump());
             }

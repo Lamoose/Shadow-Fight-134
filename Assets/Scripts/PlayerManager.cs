@@ -34,9 +34,11 @@ public class PlayerManager : MonoBehaviour
 
     public void Hit(int player, int dmg, string pos)
     {
+ 
         Debug.Log(player);
         if (player == 8)
         {
+
             P1Hp -= dmg;
             p1Slider.value = P1Hp;
             anim.Hit(pos);

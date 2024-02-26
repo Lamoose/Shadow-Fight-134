@@ -11,6 +11,8 @@ public class Attack
 
     public KeyCode p1obicanInput;
     public string p1dirInput;
+    public KeyCode p2obicanInput;
+    public string p2dirInput;
 
 
     public Attack() { }

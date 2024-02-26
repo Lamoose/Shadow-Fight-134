@@ -226,7 +226,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 3.5}
+    oldSize: {x: 1.6, y: 3.65}
     newSize: {x: 1.375, y: 2.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -262,6 +262,8 @@ MonoBehaviour:
   rb: {fileID: 113648114}
   speed: 3
   isCrouching: 0
+  isTryingToCrouch: 0
+  horizontalInput: 0
 --- !u!212 &113648117
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -597,7 +599,7 @@ GameObject:
   - component: {fileID: 266220931}
   - component: {fileID: 266220930}
   - component: {fileID: 266220932}
-  m_Layer: 6
+  m_Layer: 7
   m_Name: HitBox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -626,7 +628,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 266220928}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:

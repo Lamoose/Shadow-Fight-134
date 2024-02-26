@@ -325,16 +325,48 @@ public class AnimCon : MonoBehaviour
 
     public void Hit(string pos)
     {
+        
         if (p.isGrounded)
         {
-            if(pos=="mid" && !p.isCrouching) anim.Play("George-hit-mid");
-           
-            else if(pos == "mid" && p.isCrouching) anim.Play("George-hit-mid");
-            else if (pos == "high" && !p.isCrouching) anim.Play("George-hit-high");
-            else if (pos == "high" && p.isCrouching) anim.Play("George-hit-mid");
-            else if (pos == "low" && !p.isCrouching) anim.Play("George-hit-low");
-            else if (pos == "low" && p.isCrouching) anim.Play("George-hit-mid");
+            
+            if (pos == "mid" && !p.isCrouching)
+            {
+                
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid"))
+                {
+                    anim.Play("George-hit-mid 0");
+                }
+                else anim.Play("George-hit-mid");
+            }
 
+            else if (pos == "mid" && p.isCrouching)
+            {
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid")) anim.Play("George-hit-mid 0");
+                else anim.Play("George-hit-mid");
+            }
+
+            else if (pos == "high" && !p.isCrouching)
+            {
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid")) anim.Play("George-hit-high 0");
+                else anim.Play("George-hit-high");
+            }
+            else if (pos == "high" && p.isCrouching)
+            {
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid")) anim.Play("George-hit-mid 0");
+                else anim.Play("George-hit-mid");
+            }
+            else if (pos == "low" && !p.isCrouching)
+            {
+                
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-low")) anim.Play("George-hit-low 0");
+                else anim.Play("George-hit-low");
+            }
+            else if (pos == "low" && p.isCrouching)
+            {
+                
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid")) anim.Play("George-hit-mid 0");
+                else anim.Play("George-hit-mid");
+            }
         }
     }
 
@@ -501,7 +533,7 @@ public class AnimCon : MonoBehaviour
         MozeNaStack();
         nijeUNapadu();
         MozeDaHoda();
-       
+        Hb.ResetHit();
     }
     #endregion
 
