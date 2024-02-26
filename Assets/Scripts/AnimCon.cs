@@ -34,27 +34,96 @@ public class AnimCon : MonoBehaviour
     {
         if (canOnStack)
         {
-            if (G.trenutni.ime == "punch")
+            if ((G.trenutni.ime == "sweep"))    // ovde dodaj && za svaki napad koji ce moci da se chainuje u bilo koji napad
             {
-                if (Input.GetKeyDown(KeyCode.F))
+                for (int i = 0; i < G.sweep.ComboNapadi.Count; i++)
                 {
-                    napadi.Push(G.punch);
+                    if (Input.GetKeyDown(G.sweep.ComboNapadi[i].p1obicanInput))
+                    {
+                        if (p.isCrouching)
+                        {
+                            if (G.sweep.ComboNapadi[i].p1dirInput == "dole")
+                            {
+                                napadi.Push(G.sweep.ComboNapadi[i]);
+                            }
+
+                        }
+                        else
+                        {
+                            napadi.Push(G.sweep.ComboNapadi[i]);
+                        }    
+                    }
+
+                }
+            }
+
+
+            else if (G.trenutni.ime == "Punch")
+            {
+                for (int i = 0; i < G.punch.ComboNapadi.Count; i++)
+                {
+                    if (Input.GetKeyDown(G.punch.ComboNapadi[i].p1obicanInput))
+                    {
+                        if (p.isCrouching)
+                        {
+                            if (G.punch.ComboNapadi[i].p1dirInput == "dole")
+                            {
+                                napadi.Push(G.punch.ComboNapadi[i]);
+                            }
+
+                        }
+                        else
+                        {
+                            napadi.Push(G.punch.ComboNapadi[i]);
+                        }
+                    }
+
                 }
             }
 
             else if (G.trenutni.ime == "kick")
             {
-                if (Input.GetKeyDown(KeyCode.G))
+                for (int i = 0; i < G.kick.ComboNapadi.Count; i++)
                 {
-                    napadi.Push(G.triplekick);
+                    if (Input.GetKeyDown(G.kick.ComboNapadi[i].p1obicanInput))
+                    {
+                        if (p.isCrouching)
+                        {
+                            if (G.kick.ComboNapadi[i].p1dirInput == "dole")
+                            {
+                                napadi.Push(G.kick.ComboNapadi[i]);
+                            }
+
+                        }
+                        else
+                        {
+                            napadi.Push(G.kick.ComboNapadi[i]);
+                        }
+                    }
+
                 }
             }
 
             else if (G.trenutni.ime == "triplekick")
             {
-                if (Input.GetKeyDown(KeyCode.G))
+                for (int i = 0; i < G.triplekick.ComboNapadi.Count; i++)
                 {
-                    napadi.Push(G.kick);
+                    if (Input.GetKeyDown(G.triplekick.ComboNapadi[i].p1obicanInput))
+                    {
+                        if (p.isCrouching)
+                        {
+                            if (G.triplekick.ComboNapadi[i].p1dirInput == "dole")
+                            {
+                                napadi.Push(G.triplekick.ComboNapadi[i]);
+                            }
+
+                        }
+                        else
+                        {
+                            napadi.Push(G.triplekick.ComboNapadi[i]);
+                        }
+                    }
+
                 }
             }
 
@@ -63,14 +132,12 @@ public class AnimCon : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.F))
                 {
                     udarioUDashu = true;
-                    //p.isDashing = false;
                     napadi.Push(G.punch);
                 }
 
                 if (Input.GetKeyDown(KeyCode.G) && !p.isCrouching)
                 {
                     udarioUDashu = true;
-                    //p.isDashing = false;
                     napadi.Push(G.kick);
                 }
 
@@ -79,6 +146,12 @@ public class AnimCon : MonoBehaviour
                     udarioUDashu = true;
                     //p.isDashing = false;
                     napadi.Push(G.sweep);
+                }
+
+                if (Input.GetKeyDown(KeyCode.F) && p.isCrouching)
+                {
+                    napadi.Push(G.uppercut);
+                    uppercut();
                 }
             }
 
@@ -114,43 +187,38 @@ public class AnimCon : MonoBehaviour
 
         if (canChain)
         {
-            if (G.trenutni.ime == "kick")
-            { 
-                if (napadi.Contains(G.triplekick))
-                {
-                    triple_kick();
-                    canChain = false;
-                }
+            if (napadi.Contains(G.punch))
+            {
+                punch();
+                canChain = false;
             }
 
-            if (G.trenutni.ime == "triplekick")
+            if (napadi.Contains(G.uppercut))
             {
-                if (napadi.Contains(G.kick))
-                {
-                    kick();
-                    canChain = false;
-                }
+                uppercut();
+                canChain = false;
             }
+            
+
+            if (napadi.Contains(G.triplekick))
+            {
+                triple_kick();
+                canChain = false;
+            }
+            
+
+            if (napadi.Contains(G.kick))
+            {
+                kick();
+                canChain = false;
+            }
+
 
             if (udarioUDashu)
             {
                 udarioUDashu = false;
                 p.isDashing = false;
-                if (napadi.Contains(G.kick))
-                {
-                    kick();
-                    canChain = false;
-                }
-                if (napadi.Contains(G.punch))
-                {
-                    punch();
-                    canChain = false;
-                }
-                if (napadi.Contains(G.sweep))
-                {
-                    sweep();
-                    canChain = false;
-                }
+                ProveriCeoStack();
             }
         }
 
@@ -184,7 +252,7 @@ public class AnimCon : MonoBehaviour
     private void punch()
     {
         G.trenutni.kopiraj(G.punch);
-        anim.Play("punch");
+        anim.Play("Punch");
         napadi.Clear();  
     }
 
@@ -217,6 +285,49 @@ public class AnimCon : MonoBehaviour
     }
 
 
+
+
+
+
+
+
+
+
+    private void ProveriDaLiJeSvakiNapadKliknut()
+    {
+        if (Input.GetKeyDown(KeyCode.F) && !p.isCrouching)
+        {
+            napadi.Push(G.punch);
+        }
+        if (Input.GetKeyDown(KeyCode.G) && !p.isCrouching)
+        {
+            napadi.Push(G.kick);
+        }
+    }    
+
+
+
+
+
+    private void ProveriCeoStack()
+    {
+        if (napadi.Contains(G.punch))
+        {
+            punch();
+            canChain = false;
+        }
+        if (napadi.Contains(G.kick))
+        {
+            kick();
+            canChain = false;
+        }
+        if (napadi.Contains(G.sweep))
+        {
+            sweep();
+            canChain = false;
+        }
+        
+    }
 
 
 

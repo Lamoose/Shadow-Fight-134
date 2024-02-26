@@ -249,14 +249,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isGrounded: 1
   JumpForce: 12
+  JumpTime: 0.2
+  TimeSinceJump: 0
+  canDoubleJump: 0
+  Jumped: 0
   isDashing: 0
   dashTime: 0.2
   dashSpeed: 10
   dashCooldown: 0.3
   TimeSinceDash: 0
   anim: {fileID: 113648119}
+  player2: {fileID: 1509562724}
   rb: {fileID: 113648114}
   speed: 3
+  isCrouching: 0
 --- !u!212 &113648117
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -317,9 +323,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113648109}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6d1132db5c055a049bf8971582f0c090, type: 2}
+  m_Controller: {fileID: 9100000, guid: 4f934981752539b46a6b56cf7ba1d376, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -345,9 +351,13 @@ MonoBehaviour:
   p: {fileID: 113648116}
   Hb: {fileID: 266220932}
   G: {fileID: 113648120}
-  canMove: 1
-  canLAtk: 1
+  udarioUDashu: 0
+  inAttack: 0
+  canAttack: 0
+  canOnStack: 0
+  disableMove: 0
   isMoving: 0
+  canChain: 0
 --- !u!114 &113648120
 MonoBehaviour:
   m_ObjectHideFlags: 0

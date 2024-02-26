@@ -110,14 +110,21 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: NeMozeDaHoda
+    functionName: uNapadu
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0
-    functionName: uNapadu
+    functionName: NeMozeDaChainuje
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0
+    functionName: NeMozeDaHoda
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -137,22 +144,29 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0
+  - time: 0.06666667
+    functionName: MozeNaStack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.26666668
+    functionName: NeMozeNaStack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.28333333
+    functionName: MozeDaChainuje
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.3
     functionName: NeMozeDaChainuje
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.55
-    functionName: MozeDaNapadne
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.55
-    functionName: MozeDaNapadne
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -166,6 +180,13 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.55
+    functionName: MozeDaNapadne
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.55
     functionName: MozeNaStack
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -173,14 +194,21 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.55
-    functionName: MozeDaHoda
+    functionName: ClearTrenutni
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0.55
-    functionName: ClearTrenutni
+    functionName: MozeDaNapadne
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.55
+    functionName: MozeDaHoda
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

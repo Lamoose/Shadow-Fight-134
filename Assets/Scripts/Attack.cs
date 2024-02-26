@@ -6,8 +6,12 @@ public class Attack
 {
     public string ime, pos;
     public int dmg;
-
+    public List<Attack> ComboNapadi = new List<Attack>();
     public Vector2 dir;
+
+    public KeyCode p1obicanInput;
+    public string p1dirInput;
+
 
     public Attack() { }
 
@@ -17,6 +21,7 @@ public class Attack
         pos = ppos;
         dmg = pdmg;
         dir = new Vector2(x, y);
+
     }
 
     public void kopiraj(Attack napad)
@@ -25,6 +30,11 @@ public class Attack
         pos = napad.pos;
         dmg = napad.dmg;
         dir = napad.dir;
+        ComboNapadi.Clear();
+        for (int i = 0; i < napad.ComboNapadi.Count; i++)
+        {
+            ComboNapadi.Add(napad.ComboNapadi[i]);
+        }
     }
 
 }
