@@ -19,7 +19,7 @@ public class George : MonoBehaviour
     #region kick
     public Attack sweep = new Attack("sweep", "low", 15, 1f, 0f);
     public Attack kick = new Attack("kick", "high", 20, 1f, 0f);
-    public Attack triplekick = new Attack("triplekick", "mid", 20, 1f, 0f);
+    public Attack triplekick = new Attack("triplekick", "mid", 5, 1f, 0f);
     #endregion
 
 

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEngine.RuleTile.TilingRuleOutput;
@@ -323,13 +324,47 @@ public class AnimCon2 : MonoBehaviour
     {
         if (p.isGrounded)
         {
-            if (pos == "mid" && !p.isCrouching) anim.Play("George-hit-mid");
-            else if (pos == "mid" && p.isCrouching) anim.Play("George-hit-mid");
-            else if (pos == "high" && !p.isCrouching) anim.Play("George-hit-high");
-            else if (pos == "high" && p.isCrouching) anim.Play("George-hit-mid");
-            else if (pos == "low" && !p.isCrouching) anim.Play("George-hit-low");
-            else if (pos == "low" && p.isCrouching) anim.Play("George-hit-mid");
+
+            if (pos == "mid" && !p.isCrouching) 
+            {
+                if(anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid"))
+                {
+                    anim.Play("George-hit-mid 0");
+                }
+                else anim.Play("George-hit-mid");
+            }
+
+            else if (pos == "mid" && p.isCrouching)
+            {
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid")) anim.Play("George-hit-mid 0");
+                else anim.Play("George-hit-mid");
+            }
+
+            else if (pos == "high" && !p.isCrouching)
+            {
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid")) anim.Play("George-hit-high 0");
+                else anim.Play("George-hit-high");
+            }
+            else if (pos == "high" && p.isCrouching) 
+            {
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid")) anim.Play("George-hit-mid 0");
+                else anim.Play("George-hit-mid");
+            }
+            else if (pos == "low" && !p.isCrouching)
+            {
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-low")) anim.Play("George-hit-low 0");
+                else anim.Play("George-hit-low");
+            }
+            else if (pos == "low" && p.isCrouching)
+            {
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid")) anim.Play("George-hit-mid 0");
+                else anim.Play("George-hit-mid");
+            }
         }
+    }
+
+    private void OnHit()
+    {
         Hb.ResetHit();
     }
 

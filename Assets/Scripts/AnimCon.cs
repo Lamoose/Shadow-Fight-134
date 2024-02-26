@@ -336,6 +336,10 @@ public class AnimCon : MonoBehaviour
             else if (pos == "low" && p.isCrouching) anim.Play("George-hit-mid");
 
         }
+    }
+
+    private void OnHit()
+    {
         Hb.ResetHit();
     }
     #endregion
