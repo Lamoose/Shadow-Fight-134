@@ -42,8 +42,9 @@ public class Player1 : MonoBehaviour
     }
 
     void Update()
-    {        
-        if(Input.GetButton("s"))
+    {
+        #region crouch
+        if (Input.GetButton("s"))
         {
             isTryingToCrouch = true;
         }
@@ -51,13 +52,16 @@ public class Player1 : MonoBehaviour
         {
             isTryingToCrouch = false;
         }
-        //Debug.Log(isTryingToCrouch);
+        #endregion
 
+        #region input i vreme
         if (!anim.disableMove) horizontalInput = Input.GetAxisRaw("Horizontal");
         else horizontalInput = 0f;
         float verticalInput = Input.GetAxisRaw("Vertical");
         TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
         TimeSinceJump += Time.deltaTime;
+        #endregion
+
         #region flip
         if (player2.transform.position.x < gameObject.transform.position.x)
         {
@@ -70,6 +74,7 @@ public class Player1 : MonoBehaviour
         }
         #endregion
 
+        #region kretanje kad je horizontal 0 
         if (horizontalInput == 0 && isGrounded && !isDashing || anim.disableMove)
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
@@ -81,7 +86,9 @@ public class Player1 : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
             anim.isMoving = false;
         }
+        #endregion
 
+        #region jump i crouch
         if (Input.GetKeyUp(KeyCode.S))
         {
             isCrouching = false;
@@ -91,6 +98,8 @@ public class Player1 : MonoBehaviour
         {
                 rb.velocity = new Vector2(0f, rb.velocity.y);
         }
+        #endregion
+
         #region kretanje
         if (!anim.disableMove && !anim.inAttack)   
         {

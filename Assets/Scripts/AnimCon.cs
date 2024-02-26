@@ -32,7 +32,7 @@ public class AnimCon : MonoBehaviour
 
     void Update()
     {
-        #region Napadi-na-stack
+        #region Napadi na stack
         if (canOnStack)
         {
             if ((G.trenutni.ime == "sweep"))    // ovde dodaj && za svaki napad koji ce moci da se chainuje u bilo koji napad
@@ -187,7 +187,7 @@ public class AnimCon : MonoBehaviour
         }
         #endregion
 
-        #region Napadi-iz-idle
+        #region Napadi iz idle
         if (canAttack)
         {
             if (Input.GetKeyDown(KeyCode.F))
@@ -215,7 +215,7 @@ public class AnimCon : MonoBehaviour
         }
         #endregion
 
-        #region Napadi-na-chain
+        #region Napadi na chain
         if (canChain)
         {
             if (napadi.Contains(G.punch))
@@ -262,13 +262,16 @@ public class AnimCon : MonoBehaviour
 
         #region kretanje
 
-        if (isMoving && !disableMove && !inAttack && !p.isCrouching && p.isGrounded && !p.isDashing)
+        if (!disableMove && !inAttack && !p.isCrouching && p.isGrounded && !p.isDashing)
         {
-            anim.Play("walk1");
-        }
-        if (!isMoving && !disableMove && !inAttack && !p.isCrouching && p.isGrounded && !p.isDashing)
-        {
-            anim.Play("idle");
+            if (isMoving)
+            {
+                anim.Play("walk1");
+            }
+            if (!isMoving)
+            {
+                anim.Play("idle");
+            }
         }
         if (p.isCrouching && !disableMove && !inAttack && p.isGrounded && !p.isDashing)
         {

@@ -173,13 +173,6 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.55
-    functionName: nijeUNapadu
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.55
     functionName: MozeDaNapadne
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -195,6 +188,13 @@ AnimationClip:
     messageOptions: 0
   - time: 0.55
     functionName: ClearTrenutni
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.55
+    functionName: nijeUNapadu
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
