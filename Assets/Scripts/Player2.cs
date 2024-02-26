@@ -26,7 +26,6 @@ public class Player2 : MonoBehaviour
 
     #region general
     [SerializeField] private AnimCon2 anim;
-    [SerializeField] private GameObject player2;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private int speed;
     [SerializeField] public bool isCrouching;
@@ -44,25 +43,15 @@ public class Player2 : MonoBehaviour
         float verticalInput = Input.GetAxisRaw("VerticalS");
         TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
         TimeSinceJump += Time.deltaTime;
-        #region flip
-        if (player2.transform.position.x < gameObject.transform.position.x)
-        {
-            flip();
-        }
+        
 
-        if (player2.transform.position.x > gameObject.transform.position.x)
-        {
-            flip(0, 180f);
-        }
-        #endregion
-
-        if (horizontalInput == 0 && isGrounded && !isDashing && !anim.inAttack)
+        if (horizontalInput == 0 && isGrounded && !isDashing || anim.disableMove)
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
             anim.isMoving = false;
         }
 
-        if (anim.disableMove && anim.inAttack)
+        if (!anim.disableMove && anim.inAttack)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
             anim.isMoving = false;
@@ -78,7 +67,7 @@ public class Player2 : MonoBehaviour
             rb.velocity = new Vector2(0f, rb.velocity.y);
         }
         #region kretanje
-        if (!anim.disableMove)
+        if (!anim.disableMove && !anim.inAttack)
         {
             if (horizontalInput != 0 && !isDashing)
             {
@@ -168,11 +157,4 @@ public class Player2 : MonoBehaviour
         }
         dashed = false;
     }
-
-    void flip(float p1Rotate = 180f, float p2Rotate = 0)
-    {
-        gameObject.transform.rotation = Quaternion.Euler(0f, p1Rotate, 0f);
-        player2.transform.rotation = Quaternion.Euler(0f, p2Rotate, 0f);
-    }
-
 }

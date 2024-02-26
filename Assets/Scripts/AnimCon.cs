@@ -32,6 +32,7 @@ public class AnimCon : MonoBehaviour
 
     void Update()
     {
+        #region Napadi-na-stack
         if (canOnStack)
         {
             if ((G.trenutni.ime == "sweep"))    // ovde dodaj && za svaki napad koji ce moci da se chainuje u bilo koji napad
@@ -184,9 +185,10 @@ public class AnimCon : MonoBehaviour
             }
 
         }
-        
+        #endregion
 
-        if(canAttack)
+        #region Napadi-iz-idle
+        if (canAttack)
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
@@ -211,8 +213,9 @@ public class AnimCon : MonoBehaviour
                 uppercut();
             }
         }
+        #endregion
 
-
+        #region Napadi-na-chain
         if (canChain)
         {
             if (napadi.Contains(G.punch))
@@ -255,8 +258,9 @@ public class AnimCon : MonoBehaviour
                 ProveriCeoStack();
             }
         }
+        #endregion
 
-
+        #region kretanje
 
         if (isMoving && !disableMove && !inAttack && !p.isCrouching && p.isGrounded && !p.isDashing)
         {
@@ -274,15 +278,13 @@ public class AnimCon : MonoBehaviour
         {
             anim.Play("George-Dash");
         }
-     
-
-
-
-
+        #endregion
 
     }
 
+    #region funkcije
 
+    #region napadi
     private void punch()
     {
         G.trenutni.kopiraj(G.punch);
@@ -317,15 +319,10 @@ public class AnimCon : MonoBehaviour
         anim.Play("George-Sweep");
         napadi.Clear();
     }
+    #endregion
 
 
-
-
-
-
-
-
-
+    #region stack
 
     private void ProveriDaLiJeSvakiNapadKliknut()
     {
@@ -362,12 +359,10 @@ public class AnimCon : MonoBehaviour
         }
         
     }
+    #endregion
 
 
-
-
-
-
+    #region animacije-event
     private void ClearTrenutni()
     {
         G.trenutni.kopiraj(new Attack());
@@ -426,6 +421,7 @@ public class AnimCon : MonoBehaviour
     void NeMozeDaHoda()
     {
         disableMove = true;
+        isMoving = false;
     }
 
     private void Move(string s)
@@ -471,7 +467,9 @@ public class AnimCon : MonoBehaviour
             else anim.Play("George-hit-high");
         }
     }
+    #endregion
 
+    #endregion
 
 
 

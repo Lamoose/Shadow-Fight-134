@@ -31,6 +31,7 @@ public class Player1 : MonoBehaviour
     [SerializeField] private int speed;
     [SerializeField] public bool isCrouching;
     [SerializeField] public bool isTryingToCrouch;
+    [SerializeField] private float horizontalInput;
     #endregion
 
 
@@ -52,7 +53,8 @@ public class Player1 : MonoBehaviour
         }
         //Debug.Log(isTryingToCrouch);
 
-        float horizontalInput = Input.GetAxisRaw("Horizontal");
+        if (!anim.disableMove) horizontalInput = Input.GetAxisRaw("Horizontal");
+        else horizontalInput = 0f;
         float verticalInput = Input.GetAxisRaw("Vertical");
         TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
         TimeSinceJump += Time.deltaTime;
@@ -68,13 +70,13 @@ public class Player1 : MonoBehaviour
         }
         #endregion
 
-        if (horizontalInput == 0 && isGrounded && !isDashing && !anim.inAttack)
+        if (horizontalInput == 0 && isGrounded && !isDashing || anim.disableMove)
         {
             rb.velocity = new Vector2(0f, rb.velocity.y);
             anim.isMoving = false;
         }
 
-        if (anim.disableMove && anim.inAttack)
+        if (!anim.disableMove && anim.inAttack)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
             anim.isMoving = false;
@@ -90,7 +92,7 @@ public class Player1 : MonoBehaviour
                 rb.velocity = new Vector2(0f, rb.velocity.y);
         }
         #region kretanje
-        if (!anim.disableMove)   
+        if (!anim.disableMove && !anim.inAttack)   
         {
             if (horizontalInput != 0 && !isDashing)
             {

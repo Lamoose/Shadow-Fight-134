@@ -246,6 +246,7 @@ public class AnimCon2 : MonoBehaviour
     void NeMozeDaNapadne()
     {
         canAttack = false;
+        isMoving = false;
     }
 
 
