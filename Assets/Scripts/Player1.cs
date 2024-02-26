@@ -30,9 +30,10 @@ public class Player1 : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private int speed;
     [SerializeField] public bool isCrouching;
+    [SerializeField] public bool isTryingToCrouch;
     #endregion
 
-    
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -41,6 +42,16 @@ public class Player1 : MonoBehaviour
 
     void Update()
     {        
+        if(Input.GetButton("s"))
+        {
+            isTryingToCrouch = true;
+        }
+        else
+        {
+            isTryingToCrouch = false;
+        }
+        //Debug.Log(isTryingToCrouch);
+
         float horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
         TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao

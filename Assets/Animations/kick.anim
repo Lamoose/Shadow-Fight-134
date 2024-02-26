@@ -858,14 +858,14 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: uNapadu
+    functionName: NeMozeDaChainuje
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0
-    functionName: NeMozeDaChainuje
+    functionName: uNapadu
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -892,28 +892,28 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.16666667
+  - time: 0.05
     functionName: MozeNaStack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.35
+  - time: 0.33333334
     functionName: NeMozeNaStack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.36666667
+  - time: 0.35
     functionName: MozeDaChainuje
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.46666667
+  - time: 0.38333333
     functionName: NeMozeDaChainuje
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -928,20 +928,6 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.55
-    functionName: MozeDaNapadne
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.55
-    functionName: MozeDaNapadne
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.55
     functionName: nijeUNapadu
     data: 
     objectReferenceParameter: {fileID: 0}
@@ -949,7 +935,21 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0.55
+    functionName: MozeDaNapadne
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.55
     functionName: MozeNaStack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.55
+    functionName: MozeDaNapadne
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

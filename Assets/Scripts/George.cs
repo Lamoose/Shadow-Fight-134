@@ -47,9 +47,11 @@ public class George : MonoBehaviour
         punch.ComboNapadi.Add(kick);
         punch.ComboNapadi.Add(sweep);
 
+        kick.ComboNapadi.Add(sweep);
         kick.ComboNapadi.Add(triplekick);
 
         triplekick.ComboNapadi.Add(kick);
+        triplekick.ComboNapadi.Add(sweep);
 
         sweep.ComboNapadi.Add(kick);
         sweep.ComboNapadi.Add(punch);
