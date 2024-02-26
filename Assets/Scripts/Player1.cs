@@ -188,7 +188,7 @@ public class Player1 : MonoBehaviour
             isGrounded = true;
             Jumped = false;
             canDoubleJump = true;
-            if (anim.disableMove) 
+            if (anim.disableMove && !anim.inAttack) 
             {
                 anim.recovery();
             }
