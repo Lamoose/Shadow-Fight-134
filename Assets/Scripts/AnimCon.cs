@@ -322,6 +322,22 @@ public class AnimCon : MonoBehaviour
         anim.Play("George-Sweep");
         napadi.Clear();
     }
+
+    public void Hit(string pos)
+    {
+        if (p.isGrounded)
+        {
+            if(pos=="mid" && !p.isCrouching) anim.Play("George-hit-mid");
+           
+            else if(pos == "mid" && p.isCrouching) anim.Play("George-hit-mid");
+            else if (pos == "high" && !p.isCrouching) anim.Play("George-hit-high");
+            else if (pos == "high" && p.isCrouching) anim.Play("George-hit-mid");
+            else if (pos == "low" && !p.isCrouching) anim.Play("George-hit-low");
+            else if (pos == "low" && p.isCrouching) anim.Play("George-hit-mid");
+
+        }
+        Hb.ResetHit();
+    }
     #endregion
 
 
@@ -462,13 +478,26 @@ public class AnimCon : MonoBehaviour
     {
         rb.velocity = Vector2.zero;
     }
-    public void Hit(string pos)
+
+    private void neMozeNista()
     {
-        if (p.isGrounded)
-        {
-            if (pos == "high" && p.isCrouching) anim.Play("George-hit-mid");
-            else anim.Play("George-hit-high");
-        }
+        ClearTrenutni();
+        NeMozeDaChainuje();
+        NeMozeDaNapadne();
+        NeMozeNaStack();
+        uNapadu();
+        NeMozeDaHoda();
+    }
+
+    private void mozeSve()
+    {
+        ClearTrenutni();
+        MozeDaChainuje();
+        MozeDaNapadne();
+        MozeNaStack();
+        nijeUNapadu();
+        MozeDaHoda();
+       
     }
     #endregion
 

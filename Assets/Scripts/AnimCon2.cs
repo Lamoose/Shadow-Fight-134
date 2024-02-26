@@ -184,7 +184,7 @@ public class AnimCon2 : MonoBehaviour
     private void punch()
     {
         G.trenutni.kopiraj(G.punch);
-        anim.Play("punch");
+        anim.Play("Punch");
         napadi.Clear();
     }
 
@@ -323,12 +323,36 @@ public class AnimCon2 : MonoBehaviour
     {
         if (p.isGrounded)
         {
-            if (pos == "high" && p.isCrouching) anim.Play("George-hit-mid");
-            else anim.Play("George-hit-high");
+            if (pos == "mid" && !p.isCrouching) anim.Play("George-hit-mid");
+            else if (pos == "mid" && p.isCrouching) anim.Play("George-hit-mid");
+            else if (pos == "high" && !p.isCrouching) anim.Play("George-hit-high");
+            else if (pos == "high" && p.isCrouching) anim.Play("George-hit-mid");
+            else if (pos == "low" && !p.isCrouching) anim.Play("George-hit-low");
+            else if (pos == "low" && p.isCrouching) anim.Play("George-hit-mid");
         }
+        Hb.ResetHit();
     }
 
+    private void neMozeNista()
+    {
+        ClearTrenutni();
+        NeMozeDaChainuje();
+        NeMozeDaNapadne();
+        NeMozeNaStack();
+        uNapadu();
+        NeMozeDaHoda();
+    }
 
+    private void mozeSve()
+    {
+        ClearTrenutni();
+        MozeDaChainuje();
+        MozeDaNapadne();
+        MozeNaStack();
+        nijeUNapadu();
+        MozeDaHoda();
+
+    }
 
 
 

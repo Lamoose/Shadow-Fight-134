@@ -259,7 +259,6 @@ MonoBehaviour:
   dashCooldown: 0.3
   TimeSinceDash: 0
   anim: {fileID: 113648119}
-  player2: {fileID: 1509562724}
   rb: {fileID: 113648114}
   speed: 3
   isCrouching: 0
@@ -325,7 +324,7 @@ Animator:
   m_GameObject: {fileID: 113648109}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4f934981752539b46a6b56cf7ba1d376, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6d1132db5c055a049bf8971582f0c090, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -349,7 +348,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 113648116}
-  Hb: {fileID: 266220932}
+  Hb: {fileID: 669162431}
   G: {fileID: 113648120}
   udarioUDashu: 0
   inAttack: 0
@@ -1730,6 +1729,8 @@ MonoBehaviour:
   rb: {fileID: 1509562725}
   speed: 3
   isCrouching: 0
+  isTryingToCrouch: 0
+  horizontalInput: 0
 --- !u!212 &1509562728
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1833,7 +1834,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 1509562727}
-  Hb: {fileID: 669162431}
+  Hb: {fileID: 266220932}
   G: {fileID: 1509562732}
   udarioUDashu: 0
   inAttack: 0
