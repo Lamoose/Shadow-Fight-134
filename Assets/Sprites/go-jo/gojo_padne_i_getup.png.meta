@@ -1,0 +1,919 @@
+fileFormatVersion: 2
+guid: 64e1f24057fd4a241bf379edaecd0d90
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_0
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 1920
+        width: 72
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84a60c760a0f0b04c9886253775e4c7e
+      internalID: 1458835987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_1
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1920
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c8bf15d069ada44a75b4c9520bf34c
+      internalID: 400419675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_2
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 1919
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1db7a372b1aa72d45952f242e465be8a
+      internalID: -1545632559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_3
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 1918
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc513a8b4e25ff9498cf3a3925da171f
+      internalID: 1665946812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_4
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 1917
+        width: 72
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42d439a607657764393159cf5f0c294e
+      internalID: -199649426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_5
+      rect:
+        serializedVersion: 2
+        x: 1371
+        y: 1916
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c906cd4a9f2dac942aaf6765b11a8f5c
+      internalID: -771274484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_6
+      rect:
+        serializedVersion: 2
+        x: 1627
+        y: 1918
+        width: 72
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c36200d20123141ada17e6867529d0
+      internalID: 817350308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_7
+      rect:
+        serializedVersion: 2
+        x: 1882
+        y: 1919
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd6117b085bb82940a9ac9c128359470
+      internalID: 1949476587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_8
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 1664
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d528d551dc23c243ace694342701051
+      internalID: -1235397990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_9
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 1663
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db7e0028883e474094c8f352376bbe0
+      internalID: 1234737653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_10
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 1662
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d387aec55179aa469705895204d61b7
+      internalID: 1541743742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_11
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 1663
+        width: 72
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dff29123123bc74c95cee04983ecdb3
+      internalID: 1465712787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_12
+      rect:
+        serializedVersion: 2
+        x: 1113
+        y: 1662
+        width: 70
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448664e5f626692488476bed81de4045
+      internalID: 1106601971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_13
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 1661
+        width: 65
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81649ceab7c4c414eb761fb285d451e1
+      internalID: -170660259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_14
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 1661
+        width: 65
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb318dbdb75715f42bc9eb261fbdea6f
+      internalID: 1166679828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_15
+      rect:
+        serializedVersion: 2
+        x: 1881
+        y: 1661
+        width: 65
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bbf892e405aa704280984aede0e79d3
+      internalID: 2119896151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_16
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 1405
+        width: 65
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90cdf730c989abf46aac28c62522a976
+      internalID: -1639526139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_17
+      rect:
+        serializedVersion: 2
+        x: 348
+        y: 1406
+        width: 59
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 437f37bd30d3f6d4c844f66e2b2ecd52
+      internalID: 352288313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_18
+      rect:
+        serializedVersion: 2
+        x: 606
+        y: 1407
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82ba836d4994f66448dfc742d8613f3d
+      internalID: 347238341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_19
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1407
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25127152a30bd1e40b26468c63297781
+      internalID: -829108010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_20
+      rect:
+        serializedVersion: 2
+        x: 1127
+        y: 1407
+        width: 47
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93d27462d0484ac438cac1cc27cc8fda
+      internalID: -1002873667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_21
+      rect:
+        serializedVersion: 2
+        x: 1389
+        y: 1408
+        width: 44
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99c1467bc3f6da74faedd7dfaffe897e
+      internalID: -2118392456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_22
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 1409
+        width: 55
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 752d6ea0fb67e504d9df745ad0c66c65
+      internalID: -1981893240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_23
+      rect:
+        serializedVersion: 2
+        x: 1896
+        y: 1413
+        width: 61
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e252a91963343df4389667883ab1dc05
+      internalID: -1042882524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_24
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1165
+        width: 67
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d318de9a5f579e94ebf08d733bfc8812
+      internalID: -1476384407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_25
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1173
+        width: 71
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6954cd0924046004e8ebc93c2ea417b1
+      internalID: 319878616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_26
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1170
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0c27af628089d14c9877c1f0348bd0d
+      internalID: -1174597075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_27
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 1167
+        width: 72
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3611742b1284de347a9f29246d9b81fd
+      internalID: 1529037923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_28
+      rect:
+        serializedVersion: 2
+        x: 1122
+        y: 1160
+        width: 65
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1eccc9f8c9bb33409077a0d1fc0e329
+      internalID: -56739406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_29
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 1155
+        width: 51
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f4027d07da092409cffe754f99ad3d
+      internalID: 1222597619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_30
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1154
+        width: 39
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdfd33c254173774e90e6bc4dd5d95c3
+      internalID: 1262962625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_31
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 1154
+        width: 30
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7b88e4f44765143873759b518d4aed
+      internalID: 1861494328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_32
+      rect:
+        serializedVersion: 2
+        x: 118
+        y: 895
+        width: 31
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66beff25231ebbe4aa43cd9842a65eb9
+      internalID: 2069807146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_33
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 892
+        width: 23
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9518e3562dbb84ca77455fa2b1e8e1
+      internalID: -31252128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_34
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 893
+        width: 44
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b464141a41cc14e8849550fa2fc743
+      internalID: 424803668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_padne_i_getup_35
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 894
+        width: 27
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4795febdcffda144285addb68f19676c
+      internalID: -1950240630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      gojo_padne_i_getup_0: 1458835987
+      gojo_padne_i_getup_1: 400419675
+      gojo_padne_i_getup_10: 1541743742
+      gojo_padne_i_getup_11: 1465712787
+      gojo_padne_i_getup_12: 1106601971
+      gojo_padne_i_getup_13: -170660259
+      gojo_padne_i_getup_14: 1166679828
+      gojo_padne_i_getup_15: 2119896151
+      gojo_padne_i_getup_16: -1639526139
+      gojo_padne_i_getup_17: 352288313
+      gojo_padne_i_getup_18: 347238341
+      gojo_padne_i_getup_19: -829108010
+      gojo_padne_i_getup_2: -1545632559
+      gojo_padne_i_getup_20: -1002873667
+      gojo_padne_i_getup_21: -2118392456
+      gojo_padne_i_getup_22: -1981893240
+      gojo_padne_i_getup_23: -1042882524
+      gojo_padne_i_getup_24: -1476384407
+      gojo_padne_i_getup_25: 319878616
+      gojo_padne_i_getup_26: -1174597075
+      gojo_padne_i_getup_27: 1529037923
+      gojo_padne_i_getup_28: -56739406
+      gojo_padne_i_getup_29: 1222597619
+      gojo_padne_i_getup_3: 1665946812
+      gojo_padne_i_getup_30: 1262962625
+      gojo_padne_i_getup_31: 1861494328
+      gojo_padne_i_getup_32: 2069807146
+      gojo_padne_i_getup_33: -31252128
+      gojo_padne_i_getup_34: 424803668
+      gojo_padne_i_getup_35: -1950240630
+      gojo_padne_i_getup_4: -199649426
+      gojo_padne_i_getup_5: -771274484
+      gojo_padne_i_getup_6: 817350308
+      gojo_padne_i_getup_7: 1949476587
+      gojo_padne_i_getup_8: -1235397990
+      gojo_padne_i_getup_9: 1234737653
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

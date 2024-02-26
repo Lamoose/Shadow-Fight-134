@@ -43,11 +43,11 @@ public class Player2 : MonoBehaviour
     void Update()
     {
         #region crouch
-        if (Input.GetButton("down"))
+        if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             isTryingToCrouch = true;
         }
-        else
+        if(Input.GetKeyUp(KeyCode.DownArrow))
         {
             isTryingToCrouch = false;
         }
@@ -176,6 +176,10 @@ public class Player2 : MonoBehaviour
             isGrounded = true;
             Jumped = false;
             canDoubleJump = true;
+            if (anim.disableMove)
+            {
+                anim.recovery();
+            }
         }
         dashed = false;
     }

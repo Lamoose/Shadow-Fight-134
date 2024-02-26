@@ -178,7 +178,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 6200000, guid: 8d1dfd6b6f418fc4a96a56899ec80a50, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -226,7 +226,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.6, y: 3.65}
+    oldSize: {x: 3, y: 3.5}
     newSize: {x: 1.375, y: 2.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1426,6 +1426,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p1Slider: {fileID: 1065267958}
   p2Slider: {fileID: 1995168224}
+  p1: {fileID: 1509562727}
+  p2: {fileID: 113648116}
   P1Hp: 0
   P2Hp: 0
   anim: {fileID: 1509562731}

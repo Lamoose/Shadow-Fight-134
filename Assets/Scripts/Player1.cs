@@ -44,11 +44,11 @@ public class Player1 : MonoBehaviour
     void Update()
     {
         #region crouch
-        if (Input.GetButton("s"))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             isTryingToCrouch = true;
         }
-        else
+        else if(Input.GetKeyUp(KeyCode.S))
         {
             isTryingToCrouch = false;
         }
@@ -188,6 +188,10 @@ public class Player1 : MonoBehaviour
             isGrounded = true;
             Jumped = false;
             canDoubleJump = true;
+            if (anim.disableMove) 
+            {
+                anim.recovery();
+            }
         }
         dashed = false;
     }

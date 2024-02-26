@@ -196,18 +196,18 @@ public class AnimCon : MonoBehaviour
                 punch();
             }
 
-            if (Input.GetKeyDown(KeyCode.G) && !p.isCrouching)
+            if (Input.GetKeyDown(KeyCode.G) && !p.isTryingToCrouch)
             {
                 napadi.Push(G.kick);
                 kick();
             }
 
-            if (Input.GetKeyDown(KeyCode.G) && p.isCrouching)
+            if (Input.GetKeyDown(KeyCode.G) && p.isTryingToCrouch)
             {
                 napadi.Push(G.sweep);
                 sweep();
             }
-            if (Input.GetKeyDown(KeyCode.F) && p.isCrouching)
+            if (Input.GetKeyDown(KeyCode.F) && p.isTryingToCrouch)
             {
                 napadi.Push(G.uppercut);
                 uppercut();
@@ -325,13 +325,13 @@ public class AnimCon : MonoBehaviour
 
     public void Hit(string pos)
     {
-        
+
         if (p.isGrounded)
         {
-            
+
             if (pos == "mid" && !p.isCrouching)
             {
-                
+
                 if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid"))
                 {
                     anim.Play("George-hit-mid 0");
@@ -357,23 +357,61 @@ public class AnimCon : MonoBehaviour
             }
             else if (pos == "low" && !p.isCrouching)
             {
-                
+
                 if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-low")) anim.Play("George-hit-low 0");
                 else anim.Play("George-hit-low");
             }
             else if (pos == "low" && p.isCrouching)
             {
-                
+
                 if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid")) anim.Play("George-hit-mid 0");
                 else anim.Play("George-hit-mid");
             }
         }
+        if (!p.isGrounded)
+        {
+            rb.velocity = new Vector2(0f, 0f);
+            rb.gravityScale = 0f;
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-Udaren-u-Vazduhu"))
+            {
+                anim.Play("George-Udaren-u-Vazduhu 0");
+            }
+            else anim.Play("George-Udaren-u-Vazduhu");
+        }
+    }
+    public void ukljuciGravity()
+    {
+        rb.gravityScale = 3f;
+        Debug.Log("Ukljucio gravity");
     }
 
     private void OnHit()
     {
         Hb.ResetHit();
     }
+    public void launch(Vector2 dir)
+    {
+        GameObject p2;
+        p2 = GameObject.Find("/Player2");
+        if (gameObject.transform.position.x > p2.transform.position.x) rb.AddForce(dir);
+        else
+        {
+            dir = new Vector2(-dir.x, dir.y);
+            rb.AddForce(dir);
+        }
+        if (dir.y > 0f)
+        {
+            anim.Play("George-Launch");
+            p.isGrounded = false;
+        }
+    }
+
+    public void recovery ()
+    {
+        anim.Play("George-Launch-Ustaje");
+    }
+
+
     #endregion
 
 
@@ -507,7 +545,15 @@ public class AnimCon : MonoBehaviour
         Debug.Log(xf + " " + yf);
 
         Vector2 dir = new Vector2(xf, yf);
-        rb.AddForce(dir);
+
+        GameObject p2;
+        p2 = GameObject.Find("/Player2");
+        if (gameObject.transform.position.x > p2.transform.position.x)
+        {
+            dir = new Vector2(-dir.x, dir.y);
+            rb.AddForce(dir);
+        }
+        else rb.AddForce(dir);
     }
 
     private void resetSpeed()

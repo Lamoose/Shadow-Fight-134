@@ -9,6 +9,9 @@ public class PlayerManager : MonoBehaviour
 
     public Slider p1Slider;
     public Slider p2Slider;
+    [SerializeField]private Player1 p1;
+    [SerializeField]private Player2 p2;
+
     private int MaxHP=100;
     [SerializeField]private int P1Hp;
     [SerializeField]private int P2Hp;
@@ -32,7 +35,7 @@ public class PlayerManager : MonoBehaviour
         if(MatchManager.currentTimer <= 0) StartNextRound();
     }
 
-    public void Hit(int player, int dmg, string pos)
+    public void Hit(int player, int dmg, string pos,Vector2 dir)
     {
  
         Debug.Log(player);
@@ -42,6 +45,7 @@ public class PlayerManager : MonoBehaviour
             P1Hp -= dmg;
             p1Slider.value = P1Hp;
             anim.Hit(pos);
+            if (p1.isGrounded) anim.launch(dir);
         }
 
 
@@ -50,6 +54,7 @@ public class PlayerManager : MonoBehaviour
             P2Hp -= dmg;
             p2Slider.value = P2Hp;
             anim2.Hit(pos);
+            if(p2.isGrounded)anim2.launch(dir);
         }
 
     }

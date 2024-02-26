@@ -12,14 +12,14 @@ public class George : MonoBehaviour
     public Attack cuvaj = new Attack();
 
     #region punch
-    public Attack punch = new Attack("Punch", "mid", 3, 1f, 0f); 
-    public Attack uppercut = new Attack("uppercut", "mid", 5, 1f, 1f);
+    public Attack punch = new Attack("Punch", "mid", 3, 250f, 0f); 
+    public Attack uppercut = new Attack("uppercut", "mid", 5, 250f, 700f);
     #endregion
 
     #region kick
-    public Attack sweep = new Attack("sweep", "low", 5, 1f, 0f);
-    public Attack kick = new Attack("kick", "high", 3, 1f, 0f);
-    public Attack triplekick = new Attack("triplekick", "mid", 2, 1f, 0f);
+    public Attack sweep = new Attack("sweep", "low", 5, 250f, 0f);
+    public Attack kick = new Attack("kick", "high", 3, 250f, 0f);
+    public Attack triplekick = new Attack("triplekick", "mid", 2, 250f, 0f);
     #endregion
 
 

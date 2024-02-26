@@ -196,18 +196,18 @@ public class AnimCon2 : MonoBehaviour
                 punch();
             }
 
-            if (Input.GetKeyDown(KeyCode.O) && !p.isCrouching)
+            if (Input.GetKeyDown(KeyCode.O) && !p.isTryingToCrouch)
             {
                 napadi.Push(G.kick);
                 kick();
             }
 
-            if (Input.GetKeyDown(KeyCode.O) && p.isCrouching)
+            if (Input.GetKeyDown(KeyCode.O) && p.isTryingToCrouch)
             {
                 napadi.Push(G.sweep);
                 sweep();
             }
-            if (Input.GetKeyDown(KeyCode.P) && p.isCrouching)
+            if (Input.GetKeyDown(KeyCode.P) && p.isTryingToCrouch)
             {
                 napadi.Push(G.uppercut);
                 uppercut();
@@ -369,11 +369,50 @@ public class AnimCon2 : MonoBehaviour
                 else anim.Play("George-hit-mid");
             }
         }
+        if (!p.isGrounded)
+        {
+            rb.velocity = new Vector2(0f, 0f);
+            rb.gravityScale = 0f;
+            if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-Udaren-u-Vazduhu"))
+            {
+                anim.Play("George-Udaren-u-Vazduhu 0");
+            }
+            else anim.Play("George-Udaren-u-Vazduhu");
+           
+        }
+    }
+
+    public void ukljuciGravity()
+    {
+        rb.gravityScale = 3f;
+        Debug.Log("Ukljucio gravity");
     }
 
     private void OnHit()
     {
         Hb.ResetHit();
+    }
+
+    public void launch(Vector2 dir)
+    {
+        GameObject p1;
+        p1 = GameObject.Find("/Player1");
+        if (gameObject.transform.position.x > p1.transform.position.x) rb.AddForce(dir);
+        else
+        {
+            dir = new Vector2(-dir.x, dir.y);
+            rb.AddForce(dir);
+        }
+        if (dir.y > 0f)
+        {
+            anim.Play("George-Launch");
+            p.isGrounded = false;
+        }
+    }
+
+    public void recovery()
+    {
+        anim.Play("George-Launch-Ustaje");
     }
     #endregion
 
@@ -508,7 +547,14 @@ public class AnimCon2 : MonoBehaviour
         Debug.Log(xf + " " + yf);
 
         Vector2 dir = new Vector2(xf, yf);
-        rb.AddForce(dir);
+        GameObject p1;
+        p1 = GameObject.Find("/Player1");
+        if (gameObject.transform.position.x > p1.transform.position.x)
+        {
+            dir = new Vector2(-dir.x, dir.y);
+            rb.AddForce(dir);
+        }
+        else rb.AddForce(dir);
     }
 
     private void resetSpeed()
