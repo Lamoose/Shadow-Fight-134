@@ -10,7 +10,7 @@ public class AnimCon2 : MonoBehaviour
     [SerializeField] private HitBox Hb;
     [SerializeField] private George G;
     Rigidbody2D rb;
-    Animator anim;
+    public Animator anim;
 
     public bool udarioUDashu;
     public bool inAttack;

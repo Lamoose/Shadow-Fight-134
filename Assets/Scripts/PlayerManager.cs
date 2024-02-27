@@ -17,6 +17,7 @@ public class PlayerManager : MonoBehaviour
     [SerializeField]private int P2Hp;
     [SerializeField] private AnimCon anim;
     [SerializeField] private AnimCon2 anim2;
+    [SerializeField] private GatoAnimCon Gatoanim;
     void Start()
     {
         P1Hp = MaxHP;
@@ -30,9 +31,9 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (P1Hp <= 0) StartNextRound();
-        if (P2Hp <= 0) StartNextRound();
-        if(MatchManager.currentTimer <= 0) StartNextRound();
+        if (P1Hp <= 0) StartCoroutine(StartNextRound());
+        if (P2Hp <= 0) StartCoroutine(StartNextRound());
+        if(MatchManager.currentTimer <= 0) StartCoroutine(StartNextRound());
     }
 
     public void Hit(int player, int dmg, string pos,Vector2 dir)
@@ -59,8 +60,21 @@ public class PlayerManager : MonoBehaviour
 
     }
 
-    void StartNextRound()
+    IEnumerator StartNextRound()
     {
+        Gatoanim.roundEnd();
+
+        if(P1Hp<=0)
+        {
+            anim.anim.Play("roundEnd");
+        }
+
+        else
+        {
+            anim2.anim.Play("roundEnd");
+        }
+        yield return new WaitForSeconds(5);
         SceneManager.LoadScene("SampleScene");
+        
     }
 }
