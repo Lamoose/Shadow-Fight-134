@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using static UnityEditor.PlayerSettings;
 
 public class Player1 : MonoBehaviour
 {
@@ -159,7 +158,8 @@ public class Player1 : MonoBehaviour
 
 
     IEnumerator Jump()
-    {  
+    {
+        anim.anim.Play("George-Jump");
         isGrounded = false;
         canDoubleJump = false;
         float startTime = Time.time;
