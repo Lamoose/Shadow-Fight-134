@@ -11,6 +11,8 @@ public class PlayerManager : MonoBehaviour
     public Slider p2Slider;
     [SerializeField]private Player1 p1;
     [SerializeField]private Player2 p2;
+    [SerializeField] private FightGui Gui;
+    [SerializeField] private GameObject Canvas;
 
     private int MaxHP=100;
     [SerializeField]private int P1Hp;
@@ -60,6 +62,8 @@ public class PlayerManager : MonoBehaviour
 
     IEnumerator StartNextRound()
     {
+        Canvas.SetActive(false);
+        Gui.enabled = false;
         Gatoanim.roundEnd();
 
         if(P1Hp<=0)
@@ -71,6 +75,7 @@ public class PlayerManager : MonoBehaviour
         {
             anim2.anim.Play("roundEnd");
         }
+
         yield return new WaitForSeconds(5);
         SceneManager.LoadScene("SampleScene");
         
