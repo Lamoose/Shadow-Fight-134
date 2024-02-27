@@ -38,8 +38,6 @@ public class PlayerManager : MonoBehaviour
 
     public void Hit(int player, int dmg, string pos,Vector2 dir)
     {
- 
-        Debug.Log(player);
         if (player == 8)
         {
 

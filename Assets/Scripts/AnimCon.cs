@@ -382,7 +382,6 @@ public class AnimCon : MonoBehaviour
     public void ukljuciGravity()
     {
         rb.gravityScale = 3f;
-        Debug.Log("Ukljucio gravity");
     }
 
     private void OnHit()
@@ -540,9 +539,6 @@ public class AnimCon : MonoBehaviour
 
         float xf = float.Parse(x);
         float yf = float.Parse(y);
-
-
-        Debug.Log(xf + " " + yf);
 
         Vector2 dir = new Vector2(xf, yf);
 
