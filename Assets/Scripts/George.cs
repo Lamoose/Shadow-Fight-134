@@ -14,12 +14,14 @@ public class George : MonoBehaviour
     #region punch
     public Attack punch = new Attack("Punch", "mid", 3, 250f, 0f); 
     public Attack uppercut = new Attack("uppercut", "mid", 5, 250f, 700f);
+    public Attack Air2Punch = new Attack("Air2Punch", "mid", 5, 0f, 0f);
     #endregion
 
     #region kick
     public Attack sweep = new Attack("sweep", "low", 5, 250f, 0f);
     public Attack kick = new Attack("kick", "high", 3, 250f, 0f);
     public Attack triplekick = new Attack("triplekick", "mid", 2, 250f, 0f);
+    public Attack AirSpin2Win = new Attack("spin2win", "mid", 2, 0f, 0f);
     #endregion
 
 
@@ -40,6 +42,12 @@ public class George : MonoBehaviour
         triplekick.p1obicanInput = KeyCode.G;
         triplekick.p1dirInput = "nista";
 
+        Air2Punch.p1obicanInput = KeyCode.F;
+        Air2Punch.p1dirInput = "nista";
+
+        AirSpin2Win.p1obicanInput = KeyCode.G;
+        AirSpin2Win.p1dirInput = "nista";
+
 
         punch.p2obicanInput = KeyCode.P;
         punch.p2dirInput = "nista";
@@ -55,6 +63,12 @@ public class George : MonoBehaviour
 
         triplekick.p2obicanInput = KeyCode.O;
         triplekick.p2dirInput = "nista";
+
+        Air2Punch.p2obicanInput = KeyCode.I;
+        Air2Punch.p2dirInput = "nista";
+
+        AirSpin2Win.p2obicanInput = KeyCode.O;
+        AirSpin2Win.p2dirInput = "nista";
 
 
 
