@@ -1,0 +1,832 @@
+fileFormatVersion: 2
+guid: 28a86f6a7b38150449f903664681cade
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 20
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_0
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1917
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cc4e8fe324681548a59b646ae036f8f
+      internalID: -1906081907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_1
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1917
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4fd535c8608d44aa4eb13c5307d18b
+      internalID: 841789958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_2
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1917
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7032a5d7edaadd04296995a18128e496
+      internalID: 512266927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_3
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1917
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47c601e15839524fb34e260281a0e0a
+      internalID: 601210681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_4
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1917
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c9c1989eed685e48b0cc8c6cadf6f6b
+      internalID: -1650681198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_5
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 1917
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248f0c28bffafe249ac55a6d856814ca
+      internalID: 1525468780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_6
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 1917
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 099b00d7e72820e498cc8c51b0e3ec07
+      internalID: 280961240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_7
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 1917
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1d194abaf84e44ba3a4108712c0c88
+      internalID: 873311809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_8
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1661
+        width: 64
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6dea230133615f4b99fc6580b0d0019
+      internalID: 139842384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_9
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1661
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12bf91d434a86d44990afafe1776aad9
+      internalID: -1064110542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_10
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1661
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8bb308ffa37644cab3f726fd531bc8
+      internalID: 1737877643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_11
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1661
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08329c0a2c318094a893131ef080a517
+      internalID: -1183278177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_12
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1661
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bac958f798564649bbed68188afc2f3
+      internalID: 1784398815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_13
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 1661
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e947d49992fa3a4ebfdcd88cd006c9d
+      internalID: -1491793863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_14
+      rect:
+        serializedVersion: 2
+        x: 1638
+        y: 1661
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e16c726523c8df4cb612240e234af71
+      internalID: 1612360991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_15
+      rect:
+        serializedVersion: 2
+        x: 1889
+        y: 1661
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52188351cd75e444861b3306044d823
+      internalID: 1874485935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_16
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 1406
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49390dd916ec90479f5ae062f737f36
+      internalID: 1005719894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_17
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1406
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75e7b9bcb1b46246bc78b2d118e1cdc
+      internalID: 960021536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_18
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1406
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c9a7bee7634b340b021e3cd754f80c
+      internalID: 918801998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_19
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1406
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59262731a029d024ab1a4bdb2c34a119
+      internalID: -1128625565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_20
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1406
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6320b6cdafeec36428185908b478943b
+      internalID: 76963125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_21
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 1406
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f248349e8131b5a4c99d9cf263bcdf35
+      internalID: -811961615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_22
+      rect:
+        serializedVersion: 2
+        x: 1633
+        y: 1406
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70afa1075038b6b4cbb888036a76c0f3
+      internalID: 1255760916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_23
+      rect:
+        serializedVersion: 2
+        x: 1889
+        y: 1406
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 844d1922045ec894c8607f21c62bb20f
+      internalID: -2071207400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_24
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1149
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3315056655f43e40be903d9b3368051
+      internalID: -124501631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_25
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1149
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bae493b09892a2478bb1b94737a12e5
+      internalID: 1240102484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_26
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1149
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72bd55634c675b24d9012ba9c2f540ba
+      internalID: 1175135738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_27
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 1149
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa1296d8e6f3e5f44bac72261c4015a0
+      internalID: -1282853704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_28
+      rect:
+        serializedVersion: 2
+        x: 1116
+        y: 1149
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32270e0f53c3fd42bcb8ee3a085ed05
+      internalID: -1296859851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_29
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 1149
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 589886069784ced4692902cbf31f55ac
+      internalID: -1396673847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_30
+      rect:
+        serializedVersion: 2
+        x: 1630
+        y: 1149
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52df4009ce537a643b6cce0e5633b07d
+      internalID: 131640375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gojo_2_hit_kick_31
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 1149
+        width: 75
+        height: 75
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d10c520bb4df6740955973ee28396f4
+      internalID: -1878819427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      gojo_2_hit_kick_0: -1906081907
+      gojo_2_hit_kick_1: 841789958
+      gojo_2_hit_kick_10: 1737877643
+      gojo_2_hit_kick_11: -1183278177
+      gojo_2_hit_kick_12: 1784398815
+      gojo_2_hit_kick_13: -1491793863
+      gojo_2_hit_kick_14: 1612360991
+      gojo_2_hit_kick_15: 1874485935
+      gojo_2_hit_kick_16: 1005719894
+      gojo_2_hit_kick_17: 960021536
+      gojo_2_hit_kick_18: 918801998
+      gojo_2_hit_kick_19: -1128625565
+      gojo_2_hit_kick_2: 512266927
+      gojo_2_hit_kick_20: 76963125
+      gojo_2_hit_kick_21: -811961615
+      gojo_2_hit_kick_22: 1255760916
+      gojo_2_hit_kick_23: -2071207400
+      gojo_2_hit_kick_24: -124501631
+      gojo_2_hit_kick_25: 1240102484
+      gojo_2_hit_kick_26: 1175135738
+      gojo_2_hit_kick_27: -1282853704
+      gojo_2_hit_kick_28: -1296859851
+      gojo_2_hit_kick_29: -1396673847
+      gojo_2_hit_kick_3: 601210681
+      gojo_2_hit_kick_30: 131640375
+      gojo_2_hit_kick_31: -1878819427
+      gojo_2_hit_kick_32: -581362207
+      gojo_2_hit_kick_4: -1650681198
+      gojo_2_hit_kick_5: 1525468780
+      gojo_2_hit_kick_6: 280961240
+      gojo_2_hit_kick_7: 873311809
+      gojo_2_hit_kick_8: 139842384
+      gojo_2_hit_kick_9: -1064110542
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
