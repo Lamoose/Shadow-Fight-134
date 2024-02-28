@@ -404,6 +404,11 @@ public class AnimCon : MonoBehaviour
         rb.gravityScale = 3f;
     }
 
+    private void islkuciGravity()
+    {
+        rb.gravityScale = 0f;
+    }
+
     private void OnHit()
     {
         Hb.ResetHit();

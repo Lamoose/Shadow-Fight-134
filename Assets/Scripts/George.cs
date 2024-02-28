@@ -21,7 +21,7 @@ public class George : MonoBehaviour
     public Attack sweep = new Attack("sweep", "low", 5, 250f, 0f);
     public Attack kick = new Attack("kick", "high", 3, 250f, 0f);
     public Attack triplekick = new Attack("triplekick", "mid", 2, 250f, 0f);
-    public Attack AirSpin2Win = new Attack("spin2win", "mid", 2, 0f, 0f);
+    public Attack AirSpin2Win = new Attack("spin2win", "mid", 2, 0f, -250f);
     #endregion
 
 
@@ -85,5 +85,9 @@ public class George : MonoBehaviour
 
         sweep.ComboNapadi.Add(kick);
         sweep.ComboNapadi.Add(punch);
+
+        AirSpin2Win.ComboNapadi.Add(Air2Punch);
+
+        Air2Punch.ComboNapadi.Add(AirSpin2Win);
     }
 }
