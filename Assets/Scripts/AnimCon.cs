@@ -387,13 +387,13 @@ public class AnimCon : MonoBehaviour
         }
         if (!p.isGrounded)
         {
-            rb.velocity = new Vector2(0f, 0f);
             rb.gravityScale = 0f;
             if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-Udaren-u-Vazduhu"))
             {
                 anim.Play("George-Udaren-u-Vazduhu 0");
             }
             else anim.Play("George-Udaren-u-Vazduhu");
+            rb.velocity = new Vector2(0f, 0f);
         }
     }
     public void ukljuciGravity()

@@ -46,7 +46,7 @@ public class PlayerManager : MonoBehaviour
             P1Hp -= dmg;
             p1Slider.value = P1Hp;
             anim.Hit(pos);
-            if (p1.isGrounded) anim.launch(dir);
+            anim.launch(dir);
         }
 
 
@@ -55,7 +55,7 @@ public class PlayerManager : MonoBehaviour
             P2Hp -= dmg;
             p2Slider.value = P2Hp;
             anim2.Hit(pos);
-            if(p2.isGrounded)anim2.launch(dir);
+            anim2.launch(dir);
         }
 
     }
