@@ -259,19 +259,6 @@ public class AnimCon : MonoBehaviour
         #endregion
 
         #region kretanje
-        if (!disableMove && !inAttack && !p.isCrouching && !p.isGrounded && !p.isDashing)
-        {
-            if (isMoving)
-            {
-                anim.Play("walk1");
-            }
-            if (!isMoving)
-            {
-                anim.Play("idle");
-            }
-        }
-
-
 
         if (!disableMove && !inAttack && !p.isCrouching && p.isGrounded && !p.isDashing)
         {
