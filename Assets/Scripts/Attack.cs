@@ -13,16 +13,18 @@ public class Attack
     public string p1dirInput;
     public KeyCode p2obicanInput;
     public string p2dirInput;
+    public string pozicija;
 
 
     public Attack() { }
 
-    public Attack(string pime, string ppos, int pdmg, float x, float y)
+    public Attack(string pime, string ppos, int pdmg, float x, float y, string ppozicija)
     {
         ime = pime;
         pos = ppos;
         dmg = pdmg;
         dir = new Vector2(x, y);
+        pozicija = ppozicija;
 
     }
 

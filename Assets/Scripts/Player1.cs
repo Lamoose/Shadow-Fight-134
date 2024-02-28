@@ -157,7 +157,7 @@ public class Player1 : MonoBehaviour
     }
 
 
-    IEnumerator Jump()
+    public IEnumerator Jump()
     {
         anim.anim.Play("George-Jump");
         isGrounded = false;

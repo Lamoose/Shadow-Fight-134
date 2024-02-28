@@ -35,10 +35,10 @@ public class AnimCon : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.G))
         {
             if (!p.isGrounded)
-            {
+            {           
                 for (int i = 0; i < napad.ComboNapadi.Count; i++)
                 {
-                    if (Input.GetKeyDown(napad.ComboNapadi[i].p1obicanInput) && napad.ComboNapadi[i].p1dirInput == "nista")
+                    if (Input.GetKeyDown(napad.ComboNapadi[i].p1obicanInput) && napad.ComboNapadi[i].p1dirInput == "nista" && napad.ComboNapadi[i].pozicija == "air")
                     {
                         napadi.Push(napad.ComboNapadi[i]);
                         break;
@@ -83,20 +83,21 @@ public class AnimCon : MonoBehaviour
         #region Napadi na stack
         if (canOnStack)
         {
-
             if (G.trenutni.ime == "Air2Punch")
             {
+                Debug.Log("uspeo sam");
                 KomboajNapad(G.Air2Punch);
             }
 
-            if (G.trenutni.ime == "spin2win")
+            else if (G.trenutni.ime == "spin2win")
             {
+                Debug.Log("uspeo sam");
                 KomboajNapad(G.AirSpin2Win);
             }
 
 
 
-            if ((G.trenutni.ime == "sweep"))    // ovde dodaj && za svaki napad koji ce moci da se chainuje u bilo koji napad
+            else if (G.trenutni.ime == "sweep")    // ovde dodaj && za svaki napad koji ce moci da se chainuje u bilo koji napad
             {
                 KomboajNapad(G.sweep);
 
@@ -169,35 +170,31 @@ public class AnimCon : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F) && !p.isGrounded && !p.isTryingToCrouch)
             {
-                napadi.Push(G.Air2Punch);
+                Air2Punch();
             }
 
             if (Input.GetKeyDown(KeyCode.G) && !p.isGrounded && !p.isTryingToCrouch)
             {
-                napadi.Push(G.AirSpin2Win);
+                AirSpin2Win();
             }
 
 
             if (Input.GetKeyDown(KeyCode.F) && p.isGrounded && !p.isTryingToCrouch)
             {
-                napadi.Push(G.punch);
                 punch();
             }
 
             if (Input.GetKeyDown(KeyCode.G) && !p.isTryingToCrouch && p.isGrounded)
             {
-                napadi.Push(G.kick);
                 kick();
             }
 
             if (Input.GetKeyDown(KeyCode.G) && p.isTryingToCrouch && p.isGrounded)
             {
-                napadi.Push(G.sweep);
                 sweep();
             }
             if (Input.GetKeyDown(KeyCode.F) && p.isTryingToCrouch && p.isGrounded)
             {
-                napadi.Push(G.uppercut);
                 uppercut();
             }
         }
@@ -262,6 +259,19 @@ public class AnimCon : MonoBehaviour
         #endregion
 
         #region kretanje
+        if (!disableMove && !inAttack && !p.isCrouching && !p.isGrounded && !p.isDashing)
+        {
+            if (isMoving)
+            {
+                anim.Play("walk1");
+            }
+            if (!isMoving)
+            {
+                anim.Play("idle");
+            }
+        }
+
+
 
         if (!disableMove && !inAttack && !p.isCrouching && p.isGrounded && !p.isDashing)
         {
@@ -474,7 +484,23 @@ public class AnimCon : MonoBehaviour
             sweep();
             canChain = false;
         }
-        
+        if (napadi.Contains(G.Air2Punch))
+        {
+            Air2Punch();
+            canChain = false;
+        }
+        if (napadi.Contains(G.AirSpin2Win))
+        {
+            AirSpin2Win();
+            canChain = false;
+        }
+        if (napadi.Contains(G.uppercut))
+        {
+            uppercut();
+            canChain = false;
+        }
+
+
     }
     #endregion
 
@@ -595,7 +621,7 @@ public class AnimCon : MonoBehaviour
     private void mozeSve()
     {
         ClearTrenutni();
-        MozeDaChainuje();
+        //MozeDaChainuje();
         MozeDaNapadne();
         MozeNaStack();
         nijeUNapadu();

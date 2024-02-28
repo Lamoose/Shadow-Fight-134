@@ -9,14 +9,14 @@ public class PlayerManager : MonoBehaviour
 
     public Slider p1Slider;
     public Slider p2Slider;
-    [SerializeField]private Player1 p1;
-    [SerializeField]private Player2 p2;
+    [SerializeField] private Player1 p1;
+    [SerializeField] private Player2 p2;
     [SerializeField] private FightGui Gui;
     [SerializeField] private GameObject Canvas;
 
     private int MaxHP=100;
-    [SerializeField]private int P1Hp;
-    [SerializeField]private int P2Hp;
+    [SerializeField] private int P1Hp;
+    [SerializeField] private int P2Hp;
     [SerializeField] private AnimCon anim;
     [SerializeField] private AnimCon2 anim2;
     [SerializeField] private GatoAnimCon Gatoanim;
