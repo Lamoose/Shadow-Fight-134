@@ -32,7 +32,6 @@ public class AnimCon2 : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(G.trenutni.stranaUdarca);
         #region Napadi na stack
         if (canOnStack)
         {

@@ -11,17 +11,18 @@ public class George : MonoBehaviour
     public Attack trenutni = new Attack();
     public Attack cuvaj = new Attack();
 
+
     #region punch
-    public Attack punch = new Attack("Punch", "mid", 3, 250f, 0f, "ground", "kamera"); 
-    public Attack uppercut = new Attack("uppercut", "mid", 5, 250f, 700f, "ground", "kamera");
-    public Attack Air2Punch = new Attack("Air2Punch", "mid", 5, 1000f, 0f, "air", "oba");
+    public Attack punch = new Attack("Punch", "mid", 3, 250f, 0f, "ground", "kamera", 7); 
+    public Attack uppercut = new Attack("uppercut", "mid", 5, 250f, 700f, "ground", "kamera", 10);
+    public Attack Air2Punch = new Attack("Air2Punch", "mid", 5, 1000f, 0f, "air", "oba", 7);
     #endregion
 
     #region kick
-    public Attack sweep = new Attack("sweep", "low", 5, 250f, 0f, "ground", "screen");
-    public Attack kick = new Attack("kick", "high", 3, 250f, 0f, "ground", "kamera");
-    public Attack triplekick = new Attack("triplekick", "mid", 2, 250f, 0f, "ground", "screen");
-    public Attack AirSpin2Win = new Attack("spin2win", "mid", 2, 0f, -1000f, "air", "oba");
+    public Attack sweep = new Attack("sweep", "low", 5, 250f, 0f, "ground", "screen", 12);
+    public Attack kick = new Attack("kick", "high", 3, 250f, 0f, "ground", "kamera", 7);
+    public Attack triplekick = new Attack("triplekick", "mid", 2, 250f, 0f, "ground", "screen", 13);
+    public Attack AirSpin2Win = new Attack("spin2win", "mid", 2, 0f, -1000f, "air", "oba", 9);
     #endregion
 
 

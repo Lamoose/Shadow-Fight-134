@@ -22,7 +22,8 @@ public class AnimCon : MonoBehaviour
     Stack<Attack> napadi = new Stack<Attack>();
     public bool overheadBlock;
     public bool LowBlock;
-
+    public int frameovi;
+    public bool inBlockAnim;
 
 
 
@@ -305,6 +306,16 @@ public class AnimCon : MonoBehaviour
         }
 
 
+        if (inBlockAnim)
+        {
+            if (Time.frameCount > frameovi)
+            {
+                disableMove = false;
+                inBlockAnim = false;
+            }
+        }
+
+
     }
 
     #region funkcije
@@ -364,30 +375,35 @@ public class AnimCon : MonoBehaviour
     }
 
 
-    public void Hit(string pos, string stranaUdarca)
+    public void Hit(string pos, string stranaUdarca, int blockRecovery)
     {
+
+        frameovi = Time.frameCount + blockRecovery;
+        Debug.Log(pos);
 
         if (p.isGrounded)
         {
-            //Debug.Log(stranaUdarca);
             if (overheadBlock && pos == "high")
-            {
+            {                    
                 anim.Play("George-block-ka-gore");
+                inBlockAnim = true;
             }
             else if (LowBlock && (pos == "low" || pos == "mid"))
             {
                 anim.Play("George-block-na-dole");
+                inBlockAnim = true;
             }
             else if (overheadBlock  && pos == "mid")
             {
-                //Debug.Log("uspeo sam");
                 if (stranaUdarca == "kamera")
                 {
                     anim.Play("George-block-od-screena");
+                    inBlockAnim = true;
                 }
                 if (stranaUdarca == "screen")
                 {
                     anim.Play("George-block-ka-screenu");
+                    inBlockAnim = true;
                 }
             }
             else if (pos == "mid" && !p.isCrouching)

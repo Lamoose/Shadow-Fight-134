@@ -15,11 +15,12 @@ public class Attack
     public string p2dirInput;
     public string pozicija;
     public string stranaUdarca;
+    public int blockRecovery;
 
 
     public Attack() { }
 
-    public Attack(string pime, string ppos, int pdmg, float x, float y, string ppozicija, string pstranaUdarca)
+    public Attack(string pime, string ppos, int pdmg, float x, float y, string ppozicija, string pstranaUdarca, int pblockRecovery)
     {
         ime = pime;
         pos = ppos;
@@ -27,6 +28,7 @@ public class Attack
         dir = new Vector2(x, y);
         pozicija = ppozicija;
         stranaUdarca = pstranaUdarca;
+        blockRecovery = pblockRecovery;
     }
 
     public void kopiraj(Attack napad)
@@ -36,6 +38,7 @@ public class Attack
         dmg = napad.dmg;
         dir = napad.dir;
         stranaUdarca = napad.stranaUdarca;
+        blockRecovery = napad.blockRecovery;
         ComboNapadi.Clear();
         for (int i = 0; i < napad.ComboNapadi.Count; i++)
         {
