@@ -38,15 +38,23 @@ public class PlayerManager : MonoBehaviour
         if(MatchManager.currentTimer <= 0) StartCoroutine(StartNextRound());
     }
 
-    public void Hit(int player, int dmg, string pos,Vector2 dir)
+    public void Hit(int player, int dmg, string pos,Vector2 dir, string stranaUdarca)
     {
         if (player == 8)
         {
-
-            P1Hp -= dmg;
-            p1Slider.value = P1Hp;
-            anim.Hit(pos);
-            anim.launch(dir);
+            if (anim.overheadBlock || anim.LowBlock)
+            {
+                //Debug.Log(stranaUdarca);
+                anim.Hit(pos, stranaUdarca);
+            }
+            else
+            {
+                P1Hp -= dmg;
+                p1Slider.value = P1Hp;
+                anim.Hit(pos, stranaUdarca);
+                anim.launch(dir);
+            }
+            
         }
 
 

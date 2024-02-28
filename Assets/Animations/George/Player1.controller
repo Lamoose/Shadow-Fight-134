@@ -22,6 +22,32 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
+--- !u!1102 &-8283077071788042507
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: George-block-ka-gore
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 2ecf10e5b929e1e40b7a30fab016bb0a, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &-7878928707405957174
 AnimatorState:
   serializedVersion: 6
@@ -215,22 +241,22 @@ AnimatorStateMachine:
   m_ChildStates:
   - serializedVersion: 1
     m_State: {fileID: -7837431571982704474}
-    m_Position: {x: -480, y: -150, z: 0}
+    m_Position: {x: -490, y: -230, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3598087184173863960}
-    m_Position: {x: 80, y: -50, z: 0}
+    m_Position: {x: 160, y: -150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 6561214019215684678}
-    m_Position: {x: 80, y: -110, z: 0}
+    m_Position: {x: 160, y: -210, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7961882879068775487}
-    m_Position: {x: -480, y: -90, z: 0}
+    m_Position: {x: -490, y: -170, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -2661347557191371844}
-    m_Position: {x: -480, y: 30, z: 0}
+    m_Position: {x: -490, y: -50, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8600405377934563501}
-    m_Position: {x: 80, y: 10, z: 0}
+    m_Position: {x: 160, y: -90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 66040261557211136}
     m_Position: {x: -980, y: 320, z: 0}
@@ -239,16 +265,16 @@ AnimatorStateMachine:
     m_Position: {x: -980, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -3376691079034640582}
-    m_Position: {x: -480, y: -30, z: 0}
+    m_Position: {x: -490, y: -110, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7800638929126227414}
     m_Position: {x: -980, y: 200, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5698126271986584668}
-    m_Position: {x: 300, y: -50, z: 0}
+    m_Position: {x: 380, y: -150, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5955786825220340413}
-    m_Position: {x: 300, y: -110, z: 0}
+    m_Position: {x: 380, y: -210, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -747967400746419401}
     m_Position: {x: -770, y: 320, z: 0}
@@ -287,7 +313,7 @@ AnimatorStateMachine:
     m_Position: {x: -200, y: 320, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 8546943173017120165}
-    m_Position: {x: 80, y: 250, z: 0}
+    m_Position: {x: 80, y: 260, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -5257870454452486804}
     m_Position: {x: 80, y: 310, z: 0}
@@ -296,7 +322,31 @@ AnimatorStateMachine:
     m_Position: {x: 80, y: 360, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7878928707405957174}
-    m_Position: {x: 115, y: 425, z: 0}
+    m_Position: {x: 80, y: 410, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -8283077071788042507}
+    m_Position: {x: -270, y: 30, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 3893429684473309231}
+    m_Position: {x: -270, y: 80, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 5575507111152245079}
+    m_Position: {x: -270, y: 130, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -2583705048179744738}
+    m_Position: {x: -270, y: 180, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -4285073808598568430}
+    m_Position: {x: -50, y: 180, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: -5053400534923518828}
+    m_Position: {x: -50, y: 130, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 193900373262117072}
+    m_Position: {x: -50, y: 80, z: 0}
+  - serializedVersion: 1
+    m_State: {fileID: 4457970416780553306}
+    m_Position: {x: -50, y: 30, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -333,6 +383,32 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1102 &-5053400534923518828
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: George-block-od-screena 0
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 18fbb5b51f48e2f419655df220c2ac65, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &-4376353294332346057
 AnimatorState:
   serializedVersion: 6
@@ -354,6 +430,32 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: f9f4d49059f49bd43a5cb1d17c076067, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &-4285073808598568430
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: George-block-na-dole 0
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 14b304828889e88419792064f37def45, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -484,6 +586,32 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 8a846bf9de3244b44a74c0142972746a, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &-2583705048179744738
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: George-block-na-dole
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 14b304828889e88419792064f37def45, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 
@@ -829,6 +957,32 @@ AnimatorState:
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
   m_TimeParameter: 
+--- !u!1102 &193900373262117072
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: George-block-ka-screenu 0
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 520a48874c1c40a419db2a497d2d073e, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
 --- !u!1102 &416762690257316551
 AnimatorState:
   serializedVersion: 6
@@ -1028,6 +1182,84 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
   m_Motion: {fileID: 7400000, guid: f52d999463f937644989adef1e969472, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &3893429684473309231
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: George-block-ka-screenu
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 520a48874c1c40a419db2a497d2d073e, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &4457970416780553306
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: George-block-ka-gore 0
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 2ecf10e5b929e1e40b7a30fab016bb0a, type: 2}
+  m_Tag: 
+  m_SpeedParameter: 
+  m_MirrorParameter: 
+  m_CycleOffsetParameter: 
+  m_TimeParameter: 
+--- !u!1102 &5575507111152245079
+AnimatorState:
+  serializedVersion: 6
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: George-block-od-screena
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions: []
+  m_StateMachineBehaviours: []
+  m_Position: {x: 50, y: 50, z: 0}
+  m_IKOnFeet: 0
+  m_WriteDefaultValues: 1
+  m_Mirror: 0
+  m_SpeedParameterActive: 0
+  m_MirrorParameterActive: 0
+  m_CycleOffsetParameterActive: 0
+  m_TimeParameterActive: 0
+  m_Motion: {fileID: 7400000, guid: 18fbb5b51f48e2f419655df220c2ac65, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

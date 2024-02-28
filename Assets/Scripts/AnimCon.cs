@@ -20,6 +20,9 @@ public class AnimCon : MonoBehaviour
     public bool isMoving;
     public bool canChain;
     Stack<Attack> napadi = new Stack<Attack>();
+    public bool overheadBlock;
+    public bool LowBlock;
+
 
 
 
@@ -80,6 +83,7 @@ public class AnimCon : MonoBehaviour
 
     void Update()
     {
+
         #region Napadi na stack
         if (canOnStack)
         {
@@ -281,6 +285,26 @@ public class AnimCon : MonoBehaviour
         }
         #endregion
 
+
+        if (!p.isDashing && !inAttack && Input.GetButton("left ctrl") && (!p.isTryingToCrouch || !p.isCrouching))
+        {
+            overheadBlock = true;
+        }
+        else
+        {
+            overheadBlock = false;
+        }
+         
+        if (!p.isDashing && !inAttack && Input.GetButton("left ctrl") && (p.isTryingToCrouch || p.isCrouching))
+        {
+            LowBlock = true;
+        }
+        else
+        {
+            LowBlock = false;
+        }
+
+
     }
 
     #region funkcije
@@ -340,13 +364,33 @@ public class AnimCon : MonoBehaviour
     }
 
 
-    public void Hit(string pos)
+    public void Hit(string pos, string stranaUdarca)
     {
 
         if (p.isGrounded)
         {
-
-            if (pos == "mid" && !p.isCrouching)
+            //Debug.Log(stranaUdarca);
+            if (overheadBlock && pos == "high")
+            {
+                anim.Play("George-block-ka-gore");
+            }
+            else if (LowBlock && (pos == "low" || pos == "mid"))
+            {
+                anim.Play("George-block-na-dole");
+            }
+            else if (overheadBlock  && pos == "mid")
+            {
+                //Debug.Log("uspeo sam");
+                if (stranaUdarca == "kamera")
+                {
+                    anim.Play("George-block-od-screena");
+                }
+                if (stranaUdarca == "screen")
+                {
+                    anim.Play("George-block-ka-screenu");
+                }
+            }
+            else if (pos == "mid" && !p.isCrouching)
             {
 
                 if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid"))

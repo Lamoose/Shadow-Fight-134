@@ -16,7 +16,7 @@ public class HitBox : MonoBehaviour
             if (canHit)
             {
                 int Player = collision.gameObject.layer;
-                pm.Hit(Player, george.trenutni.dmg,george.trenutni.pos,george.trenutni.dir);
+                pm.Hit(Player, george.trenutni.dmg,george.trenutni.pos,george.trenutni.dir,george.trenutni.stranaUdarca);
                 canHit = false;
             }
         }

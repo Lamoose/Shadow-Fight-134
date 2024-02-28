@@ -14,18 +14,19 @@ public class Attack
     public KeyCode p2obicanInput;
     public string p2dirInput;
     public string pozicija;
+    public string stranaUdarca;
 
 
     public Attack() { }
 
-    public Attack(string pime, string ppos, int pdmg, float x, float y, string ppozicija)
+    public Attack(string pime, string ppos, int pdmg, float x, float y, string ppozicija, string pstranaUdarca)
     {
         ime = pime;
         pos = ppos;
         dmg = pdmg;
         dir = new Vector2(x, y);
         pozicija = ppozicija;
-
+        stranaUdarca = pstranaUdarca;
     }
 
     public void kopiraj(Attack napad)
@@ -34,6 +35,7 @@ public class Attack
         pos = napad.pos;
         dmg = napad.dmg;
         dir = napad.dir;
+        stranaUdarca = napad.stranaUdarca;
         ComboNapadi.Clear();
         for (int i = 0; i < napad.ComboNapadi.Count; i++)
         {
