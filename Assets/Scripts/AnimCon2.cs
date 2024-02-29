@@ -380,7 +380,7 @@ public class AnimCon2 : MonoBehaviour
                 anim.Play("George-Udaren-u-Vazduhu 0");
             }
             else anim.Play("George-Udaren-u-Vazduhu");
-            rb.velocity = new Vector2(0f, 0f);
+            rb.velocity = new Vector2(rb.velocity.y, 0f);
            
         }
     }
@@ -405,10 +405,15 @@ public class AnimCon2 : MonoBehaviour
         if (anim1.dodajKnockback) Debug.Log(dir);
         GameObject p1;
         p1 = GameObject.Find("/Player1");
-        if (gameObject.transform.position.x > p1.transform.position.x) rb.AddForce(dir);
+        if (gameObject.transform.position.x > p1.transform.position.x)
+        {
+            if (!p.isGrounded && !anim1.dodajKnockback) dir.y /= 2;
+            rb.AddForce(dir);
+        }
         else
         {
             dir = new Vector2(-dir.x, dir.y);
+            if (!p.isGrounded && !anim1.dodajKnockback) dir.y /= 2;
             rb.AddForce(dir);
         }
         if (dir.y > 0f && p.isGrounded)
