@@ -61,12 +61,12 @@ public class Player1 : MonoBehaviour
         #endregion
 
         #region flip
-        if (player2.transform.position.x < gameObject.transform.position.x)
+        if (player2.transform.position.x < gameObject.transform.position.x && !anim.inAttack)
         {
             flip();
         }
 
-        if (player2.transform.position.x > gameObject.transform.position.x)
+        if (player2.transform.position.x > gameObject.transform.position.x && !anim.inAttack)
         {
             flip(0, 180f);
         }
