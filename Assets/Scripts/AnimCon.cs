@@ -439,10 +439,35 @@ public class AnimCon : MonoBehaviour
 
         if (p.isGrounded)
         {
-
-            if (pos == "mid" && !p.isCrouching)
+            if (overheadBlock && pos == "high")
             {
+                anim.Play("George-block-ka-gore");
+                inBlockAnim = true;
+            }
 
+            else if (LowBlock && (pos == "low" || pos == "mid"))
+            {
+                anim.Play("George-block-na-dole");
+                inBlockAnim = true;
+            }
+            else if (overheadBlock && pos == "mid")
+            {
+                //Debug.Log("uspeo sam");
+                if (stranaUdarca == "kamera")
+                {
+                    anim.Play("George-block-od-screena");
+                    inBlockAnim = true;
+                }
+                if (stranaUdarca == "screen")
+                {
+                    anim.Play("George-block-ka-screenu");
+                    inBlockAnim = true;
+                }
+            }
+
+
+            else if (pos == "mid" && !p.isCrouching)
+            { 
                 if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid"))
                 {
                     anim.Play("George-hit-mid 0");

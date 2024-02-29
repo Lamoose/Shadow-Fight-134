@@ -440,6 +440,33 @@ public class AnimCon2 : MonoBehaviour
 
         if (p.isGrounded)
         {
+            if (overheadBlock && pos == "high")
+            {
+                anim.Play("George-block-ka-gore");
+                inBlockAnim = true;
+            }
+
+            else if (LowBlock && (pos == "low" || pos == "mid"))
+            {
+                anim.Play("George-block-na-dole");
+                inBlockAnim = true;
+            }
+            else if (overheadBlock && pos == "mid")
+            {
+                //Debug.Log("uspeo sam");
+                if (stranaUdarca == "kamera")
+                {
+                    anim.Play("George-block-od-screena");
+                    inBlockAnim = true;
+                }
+                if (stranaUdarca == "screen")
+                {
+                    anim.Play("George-block-ka-screenu");
+                    inBlockAnim = true;
+                }
+            }
+
+
 
             if (pos == "mid" && !p.isCrouching)
             {
