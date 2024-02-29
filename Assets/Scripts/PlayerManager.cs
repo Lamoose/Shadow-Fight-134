@@ -70,7 +70,7 @@ public class PlayerManager : MonoBehaviour
             anim2.launch(dir);
             if (anim.dodajKnockback)
             {
-                
+                Debug.Log(anim.G.trenutni.ime);
                 anim2.launch(anim.G.trenutni.posebanKnockback);
             }
         }

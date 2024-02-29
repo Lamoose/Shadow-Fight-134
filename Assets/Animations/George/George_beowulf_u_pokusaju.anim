@@ -5738,13 +5738,6 @@ AnimationClip:
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 1.1333333
-    functionName: SkloniKnockback
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
   - time: 1.7333333
     functionName: MozeNaStack
     data: 
@@ -5789,6 +5782,13 @@ AnimationClip:
     messageOptions: 0
   - time: 1.7333333
     functionName: MozeDaNapadne
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 1.7333333
+    functionName: SkloniKnockback
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
