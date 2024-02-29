@@ -436,34 +436,11 @@ public class AnimCon : MonoBehaviour
     {
 
         frameovi = Time.frameCount + blockRecovery;
-        Debug.Log(pos);
 
         if (p.isGrounded)
         {
-            if (overheadBlock && pos == "high")
-            {                    
-                anim.Play("George-block-ka-gore");
-                inBlockAnim = true;
-            }
-            else if (LowBlock && (pos == "low" || pos == "mid"))
-            {
-                anim.Play("George-block-na-dole");
-                inBlockAnim = true;
-            }
-            else if (overheadBlock  && pos == "mid")
-            {
-                if (stranaUdarca == "kamera")
-                {
-                    anim.Play("George-block-od-screena");
-                    inBlockAnim = true;
-                }
-                if (stranaUdarca == "screen")
-                {
-                    anim.Play("George-block-ka-screenu");
-                    inBlockAnim = true;
-                }
-            }
-            else if (pos == "mid" && !p.isCrouching)
+
+            if (pos == "mid" && !p.isCrouching)
             {
 
                 if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid"))
@@ -491,13 +468,15 @@ public class AnimCon : MonoBehaviour
             }
             else if (pos == "low" && !p.isCrouching)
             {
-
-                if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-low")) anim.Play("George-hit-low 0");
+                if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-low"))
+                {
+                    anim.Play("George-hit-low 0");
+                    Debug.Log(anim.GetCurrentAnimatorStateInfo(0));
+                }
                 else anim.Play("George-hit-low");
             }
             else if (pos == "low" && p.isCrouching)
             {
-
                 if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid")) anim.Play("George-hit-mid 0");
                 else anim.Play("George-hit-mid");
             }
@@ -510,7 +489,8 @@ public class AnimCon : MonoBehaviour
                 anim.Play("George-Udaren-u-Vazduhu 0");
             }
             else anim.Play("George-Udaren-u-Vazduhu");
-            rb.velocity = new Vector2(0f, 0f);
+            rb.velocity = new Vector2(rb.velocity.y, 0f);
+
         }
     }
     public void ukljuciGravity()
@@ -531,13 +511,18 @@ public class AnimCon : MonoBehaviour
     {
         GameObject p2;
         p2 = GameObject.Find("/Player2");
-        if (gameObject.transform.position.x > p2.transform.position.x) rb.AddForce(dir);
+        if (gameObject.transform.position.x > p2.transform.position.x)
+        {
+            if(!p.isGrounded)dir.y = dir.y / 2;
+            rb.AddForce(dir);
+        }
         else
         {
+            if (!p.isGrounded) dir.y = dir.y / 2;
             dir = new Vector2(-dir.x, dir.y);
             rb.AddForce(dir);
         }
-        if (dir.y > 0f)
+        if (dir.y > 0f && p.isGrounded)
         {
             anim.Play("George-Launch");
             p.isGrounded = false;

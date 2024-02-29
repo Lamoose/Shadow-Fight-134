@@ -54,6 +54,7 @@ public class PlayerManager : MonoBehaviour
             }
             else
             {
+                Debug.Log("p1");
                 P1Hp -= dmg;
                 p1Slider.value = P1Hp;
                 anim.Hit(pos, stranaUdarca, blockRecovery);
@@ -65,14 +66,23 @@ public class PlayerManager : MonoBehaviour
 
         if (player == 9)
         {
-            P2Hp -= dmg;
-            p2Slider.value = P2Hp;
-            anim2.Hit(pos);
-            anim2.launch(dir);
-            if (anim.dodajKnockback)
+            if (anim2.overheadBlock && (pos == "high" || pos == "mid"))
             {
-                Debug.Log(anim.G.trenutni.ime);
-                anim2.launch(anim.G.trenutni.posebanKnockback);
+                //Debug.Log(stranaUdarca);
+                anim.Hit(pos, stranaUdarca, blockRecovery);
+            }
+            else if (anim2.LowBlock && (pos == "low" || pos == "mid"))
+            {
+                anim.Hit(pos, stranaUdarca, blockRecovery);
+            }
+            else
+            {
+
+                Debug.Log("p2");
+                P2Hp -= dmg;
+                p2Slider.value = P1Hp;
+                anim2.Hit(pos, stranaUdarca, blockRecovery);
+                anim2.launch(dir);
             }
         }
 

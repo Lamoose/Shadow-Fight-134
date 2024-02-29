@@ -29,7 +29,7 @@ public class Player2 : MonoBehaviour
     [SerializeField] private int speed;
     [SerializeField] public bool isCrouching;
     [SerializeField] public bool isTryingToCrouch;
-    [SerializeField] private float horizontalInput;
+    [SerializeField] public float horizontalInput;
     #endregion
 
 
@@ -46,21 +46,20 @@ public class Player2 : MonoBehaviour
         {
             isTryingToCrouch = true;
         }
-        if(Input.GetKeyUp(KeyCode.DownArrow))
+        else if (Input.GetKeyUp(KeyCode.DownArrow))
         {
             isTryingToCrouch = false;
         }
         #endregion
 
         #region input i vreme
-        if (!anim.disableMove) horizontalInput = Input.GetAxisRaw("HorizontalS");
-        else horizontalInput = 0f;
+        horizontalInput = Input.GetAxisRaw("HorizontalS");
         float verticalInput = Input.GetAxisRaw("VerticalS");
         TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
         TimeSinceJump += Time.deltaTime;
         #endregion
 
-
+       
         #region kretanje kad je horizontal 0 
         if (horizontalInput == 0 && isGrounded && !isDashing || anim.disableMove)
         {
@@ -145,7 +144,7 @@ public class Player2 : MonoBehaviour
     }
 
 
-    IEnumerator Jump()
+    public IEnumerator Jump()
     {
         anim.anim.Play("George-Jump");
         isGrounded = false;

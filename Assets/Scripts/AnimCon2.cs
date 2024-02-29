@@ -7,9 +7,10 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class AnimCon2 : MonoBehaviour
 {
     [SerializeField] private Player2 p;
+    [SerializeField] private Player1 p2;
     [SerializeField] private HitBox Hb;
     [SerializeField] public George G;
-    [SerializeField] private AnimCon anim1;
+    public AnimCon2 anim2;
     Rigidbody2D rb;
     public Animator anim;
 
@@ -21,170 +22,179 @@ public class AnimCon2 : MonoBehaviour
     public bool isMoving;
     public bool canChain;
     Stack<Attack> napadi = new Stack<Attack>();
+    public bool overheadBlock;
+    public bool LowBlock;
+    public int frameovi;
+    public bool inBlockAnim;
+    public bool dodajKnockback;
 
 
 
     void Start()
     {
-
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void KomboajNapad(Attack napad)
     {
 
-
-        #region Napadi na stack
-        if (canOnStack)
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.O))
         {
-            if ((G.trenutni.ime == "sweep"))    // ovde dodaj && za svaki napad koji ce moci da se chainuje u bilo koji napad
+            if (!p.isGrounded && horizontal() > 0 && !p.isTryingToCrouch)
             {
-                if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.O))
+                for (int i = 0; i < napad.ComboNapadi.Count; i++)
                 {
-                    if (p.isTryingToCrouch)
+                    if (Input.GetKeyDown(napad.ComboNapadi[i].p2obicanInput) && napad.ComboNapadi[i].p2dirInput == "napred" && napad.ComboNapadi[i].pozicija == "air")
                     {
-                        for (int i = 0; i < G.sweep.ComboNapadi.Count; i++)
-                        {
-                            if (Input.GetKeyDown(G.sweep.ComboNapadi[i].p2obicanInput) && G.sweep.ComboNapadi[i].p2dirInput == "dole")
-                            {
-                                napadi.Push(G.sweep.ComboNapadi[i]);
-                                break;
-                            }
-                        }
+                        napadi.Push(napad.ComboNapadi[i]);
+                        break;
                     }
-                    else
+                }
+            }
+
+            else if (!p.isGrounded && horizontal() == 0)
+            {
+                for (int i = 0; i < napad.ComboNapadi.Count; i++)
+                {
+                    if (Input.GetKeyDown(napad.ComboNapadi[i].p2obicanInput) && napad.ComboNapadi[i].p2dirInput == "nista" && napad.ComboNapadi[i].pozicija == "air")
                     {
-                        for (int i = 0; i < G.sweep.ComboNapadi.Count; i++)
+                        napadi.Push(napad.ComboNapadi[i]);
+                        break;
+                    }
+                }
+
+            }
+            else
+            {
+                if (p.isTryingToCrouch)
+                {
+                    for (int i = 0; i < napad.ComboNapadi.Count; i++)
+                    {
+                        if (Input.GetKeyDown(napad.ComboNapadi[i].p2obicanInput) && napad.ComboNapadi[i].p2dirInput == "dole")
                         {
-                            if (Input.GetKeyDown(G.sweep.ComboNapadi[i].p2obicanInput) && G.sweep.ComboNapadi[i].p2dirInput == "nista")
-                            {
-                                napadi.Push(G.sweep.ComboNapadi[i]);
-                                break;
-                            }
+                            napadi.Push(napad.ComboNapadi[i]);
+                            break;
                         }
                     }
                 }
+                else
+                {
+                    for (int i = 0; i < napad.ComboNapadi.Count; i++)
+                    {
+                        if (Input.GetKeyDown(napad.ComboNapadi[i].p2obicanInput) && napad.ComboNapadi[i].p2dirInput == "nista")
+                        {
+                            napadi.Push(napad.ComboNapadi[i]);
+                            break;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+    }
+
+
+    void Update()
+    {
+        #region Napadi na stack
+        if (canOnStack)
+        {
+            if (G.trenutni.ime == "PunchKickAir")
+            {
+                KomboajNapad(G.PunchKickAir);
+            }
+
+            if (G.trenutni.ime == "Air2Punch")
+            {
+                KomboajNapad(G.Air2Punch);
+            }
+
+            else if (G.trenutni.ime == "spin2win")
+            {
+                KomboajNapad(G.AirSpin2Win);
+            }
+
+
+
+            else if (G.trenutni.ime == "sweep")    // ovde dodaj && za svaki napad koji ce moci da se chainuje u bilo koji napad
+            {
+                KomboajNapad(G.sweep);
 
             }
 
 
             else if (G.trenutni.ime == "Punch")
             {
-                if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.O))
-                {
-                    if (p.isTryingToCrouch)
-                    {
-                        for (int i = 0; i < G.punch.ComboNapadi.Count; i++)
-                        {
-                            if (Input.GetKeyDown(G.punch.ComboNapadi[i].p2obicanInput) && G.punch.ComboNapadi[i].p2dirInput == "dole")
-                            {
-                                napadi.Push(G.punch.ComboNapadi[i]);
-                                break;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        for (int i = 0; i < G.punch.ComboNapadi.Count; i++)
-                        {
-                            if (Input.GetKeyDown(G.punch.ComboNapadi[i].p2obicanInput) && G.punch.ComboNapadi[i].p2dirInput == "nista")
-                            {
-                                napadi.Push(G.punch.ComboNapadi[i]);
-                                break;
-                            }
-                        }
-                    }
-                }
+                KomboajNapad(G.punch);
 
             }
 
             else if (G.trenutni.ime == "kick")
             {
-                if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.O))
-                {
-                    if (p.isTryingToCrouch)
-                    {
-                        for (int i = 0; i < G.kick.ComboNapadi.Count; i++)
-                        {
-                            if (Input.GetKeyDown(G.kick.ComboNapadi[i].p2obicanInput) && G.kick.ComboNapadi[i].p2dirInput == "dole")
-                            {
-                                napadi.Push(G.kick.ComboNapadi[i]);
-                                break;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        for (int i = 0; i < G.kick.ComboNapadi.Count; i++)
-                        {
-                            if (Input.GetKeyDown(G.kick.ComboNapadi[i].p2obicanInput) && G.kick.ComboNapadi[i].p2dirInput == "nista")
-                            {
-                                napadi.Push(G.kick.ComboNapadi[i]);
-                                break;
-                            }
-                        }
-                    }
-                }
+                KomboajNapad(G.kick);
 
             }
 
             else if (G.trenutni.ime == "triplekick")
             {
-                if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.O))
-                {
-                    if (p.isTryingToCrouch)
-                    {
-                        for (int i = 0; i < G.triplekick.ComboNapadi.Count; i++)
-                        {
-                            if (Input.GetKeyDown(G.triplekick.ComboNapadi[i].p2obicanInput) && G.triplekick.ComboNapadi[i].p2dirInput == "dole")
-                            {
-                                napadi.Push(G.triplekick.ComboNapadi[i]);
-                                break;
-                            }
-                        }
-                    }
-                    else
-                    {
-                        for (int i = 0; i < G.triplekick.ComboNapadi.Count; i++)
-                        {
-                            if (Input.GetKeyDown(G.triplekick.ComboNapadi[i].p2obicanInput) && G.triplekick.ComboNapadi[i].p2dirInput == "nista")
-                            {
-                                napadi.Push(G.triplekick.ComboNapadi[i]);
-                                break;
-                            }
-                        }
-                    }
-                }
+                KomboajNapad(G.triplekick);
 
             }
 
             else if (p.isDashing)
             {
-                if (Input.GetKeyDown(KeyCode.P))
+                if (horizontal() > 0)
                 {
-                    udarioUDashu = true;
-                    napadi.Push(G.punch);
+                    if (Input.GetKeyDown(KeyCode.O) && !p.isGrounded)
+                    {
+                        udarioUDashu = true;
+                        napadi.Push(G.PunchKickAir);
+                    }
                 }
 
-                if (Input.GetKeyDown(KeyCode.O) && !p.isCrouching)
+                if (horizontal() == 0)
                 {
-                    udarioUDashu = true;
-                    napadi.Push(G.kick);
+                    if (Input.GetKeyDown(KeyCode.P) && !p.isGrounded && !p.isTryingToCrouch)
+                    {
+                        udarioUDashu = true;
+                        napadi.Push(G.Air2Punch);
+                    }
+
+                    if (Input.GetKeyDown(KeyCode.O) && !p.isGrounded && !p.isTryingToCrouch)
+                    {
+                        udarioUDashu = true;
+                        napadi.Push(G.AirSpin2Win);
+                    }
+
+                    if (Input.GetKeyDown(KeyCode.P) && !p.isTryingToCrouch)
+                    {
+                        udarioUDashu = true;
+                        napadi.Push(G.punch);
+                    }
+
+                    if (Input.GetKeyDown(KeyCode.O) && !p.isTryingToCrouch)
+                    {
+                        udarioUDashu = true;
+                        napadi.Push(G.kick);
+                    }
+
+                    if (Input.GetKeyDown(KeyCode.O) && p.isTryingToCrouch)
+                    {
+                        udarioUDashu = true;
+                        //p.isDashing = false;
+                        napadi.Push(G.sweep);
+                    }
+
+                    if (Input.GetKeyDown(KeyCode.P) && p.isTryingToCrouch)
+                    {
+                        udarioUDashu = true;
+                        napadi.Push(G.uppercut);
+                    }
                 }
 
-                if (Input.GetKeyDown(KeyCode.P) && p.isCrouching)
-                {
-                    udarioUDashu = true;
-                    //p.isDashing = false;
-                    napadi.Push(G.sweep);
-                }
-
-                if (Input.GetKeyDown(KeyCode.O) && p.isCrouching)
-                {
-                    napadi.Push(G.uppercut);
-                    uppercut();
-                }
             }
 
         }
@@ -193,34 +203,73 @@ public class AnimCon2 : MonoBehaviour
         #region Napadi iz idle
         if (canAttack)
         {
-            if (Input.GetKeyDown(KeyCode.P))
+            if (horizontal() > 0)
             {
-                napadi.Push(G.punch);
-                punch();
+                if (Input.GetKeyDown(KeyCode.O) && !p.isGrounded)
+                {
+                    PunchKickAir();
+                }
+            }
+            if (horizontal() == 0)
+            {
+                if (Input.GetKeyDown(KeyCode.P) && !p.isGrounded && !p.isTryingToCrouch)
+                {
+                    Air2Punch();
+                }
+
+                else if (Input.GetKeyDown(KeyCode.O) && !p.isGrounded && !p.isTryingToCrouch)
+                {
+                    AirSpin2Win();
+                }
+
+
+                else if (Input.GetKeyDown(KeyCode.P) && p.isGrounded && !p.isTryingToCrouch)
+                {
+                    punch();
+                }
+
+                else if (Input.GetKeyDown(KeyCode.O) && !p.isTryingToCrouch && p.isGrounded)
+                {
+                    kick();
+                }
+
+                else if (Input.GetKeyDown(KeyCode.O) && p.isTryingToCrouch && p.isGrounded)
+                {
+                    sweep();
+                }
+                else if (Input.GetKeyDown(KeyCode.P) && p.isTryingToCrouch && p.isGrounded)
+                {
+                    uppercut();
+                }
             }
 
-            if (Input.GetKeyDown(KeyCode.O) && !p.isTryingToCrouch)
-            {
-                napadi.Push(G.kick);
-                kick();
-            }
 
-            if (Input.GetKeyDown(KeyCode.O) && p.isTryingToCrouch)
-            {
-                napadi.Push(G.sweep);
-                sweep();
-            }
-            if (Input.GetKeyDown(KeyCode.P) && p.isTryingToCrouch)
-            {
-                napadi.Push(G.uppercut);
-                uppercut();
-            }
+
         }
         #endregion
 
         #region Napadi na chain
         if (canChain)
         {
+            if (napadi.Contains(G.PunchKickAir))
+            {
+                PunchKickAir();
+                canChain = false;
+            }
+
+            if (napadi.Contains(G.Air2Punch))
+            {
+                Air2Punch();
+                canChain = false;
+            }
+
+            if (napadi.Contains(G.AirSpin2Win))
+            {
+                AirSpin2Win();
+                canChain = false;
+            }
+
+
             if (napadi.Contains(G.punch))
             {
                 punch();
@@ -286,11 +335,45 @@ public class AnimCon2 : MonoBehaviour
         }
         #endregion
 
+
+        if (!p.isDashing && !inAttack && Input.GetButton("[") && (!p.isTryingToCrouch || !p.isCrouching))
+        {
+            overheadBlock = true;
+        }
+        else
+        {
+            overheadBlock = false;
+        }
+
+        if (!p.isDashing && !inAttack && Input.GetButton("[") && (p.isTryingToCrouch || p.isCrouching))
+        {
+            LowBlock = true;
+        }
+        else
+        {
+            LowBlock = false;
+        }
+
+
+        if (inBlockAnim)
+        {
+            if (Time.frameCount > frameovi)
+            {
+                disableMove = false;
+                inBlockAnim = false;
+            }
+        }
+
+
     }
 
     #region funkcije
 
     #region napadi
+
+
+
+
     private void punch()
     {
         G.trenutni.kopiraj(G.punch);
@@ -326,14 +409,41 @@ public class AnimCon2 : MonoBehaviour
         napadi.Clear();
     }
 
-    public void Hit(string pos)
+    private void Air2Punch()
     {
+        G.trenutni.kopiraj(G.Air2Punch);
+        anim.Play("Air2Punch");
+        napadi.Clear();
+    }
+
+    private void AirSpin2Win()
+    {
+        G.trenutni.kopiraj(G.AirSpin2Win);
+        anim.Play("AirSpin2Win");
+        napadi.Clear();
+    }
+
+    private void PunchKickAir()
+    {
+        G.trenutni.kopiraj(G.PunchKickAir);
+        anim.Play("PunchKickAir");
+        napadi.Clear();
+    }
+
+
+
+    public void Hit(string pos, string stranaUdarca, int blockRecovery)
+    {
+
+        frameovi = Time.frameCount + blockRecovery;
+        Debug.Log(pos);
+
         if (p.isGrounded)
         {
-            
+
             if (pos == "mid" && !p.isCrouching)
             {
-                
+
                 if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid"))
                 {
                     anim.Play("George-hit-mid 0");
@@ -381,10 +491,9 @@ public class AnimCon2 : MonoBehaviour
             }
             else anim.Play("George-Udaren-u-Vazduhu");
             rb.velocity = new Vector2(rb.velocity.y, 0f);
-           
+
         }
     }
-
     public void ukljuciGravity()
     {
         rb.gravityScale = 3f;
@@ -399,21 +508,20 @@ public class AnimCon2 : MonoBehaviour
     {
         Hb.ResetHit();
     }
-
     public void launch(Vector2 dir)
     {
-        if (anim1.dodajKnockback) Debug.Log(dir);
         GameObject p1;
         p1 = GameObject.Find("/Player1");
+
         if (gameObject.transform.position.x > p1.transform.position.x)
         {
-            if (!p.isGrounded && !anim1.dodajKnockback) dir.y /= 2;
+            if (!p.isGrounded) dir.y = dir.y / 2;
             rb.AddForce(dir);
         }
         else
         {
             dir = new Vector2(-dir.x, dir.y);
-            if (!p.isGrounded && !anim1.dodajKnockback) dir.y /= 2;
+            if (!p.isGrounded) dir.y = dir.y / 2;           
             rb.AddForce(dir);
         }
         if (dir.y > 0f && p.isGrounded)
@@ -424,26 +532,18 @@ public class AnimCon2 : MonoBehaviour
     }
 
 
+
     public void recovery()
     {
         anim.Play("George-Launch-Ustaje");
     }
+
+
     #endregion
 
 
     #region stack
 
-    private void ProveriDaLiJeSvakiNapadKliknut()
-    {
-        if (Input.GetKeyDown(KeyCode.F) && !p.isCrouching)
-        {
-            napadi.Push(G.punch);
-        }
-        if (Input.GetKeyDown(KeyCode.G) && !p.isCrouching)
-        {
-            napadi.Push(G.kick);
-        }
-    }
 
 
 
@@ -456,6 +556,11 @@ public class AnimCon2 : MonoBehaviour
             punch();
             canChain = false;
         }
+        if (napadi.Contains(G.PunchKickAir))
+        {
+            PunchKickAir();
+            canChain = false;
+        }
         if (napadi.Contains(G.kick))
         {
             kick();
@@ -466,6 +571,22 @@ public class AnimCon2 : MonoBehaviour
             sweep();
             canChain = false;
         }
+        if (napadi.Contains(G.Air2Punch))
+        {
+            Air2Punch();
+            canChain = false;
+        }
+        if (napadi.Contains(G.AirSpin2Win))
+        {
+            AirSpin2Win();
+            canChain = false;
+        }
+        if (napadi.Contains(G.uppercut))
+        {
+            uppercut();
+            canChain = false;
+        }
+
 
     }
     #endregion
@@ -557,8 +678,8 @@ public class AnimCon2 : MonoBehaviour
         float xf = float.Parse(x);
         float yf = float.Parse(y);
 
-
         Vector2 dir = new Vector2(xf, yf);
+
         GameObject p1;
         p1 = GameObject.Find("/Player1");
         if (gameObject.transform.position.x > p1.transform.position.x)
@@ -574,9 +695,34 @@ public class AnimCon2 : MonoBehaviour
         rb.velocity = Vector2.zero;
     }
 
+
+    public void Knockback()
+    {
+        dodajKnockback = true;
+    }
+    public void SkloniKnockback()
+    {
+        dodajKnockback = false;
+    }
+
+
+    public float horizontal()
+    {
+        if (gameObject.transform.position.x > p2.transform.position.x)
+        {
+            return -p.horizontalInput;
+        }
+        else
+        {
+            return p.horizontalInput;
+        }
+    }
+
+
+
     private void neMozeNista()
     {
-        ClearTrenutni();
+        //ClearTrenutni();
         NeMozeDaChainuje();
         NeMozeDaNapadne();
         NeMozeNaStack();
@@ -587,21 +733,15 @@ public class AnimCon2 : MonoBehaviour
     private void mozeSve()
     {
         ClearTrenutni();
-        MozeDaChainuje();
+        //MozeDaChainuje();
         MozeDaNapadne();
         MozeNaStack();
         nijeUNapadu();
         MozeDaHoda();
         Hb.ResetHit();
-
     }
     #endregion
 
     #endregion
 
-    public void PrimiKnockback(Vector2 dir)
-    {
-        rb.AddForce(dir);
-        //anim1.posebanKnockback = false;
-    }
 }

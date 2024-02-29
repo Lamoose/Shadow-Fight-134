@@ -350,10 +350,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 113648116}
+  p2: {fileID: 1509562727}
   Hb: {fileID: 669162431}
   G: {fileID: 113648120}
-  anim1: {fileID: 1509562731}
-  anim: {fileID: 0}
+  anim2: {fileID: 113648119}
+  anim: {fileID: 113648118}
   udarioUDashu: 0
   inAttack: 0
   canAttack: 0
@@ -361,6 +362,11 @@ MonoBehaviour:
   disableMove: 0
   isMoving: 0
   canChain: 0
+  overheadBlock: 0
+  LowBlock: 0
+  frameovi: 0
+  inBlockAnim: 0
+  dodajKnockback: 0
 --- !u!114 &113648120
 MonoBehaviour:
   m_ObjectHideFlags: 0
