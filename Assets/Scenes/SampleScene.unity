@@ -1956,7 +1956,7 @@ MonoBehaviour:
   Hb: {fileID: 266220932}
   G: {fileID: 1509562732}
   anim2: {fileID: 113648119}
-  anim: {fileID: 0}
+  anim: {fileID: 1509562730}
   udarioUDashu: 0
   inAttack: 0
   canAttack: 0

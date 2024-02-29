@@ -54,7 +54,7 @@ public class Player1 : MonoBehaviour
         #endregion
 
         #region input i vreme
-        if (!anim.disableMove) horizontalInput = Input.GetAxisRaw("Horizontal");
+        horizontalInput = Input.GetAxisRaw("Horizontal");
         float verticalInput = Input.GetAxisRaw("Vertical");
         TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
         TimeSinceJump += Time.deltaTime;

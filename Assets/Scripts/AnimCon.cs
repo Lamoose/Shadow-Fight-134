@@ -41,10 +41,7 @@ public class AnimCon : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.F) || Input.GetKeyDown(KeyCode.G))
         {
-
-
-
-            if (!p.isGrounded && horizontal() > 0)
+            if (!p.isGrounded && horizontal() > 0 && !p.isTryingToCrouch)
             {
                 for (int i = 0; i < napad.ComboNapadi.Count; i++)
                 {
@@ -56,7 +53,7 @@ public class AnimCon : MonoBehaviour
                 }
             }
 
-            else if (!p.isGrounded)
+            else if (!p.isGrounded && horizontal() == 0)
             {           
                 for (int i = 0; i < napad.ComboNapadi.Count; i++)
                 {
@@ -172,7 +169,7 @@ public class AnimCon : MonoBehaviour
                         napadi.Push(G.AirSpin2Win);
                     }
 
-                    if (Input.GetKeyDown(KeyCode.F))
+                    if (Input.GetKeyDown(KeyCode.F) && !p.isTryingToCrouch)
                     {
                         udarioUDashu = true;
                         napadi.Push(G.punch);
@@ -193,6 +190,7 @@ public class AnimCon : MonoBehaviour
 
                     if (Input.GetKeyDown(KeyCode.F) && p.isTryingToCrouch)
                     {
+                        udarioUDashu = true;
                         napadi.Push(G.uppercut);
                     }
                 }
