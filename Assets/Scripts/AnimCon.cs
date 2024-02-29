@@ -151,7 +151,7 @@ public class AnimCon : MonoBehaviour
             {
                 if (horizontal() > 0)
                 {
-                    if (Input.GetKeyDown(KeyCode.G) && !p.isGrounded && p.horizontalInput > 0)
+                    if (Input.GetKeyDown(KeyCode.G) && !p.isGrounded)
                     {
                         udarioUDashu = true;
                         napadi.Push(G.PunchKickAir);
@@ -428,7 +428,7 @@ public class AnimCon : MonoBehaviour
     private void PunchKickAir()
     {
         G.trenutni.kopiraj(G.PunchKickAir);
-        anim.Play("George-punch-kick-air");
+        anim.Play("PunchKickAir");
         napadi.Clear();
     }
 
@@ -737,7 +737,7 @@ public class AnimCon : MonoBehaviour
 
     private void neMozeNista()
     {
-        ClearTrenutni();
+        //ClearTrenutni();
         NeMozeDaChainuje();
         NeMozeDaNapadne();
         NeMozeNaStack();

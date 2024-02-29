@@ -33,6 +33,7 @@ public class PlayerManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.T)) SceneManager.LoadScene("SampleScene");
         if (P1Hp <= 0) StartCoroutine(StartNextRound());
         if (P2Hp <= 0) StartCoroutine(StartNextRound());
         if(MatchManager.currentTimer <= 0) StartCoroutine(StartNextRound());
@@ -83,7 +84,9 @@ public class PlayerManager : MonoBehaviour
         Gui.enabled = false;
         Gatoanim.roundEnd();
 
-        if(P1Hp<=0)
+        
+
+        if (P1Hp<=0)
         {
             anim.anim.Play("roundEnd");
         }

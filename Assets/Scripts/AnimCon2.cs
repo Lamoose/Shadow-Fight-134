@@ -402,7 +402,7 @@ public class AnimCon2 : MonoBehaviour
 
     public void launch(Vector2 dir)
     {
-        if (anim1.dodajKnockback == true) Debug.Log(dir);
+        if (anim1.dodajKnockback) Debug.Log(dir);
         GameObject p1;
         p1 = GameObject.Find("/Player1");
         if (gameObject.transform.position.x > p1.transform.position.x) rb.AddForce(dir);

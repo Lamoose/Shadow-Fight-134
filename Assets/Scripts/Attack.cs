@@ -45,13 +45,14 @@ public class Attack
     }
 
 
-
+    //public Attack PunchKickAir = new Attack("PunchKickAir", "high", 7, 0f, 0f, "air", "oba", 9, 500f, 0f);
     public void kopiraj(Attack napad)
     {
         ime = napad.ime;
         pos = napad.pos;
         dmg = napad.dmg;
         dir = napad.dir;
+        pozicija = napad.pozicija;
         stranaUdarca = napad.stranaUdarca;
         blockRecovery = napad.blockRecovery;
         posebanKnockback = napad.posebanKnockback;
