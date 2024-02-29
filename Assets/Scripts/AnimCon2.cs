@@ -468,7 +468,7 @@ public class AnimCon2 : MonoBehaviour
 
 
 
-            if (pos == "mid" && !p.isCrouching)
+            else if (pos == "mid" && !p.isCrouching)
             {
 
                 if (anim.GetCurrentAnimatorStateInfo(0).IsName("George-hit-mid"))

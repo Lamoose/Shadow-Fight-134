@@ -69,18 +69,18 @@ public class PlayerManager : MonoBehaviour
             if (anim2.overheadBlock && (pos == "high" || pos == "mid"))
             {
                 //Debug.Log(stranaUdarca);
-                anim.Hit(pos, stranaUdarca, blockRecovery);
+                anim2.Hit(pos, stranaUdarca, blockRecovery);
             }
             else if (anim2.LowBlock && (pos == "low" || pos == "mid"))
             {
-                anim.Hit(pos, stranaUdarca, blockRecovery);
+                anim2.Hit(pos, stranaUdarca, blockRecovery);
             }
             else
             {
 
                 Debug.Log("p2");
                 P2Hp -= dmg;
-                p2Slider.value = P1Hp;
+                p2Slider.value = P2Hp;
                 anim2.Hit(pos, stranaUdarca, blockRecovery);
                 anim2.launch(dir);
             }
