@@ -99,14 +99,14 @@ public class Player2 : MonoBehaviour
 
             }
 
-            if (Input.GetKeyDown(KeyCode.I) && !isDashing && !dashed && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
+            if (Input.GetKeyDown(KeyCode.K) && !isDashing && !dashed && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
             {
                 StartCoroutine(Dash(horizontalInput));
 
                 TimeSinceDash = 0f; //resetuje dash poslednje dash vreme
             }
 
-            if (Input.GetKeyDown(KeyCode.U) && !isDashing)
+            if (Input.GetKeyDown(KeyCode.L) && !isDashing)
             {
                 if (canDoubleJump) StartCoroutine(Jump());
             }

@@ -336,7 +336,7 @@ public class AnimCon2 : MonoBehaviour
         #endregion
 
 
-        if (!p.isDashing && !inAttack && Input.GetButton("[") && (!p.isTryingToCrouch || !p.isCrouching))
+        if (!p.isDashing && !inAttack && Input.GetButton(";") && (!p.isTryingToCrouch || !p.isCrouching))
         {
             overheadBlock = true;
         }
@@ -345,7 +345,7 @@ public class AnimCon2 : MonoBehaviour
             overheadBlock = false;
         }
 
-        if (!p.isDashing && !inAttack && Input.GetButton("[") && (p.isTryingToCrouch || p.isCrouching))
+        if (!p.isDashing && !inAttack && Input.GetButton(";") && (p.isTryingToCrouch || p.isCrouching))
         {
             LowBlock = true;
         }
