@@ -30,7 +30,7 @@ public class Player1 : MonoBehaviour
     [SerializeField] private int speed;
     [SerializeField] public bool isCrouching;
     [SerializeField] public bool isTryingToCrouch;
-    [SerializeField] private float horizontalInput;
+    [SerializeField] public float horizontalInput;
     #endregion
 
 
@@ -55,7 +55,6 @@ public class Player1 : MonoBehaviour
 
         #region input i vreme
         if (!anim.disableMove) horizontalInput = Input.GetAxisRaw("Horizontal");
-        else horizontalInput = 0f;
         float verticalInput = Input.GetAxisRaw("Vertical");
         TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
         TimeSinceJump += Time.deltaTime;

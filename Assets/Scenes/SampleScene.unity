@@ -352,6 +352,7 @@ MonoBehaviour:
   p: {fileID: 113648116}
   Hb: {fileID: 669162431}
   G: {fileID: 113648120}
+  anim1: {fileID: 1509562731}
   anim: {fileID: 0}
   udarioUDashu: 0
   inAttack: 0
@@ -1809,7 +1810,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3, y: 3.5}
+    oldSize: {x: 3, y: 3.35}
     newSize: {x: 3, y: 3.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -1951,8 +1952,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   p: {fileID: 1509562727}
+  p2: {fileID: 113648116}
   Hb: {fileID: 266220932}
   G: {fileID: 1509562732}
+  anim2: {fileID: 113648119}
   anim: {fileID: 0}
   udarioUDashu: 0
   inAttack: 0
@@ -1961,6 +1964,11 @@ MonoBehaviour:
   disableMove: 0
   isMoving: 0
   canChain: 0
+  overheadBlock: 0
+  LowBlock: 0
+  frameovi: 0
+  inBlockAnim: 0
+  dodajKnockback: 0
 --- !u!114 &1509562732
 MonoBehaviour:
   m_ObjectHideFlags: 0

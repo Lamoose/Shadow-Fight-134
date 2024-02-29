@@ -68,6 +68,11 @@ public class PlayerManager : MonoBehaviour
             p2Slider.value = P2Hp;
             anim2.Hit(pos);
             anim2.launch(dir);
+            if (anim.dodajKnockback)
+            {
+                
+                anim2.launch(anim.G.trenutni.posebanKnockback);
+            }
         }
 
     }

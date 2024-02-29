@@ -8,7 +8,8 @@ public class AnimCon2 : MonoBehaviour
 {
     [SerializeField] private Player2 p;
     [SerializeField] private HitBox Hb;
-    [SerializeField] private George G;
+    [SerializeField] public George G;
+    [SerializeField] private AnimCon anim1;
     Rigidbody2D rb;
     public Animator anim;
 
@@ -32,6 +33,8 @@ public class AnimCon2 : MonoBehaviour
 
     void Update()
     {
+
+
         #region Napadi na stack
         if (canOnStack)
         {
@@ -399,6 +402,7 @@ public class AnimCon2 : MonoBehaviour
 
     public void launch(Vector2 dir)
     {
+        if (anim1.dodajKnockback == true) Debug.Log(dir);
         GameObject p1;
         p1 = GameObject.Find("/Player1");
         if (gameObject.transform.position.x > p1.transform.position.x) rb.AddForce(dir);
@@ -407,12 +411,13 @@ public class AnimCon2 : MonoBehaviour
             dir = new Vector2(-dir.x, dir.y);
             rb.AddForce(dir);
         }
-        if (dir.y > 0f)
+        if (dir.y > 0f && p.isGrounded)
         {
             anim.Play("George-Launch");
             p.isGrounded = false;
         }
     }
+
 
     public void recovery()
     {
@@ -589,7 +594,9 @@ public class AnimCon2 : MonoBehaviour
 
     #endregion
 
-
-
-
+    public void PrimiKnockback(Vector2 dir)
+    {
+        rb.AddForce(dir);
+        //anim1.posebanKnockback = false;
+    }
 }
