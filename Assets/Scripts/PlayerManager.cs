@@ -59,6 +59,12 @@ public class PlayerManager : MonoBehaviour
                 p1Slider.value = P1Hp;
                 anim.Hit(pos, stranaUdarca, blockRecovery);
                 anim.launch(dir);
+
+                if (anim2.dodajKnockback)
+                {
+
+                    anim.launch(anim2.G.trenutni.posebanKnockback);
+                }
             }
             
         }
@@ -81,8 +87,13 @@ public class PlayerManager : MonoBehaviour
                 Debug.Log("p2");
                 P2Hp -= dmg;
                 p2Slider.value = P2Hp;
-                anim2.Hit(pos, stranaUdarca, blockRecovery);
+                anim2.Hit(pos, stranaUdarca,blockRecovery);
                 anim2.launch(dir);
+                if (anim.dodajKnockback)
+                {
+                    anim2.launch(anim.G.trenutni.posebanKnockback);
+                }
+
             }
         }
 
