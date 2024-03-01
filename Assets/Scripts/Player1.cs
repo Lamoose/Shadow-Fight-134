@@ -10,7 +10,7 @@ public class Player1 : MonoBehaviour
     [SerializeField] private float JumpForce = 12f;
     [SerializeField] private float JumpTime =0.2f;
     [SerializeField] private float TimeSinceJump;
-    [SerializeField] private bool canDoubleJump = false;
+    [SerializeField] public bool canDoubleJump = false;
     [SerializeField] private bool Jumped = false;
     #endregion
 
@@ -31,6 +31,7 @@ public class Player1 : MonoBehaviour
     [SerializeField] public bool isCrouching;
     [SerializeField] public bool isTryingToCrouch;
     [SerializeField] public float horizontalInput;
+    [SerializeField] public bool jumpCancel;
     #endregion
 
 
@@ -118,7 +119,7 @@ public class Player1 : MonoBehaviour
                 TimeSinceDash = 0f; //resetuje dash poslednje dash vreme
             }
 
-            if (Input.GetKeyDown(KeyCode.Space) && !isDashing)
+            if ((Input.GetKeyDown(KeyCode.Space) && !isDashing && isGrounded) || (Input.GetKeyDown(KeyCode.Space) && jumpCancel))
             {
                 if(canDoubleJump)StartCoroutine(Jump());
             }

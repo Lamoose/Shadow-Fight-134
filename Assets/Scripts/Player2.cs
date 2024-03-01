@@ -30,6 +30,7 @@ public class Player2 : MonoBehaviour
     [SerializeField] public bool isCrouching;
     [SerializeField] public bool isTryingToCrouch;
     [SerializeField] public float horizontalInput;
+    [SerializeField] public bool jumpCancel;
     #endregion
 
 
