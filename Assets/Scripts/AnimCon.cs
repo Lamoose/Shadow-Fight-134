@@ -7,7 +7,6 @@ using static UnityEngine.RuleTile.TilingRuleOutput;
 public class AnimCon : MonoBehaviour
 {
     [SerializeField] private Player1 p;
-    [SerializeField] private Player2 p2;
     [SerializeField] private HitBox Hb;
     [SerializeField] public George G;
     public AnimCon2 anim2;
@@ -731,6 +730,8 @@ public class AnimCon : MonoBehaviour
 
     public float horizontal()
     {
+        GameObject p2;
+        p2 = GameObject.Find("/Player2");
         if (gameObject.transform.position.x > p2.transform.position.x)
         {
             return  -p.horizontalInput;
