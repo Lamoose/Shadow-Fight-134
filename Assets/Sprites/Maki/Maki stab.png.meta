@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 20
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -113,7 +113,7 @@ TextureImporter:
       name: Maki stab_0
       rect:
         serializedVersion: 2
-        x: 38
+        x: 37
         y: 1919
         width: 179
         height: 68
@@ -134,7 +134,7 @@ TextureImporter:
       name: Maki stab_1
       rect:
         serializedVersion: 2
-        x: 292
+        x: 293
         y: 1919
         width: 179
         height: 68
@@ -155,7 +155,7 @@ TextureImporter:
       name: Maki stab_2
       rect:
         serializedVersion: 2
-        x: 565
+        x: 549
         y: 1920
         width: 179
         height: 68
@@ -176,7 +176,7 @@ TextureImporter:
       name: Maki stab_3
       rect:
         serializedVersion: 2
-        x: 820
+        x: 804
         y: 1919
         width: 179
         height: 68
@@ -197,7 +197,7 @@ TextureImporter:
       name: Maki stab_4
       rect:
         serializedVersion: 2
-        x: 1075
+        x: 1060
         y: 1919
         width: 179
         height: 68
@@ -218,7 +218,7 @@ TextureImporter:
       name: Maki stab_5
       rect:
         serializedVersion: 2
-        x: 1338
+        x: 1315
         y: 1919
         width: 179
         height: 68
@@ -239,7 +239,7 @@ TextureImporter:
       name: Maki stab_6
       rect:
         serializedVersion: 2
-        x: 1588
+        x: 1571
         y: 1919
         width: 179
         height: 68
@@ -260,7 +260,7 @@ TextureImporter:
       name: Maki stab_7
       rect:
         serializedVersion: 2
-        x: 1845
+        x: 1827
         y: 1919
         width: 179
         height: 68
@@ -281,7 +281,7 @@ TextureImporter:
       name: Maki stab_8
       rect:
         serializedVersion: 2
-        x: 38
+        x: 35
         y: 1663
         width: 179
         height: 68
@@ -323,7 +323,7 @@ TextureImporter:
       name: Maki stab_10
       rect:
         serializedVersion: 2
-        x: 565
+        x: 548
         y: 1663
         width: 179
         height: 68
@@ -344,7 +344,7 @@ TextureImporter:
       name: Maki stab_11
       rect:
         serializedVersion: 2
-        x: 820
+        x: 804
         y: 1663
         width: 179
         height: 68
@@ -365,7 +365,7 @@ TextureImporter:
       name: Maki stab_12
       rect:
         serializedVersion: 2
-        x: 1075
+        x: 1060
         y: 1663
         width: 179
         height: 68
@@ -386,7 +386,7 @@ TextureImporter:
       name: Maki stab_13
       rect:
         serializedVersion: 2
-        x: 1338
+        x: 1316
         y: 1663
         width: 179
         height: 68
@@ -407,7 +407,7 @@ TextureImporter:
       name: Maki stab_14
       rect:
         serializedVersion: 2
-        x: 1588
+        x: 1572
         y: 1663
         width: 179
         height: 68
@@ -428,7 +428,7 @@ TextureImporter:
       name: Maki stab_15
       rect:
         serializedVersion: 2
-        x: 1845
+        x: 1829
         y: 1663
         width: 179
         height: 68
@@ -470,7 +470,7 @@ TextureImporter:
       name: Maki stab_17
       rect:
         serializedVersion: 2
-        x: 292
+        x: 294
         y: 1407
         width: 179
         height: 69
@@ -491,7 +491,7 @@ TextureImporter:
       name: Maki stab_18
       rect:
         serializedVersion: 2
-        x: 565
+        x: 550
         y: 1407
         width: 179
         height: 69
@@ -512,7 +512,7 @@ TextureImporter:
       name: Maki stab_19
       rect:
         serializedVersion: 2
-        x: 820
+        x: 806
         y: 1407
         width: 179
         height: 69
@@ -533,7 +533,7 @@ TextureImporter:
       name: Maki stab_20
       rect:
         serializedVersion: 2
-        x: 1075
+        x: 1062
         y: 1407
         width: 179
         height: 69
