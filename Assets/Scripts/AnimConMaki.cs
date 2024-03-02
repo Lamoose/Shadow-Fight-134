@@ -101,24 +101,52 @@ public class AnimConMaki : MonoBehaviour
         #region Napadi na stack
         if (canOnStack)
         {
-            
+            if (M.trenutni.ime == "stab")
+            {
+                KomboajNapad(M.stab);
+            }
+
+            if (M.trenutni.ime == "stabdole")
+            {
+                KomboajNapad(M.stabdole);
+            }
         }
         #endregion
 
         #region Napadi iz idle
         if (canAttack)
         {
-            
+
+            if (horizontal() > 0)
+            {
+                
+            }
+            if (horizontal() == 0)
+            {
+                if (Input.GetKeyDown(KeyCode.F) && p.isGrounded)
+                {
+                    stab();
+                }
+            }
 
 
-
-        }
+            }
         #endregion
 
         #region Napadi na chain
         if (canChain)
         {
-           
+            if (napadi.Contains(M.stab))
+            {
+                stab();
+                canChain = false;
+            }
+
+            if (napadi.Contains(M.stabdole))
+            {
+                stabdole();
+                canChain = false;
+            }
         }
         #endregion
 
@@ -182,7 +210,19 @@ public class AnimConMaki : MonoBehaviour
     #region napadi
 
 
+    private void stab()
+    {
+        M.trenutni.kopiraj(M.stab);
+        anim.Play("stab");
+        napadi.Clear();
+    }
 
+    private void stabdole()
+    {
+        M.trenutni.kopiraj(M.stabdole);
+        anim.Play("stabdole");
+        napadi.Clear();
+    }
 
     public void Hit(string pos, string stranaUdarca, int blockRecovery)
     {
