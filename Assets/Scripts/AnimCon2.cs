@@ -207,7 +207,7 @@ public class AnimCon2 : MonoBehaviour
         {
             if (horizontal() > 0)
             {
-                if (Input.GetKeyDown(KeyCode.O) && !p.isGrounded || Gamepad.current.buttonSouth.wasPressedThisFrame && !p.isGrounded)
+                if (Input.GetKeyDown(KeyCode.O) && !p.isGrounded || Gamepad.current.buttonWest.wasPressedThisFrame && !p.isGrounded)
                 {
                     PunchKickAir();
                 }
