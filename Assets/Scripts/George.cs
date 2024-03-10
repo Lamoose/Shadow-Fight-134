@@ -25,7 +25,7 @@ public class George : MonoBehaviour
     public Attack kick = new Attack("kick", "high", 3, 250f, 0f, "ground", "kamera", 7);
     public Attack triplekick = new Attack("triplekick", "mid", 2, 250f, 0f, "ground", "screen", 13);
     public Attack AirSpin2Win = new Attack("spin2win", "high", 2, 0f, 10f, "air", "oba", 9 , 0f, -5000f);
-    public Attack PunchKickAir = new Attack("PunchKickAir", "high", 2, 0f, 0f, "air", "oba", 9, 500f, 1000f);
+    public Attack PunchKickAir = new Attack("PunchKickAir", "high", 2, 0f, 0f, "air", "oba", 9, 1000f, 0f);
     #endregion
 
 
