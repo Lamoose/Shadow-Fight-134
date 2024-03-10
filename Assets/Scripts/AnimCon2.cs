@@ -47,7 +47,7 @@ public class AnimCon2 : MonoBehaviour
             {
                 for (int i = 0; i < napad.ComboNapadi.Count; i++)
                 {  
-                    if (Input.GetKeyDown(napad.ComboNapadi[i].p2obicanInput) && napad.ComboNapadi[i].p2dirInput == "napred" && napad.ComboNapadi[i].pozicija == "air" || Gamepad.current.buttonEast.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "napred" && napad.ComboNapadi[i].pozicija == "air" || Gamepad.current.buttonSouth.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "napred" && napad.ComboNapadi[i].pozicija == "air")
+                    if (Input.GetKeyDown(napad.ComboNapadi[i].p2obicanInput) && napad.ComboNapadi[i].p2dirInput == "napred" && napad.ComboNapadi[i].pozicija == "air" || Gamepad.current.buttonWest.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "napred" && napad.ComboNapadi[i].pozicija == "air" || Gamepad.current.buttonSouth.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "napred" && napad.ComboNapadi[i].pozicija == "air")
                     {
                         napadi.Push(napad.ComboNapadi[i]);
                         break;
@@ -59,7 +59,7 @@ public class AnimCon2 : MonoBehaviour
             {
                 for (int i = 0; i < napad.ComboNapadi.Count; i++)
                 {
-                    if (Input.GetKeyDown(napad.ComboNapadi[i].p2obicanInput) && napad.ComboNapadi[i].p2dirInput == "nista" && napad.ComboNapadi[i].pozicija == "air" || Gamepad.current.buttonEast.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "nista" && napad.ComboNapadi[i].pozicija == "air" || Gamepad.current.buttonSouth.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "nista" && napad.ComboNapadi[i].pozicija == "air")
+                    if (Input.GetKeyDown(napad.ComboNapadi[i].p2obicanInput) && napad.ComboNapadi[i].p2dirInput == "nista" && napad.ComboNapadi[i].pozicija == "air" || Gamepad.current.buttonWest.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "nista" && napad.ComboNapadi[i].pozicija == "air" || Gamepad.current.buttonSouth.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "nista" && napad.ComboNapadi[i].pozicija == "air")
                     {
                         napadi.Push(napad.ComboNapadi[i]);
                         break;
@@ -73,7 +73,7 @@ public class AnimCon2 : MonoBehaviour
                 {
                     for (int i = 0; i < napad.ComboNapadi.Count; i++)
                     {
-                        if (Input.GetKeyDown(napad.ComboNapadi[i].p2obicanInput) && napad.ComboNapadi[i].p2dirInput == "dole" || Gamepad.current.buttonEast.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "dole" || Gamepad.current.buttonSouth.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "dole")
+                        if (Input.GetKeyDown(napad.ComboNapadi[i].p2obicanInput) && napad.ComboNapadi[i].p2dirInput == "dole" || Gamepad.current.buttonWest.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "dole" || Gamepad.current.buttonSouth.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "dole")
                         {
                             napadi.Push(napad.ComboNapadi[i]);
                             break;
@@ -84,7 +84,7 @@ public class AnimCon2 : MonoBehaviour
                 {
                     for (int i = 0; i < napad.ComboNapadi.Count; i++)
                     {
-                        if (Input.GetKeyDown(napad.ComboNapadi[i].p2obicanInput) && napad.ComboNapadi[i].p2dirInput == "nista" || Gamepad.current.buttonEast.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "nista" || Gamepad.current.buttonSouth.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "nista")
+                        if (Input.GetKeyDown(napad.ComboNapadi[i].p2obicanInput) && napad.ComboNapadi[i].p2dirInput == "nista" || Gamepad.current.buttonWest.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "nista" || Gamepad.current.buttonSouth.wasPressedThisFrame && napad.ComboNapadi[i].p2dirInput == "nista")
                         {
                             napadi.Push(napad.ComboNapadi[i]);
                             break;
