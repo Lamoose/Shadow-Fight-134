@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player2 : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class Player2 : MonoBehaviour
     [SerializeField] private float TimeSinceJump;
     [SerializeField] private bool canDoubleJump = false;
     [SerializeField] private bool Jumped = false;
+    [SerializeField] public bool jumpCancel;
     #endregion
 
     #region dash
@@ -30,7 +32,7 @@ public class Player2 : MonoBehaviour
     [SerializeField] public bool isCrouching;
     [SerializeField] public bool isTryingToCrouch;
     [SerializeField] public float horizontalInput;
-    [SerializeField] public bool jumpCancel;
+    [SerializeField] private Controller controller;
     #endregion
 
 
@@ -40,26 +42,40 @@ public class Player2 : MonoBehaviour
         Physics2D.IgnoreLayerCollision(6, 7); //ignorise koliziju od drugog igraca da bi mogao da prolazis kroz njega
     }
 
+    private void Awake()
+    {
+        controller = new Controller();
+    }
     void Update()
     {
         #region crouch
-        if (Input.GetKeyDown(KeyCode.DownArrow))
+        if (Input.GetKeyDown(KeyCode.DownArrow) || Gamepad.current.dpad.down.isPressed)
         {
             isTryingToCrouch = true;
         }
-        else if (Input.GetKeyUp(KeyCode.DownArrow))
+        else if (Input.GetKeyUp(KeyCode.DownArrow) || Gamepad.current.dpad.down.wasReleasedThisFrame)
         {
             isTryingToCrouch = false;
         }
         #endregion
 
         #region input i vreme
-        horizontalInput = Input.GetAxisRaw("HorizontalS");
-        float verticalInput = Input.GetAxisRaw("VerticalS");
+        if (Gamepad.current.dpad.right.isPressed)
+        {
+            horizontalInput = 1f;
+        }
+        else if (Gamepad.current.dpad.left.isPressed)
+        {
+            horizontalInput = -1f;
+        }
+        else
+        {
+            horizontalInput = Input.GetAxisRaw("HorizontalS");
+            float verticalInput = Input.GetAxisRaw("VerticalS");
+        }
         TimeSinceDash += Time.deltaTime; //gleda koklo dugo se nije dashovao
         TimeSinceJump += Time.deltaTime;
         #endregion
-
        
         #region kretanje kad je horizontal 0 
         if (horizontalInput == 0 && isGrounded && !isDashing || anim.disableMove)
@@ -76,7 +92,7 @@ public class Player2 : MonoBehaviour
         #endregion
 
         #region jump i crouch
-        if (Input.GetKeyUp(KeyCode.DownArrow))
+        if (Input.GetKeyUp(KeyCode.DownArrow) || Gamepad.current.dpad.down.wasReleasedThisFrame)
         {
             isCrouching = false;
         }
@@ -100,19 +116,19 @@ public class Player2 : MonoBehaviour
 
             }
 
-            if (Input.GetKeyDown(KeyCode.K) && !isDashing && !dashed && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
+            if (Input.GetKeyDown(KeyCode.K) && !isDashing && !dashed && TimeSinceDash >= dashCooldown && horizontalInput != 0f || Gamepad.current.rightTrigger.wasPressedThisFrame && !isDashing && !dashed && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
             {
                 StartCoroutine(Dash(horizontalInput));
 
                 TimeSinceDash = 0f; //resetuje dash poslednje dash vreme
             }
 
-            if (Input.GetKeyDown(KeyCode.L) && !isDashing)
+            if (Input.GetKeyDown(KeyCode.L) && !isDashing || Gamepad.current.dpad.up.wasPressedThisFrame && !isDashing)
             {
                 if (canDoubleJump) StartCoroutine(Jump());
             }
 
-            if (Input.GetKeyDown(KeyCode.DownArrow))
+            if (Input.GetKeyDown(KeyCode.DownArrow) || Gamepad.current.dpad.down.isPressed)
             {
                 isCrouching = true;
             }
