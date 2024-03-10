@@ -70,6 +70,7 @@ public class Player2 : MonoBehaviour
         }
         else
         {
+            horizontalInput = 0f;
             horizontalInput = Input.GetAxisRaw("HorizontalS");
             float verticalInput = Input.GetAxisRaw("VerticalS");
         }
