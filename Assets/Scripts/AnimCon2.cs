@@ -537,7 +537,7 @@ public class AnimCon2 : MonoBehaviour
     {
         Hb.ResetHit();
     }
-    public void launch(Vector2 dir)
+    public void launch(Vector2 dir, string pozicija)
     {
         GameObject p1;
         p1 = GameObject.Find("/Player1");
@@ -553,7 +553,7 @@ public class AnimCon2 : MonoBehaviour
             if (!p.isGrounded) dir.y = dir.y / 2;           
             rb.AddForce(dir);
         }
-        if (dir.y > 0f && p.isGrounded)
+        if (dir.y > 0f && p.isGrounded && pozicija != "air") 
         {
             anim.Play("George-Launch");
             p.isGrounded = false;

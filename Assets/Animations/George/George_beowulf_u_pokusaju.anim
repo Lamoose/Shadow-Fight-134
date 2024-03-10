@@ -1883,15 +1883,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 1
         value: -1.0564959
-        inSlope: 0
-        outSlope: 0
+        inSlope: 19.02601
+        outSlope: 19.02601
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1.0333333
-        value: -1.1601197
+        value: -0.0357368
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -2075,15 +2075,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 1
         value: 3.221301
-        inSlope: 0
-        outSlope: 0
+        inSlope: 25.671598
+        outSlope: 25.671598
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1.0333333
-        value: 3.1663988
+        value: 4.5212455
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3642,15 +3642,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 1
         value: -1.0564959
-        inSlope: 0
-        outSlope: 0
+        inSlope: 19.02601
+        outSlope: 19.02601
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1.0333333
-        value: -1.1601197
+        value: -0.0357368
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -3834,15 +3834,15 @@ AnimationClip:
       - serializedVersion: 3
         time: 1
         value: 3.221301
-        inSlope: 0
-        outSlope: 0
+        inSlope: 25.671598
+        outSlope: 25.671598
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 1.0333333
-        value: 3.1663988
+        value: 4.5212455
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -5665,14 +5665,14 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 0
-    functionName: NeMozeNaStack
+    functionName: NeMozeDaHoda
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 0
-    functionName: NeMozeDaHoda
+    functionName: NeMozeNaStack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
@@ -5763,14 +5763,14 @@ AnimationClip:
     intParameter: 0
     messageOptions: 0
   - time: 1.7166667
-    functionName: MozeNaStack
+    functionName: ClearTrenutni
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
   - time: 1.7166667
-    functionName: ClearTrenutni
+    functionName: MozeNaStack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

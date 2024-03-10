@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.UI;
 
 public class George : MonoBehaviour
 {
@@ -81,7 +83,7 @@ public class George : MonoBehaviour
         AirSpin2Win.p2obicanInput = KeyCode.O;
         AirSpin2Win.p2dirInput = "nista";
 
-
+        
 
 
         punch.ComboNapadi.Add(uppercut);

@@ -531,7 +531,7 @@ public class AnimCon : MonoBehaviour
     {
         Hb.ResetHit();
     }
-    public void launch(Vector2 dir)
+    public void launch(Vector2 dir,string pozicija)
     {
         GameObject p2;
         p2 = GameObject.Find("/Player2");
@@ -546,7 +546,7 @@ public class AnimCon : MonoBehaviour
             dir = new Vector2(-dir.x, dir.y);
             rb.AddForce(dir);
         }
-        if (dir.y > 0f && p.isGrounded)
+        if (dir.y > 0f && p.isGrounded && pozicija != "air") 
         {
             anim.Play("George-Launch");
             p.isGrounded = false;
@@ -704,12 +704,26 @@ public class AnimCon : MonoBehaviour
 
         GameObject p2;
         p2 = GameObject.Find("/Player2");
-        if (gameObject.transform.position.x > p2.transform.position.x)
+        if (p2.GetComponent<Player2>().isGrounded && !p.isGrounded)
         {
-            dir = new Vector2(-dir.x, dir.y);
-            rb.AddForce(dir);
+            dir.y = 0f;
+            if (gameObject.transform.position.x > p2.transform.position.x)
+            {
+                dir = new Vector2(-dir.x, dir.y);
+                rb.AddForce(dir);
+            }
+            else rb.AddForce(dir);
         }
-        else rb.AddForce(dir);
+
+        else
+        {
+            if (gameObject.transform.position.x > p2.transform.position.x)
+            {
+                dir = new Vector2(-dir.x, dir.y);
+                rb.AddForce(dir);
+            }
+            else rb.AddForce(dir);
+        }
     }
 
     private void resetSpeed()

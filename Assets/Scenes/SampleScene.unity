@@ -139,7 +139,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &79475969
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -229,7 +229,7 @@ GameObject:
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &105552717
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1321,7 +1321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90aa110372dfe2e40bdd40f0afa8fca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 105552724}
+  player1: {fileID: 1509562729}
   player2: {fileID: 113648113}
   yOffset: 0
   cameraSpeed: 5
@@ -2585,7 +2585,7 @@ GameObject:
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!50 &1509562725
 Rigidbody2D:
   serializedVersion: 4

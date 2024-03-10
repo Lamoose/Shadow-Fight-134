@@ -39,7 +39,7 @@ public class PlayerManager : MonoBehaviour
         if(MatchManager.currentTimer <= 0) StartCoroutine(StartNextRound());
     }
 
-    public void Hit(int player, int dmg, string pos,Vector2 dir, string stranaUdarca, int blockRecovery)
+    public void Hit(int player, int dmg, string pos,Vector2 dir, string stranaUdarca, int blockRecovery,string pozicija)
     {
         if (player == 8)
         {
@@ -58,12 +58,12 @@ public class PlayerManager : MonoBehaviour
                 P1Hp -= dmg;
                 p1Slider.value = P1Hp;
                 anim.Hit(pos, stranaUdarca, blockRecovery);
-                anim.launch(dir);
+                anim.launch(dir, pozicija);
 
                 if (anim2.dodajKnockback)
                 {
 
-                    anim.launch(anim2.G.trenutni.posebanKnockback);
+                    anim.launch(anim2.G.trenutni.posebanKnockback,pozicija);
                 }
             }
             
@@ -88,10 +88,10 @@ public class PlayerManager : MonoBehaviour
                 P2Hp -= dmg;
                 p2Slider.value = P2Hp;
                 anim2.Hit(pos, stranaUdarca,blockRecovery);
-                anim2.launch(dir);
+                anim2.launch(dir,pozicija);
                 if (anim.dodajKnockback)
                 {
-                    anim2.launch(anim.G.trenutni.posebanKnockback);
+                    anim2.launch(anim.G.trenutni.posebanKnockback,pozicija);
                 }
 
             }
