@@ -77,13 +77,14 @@ public class George : MonoBehaviour
         triplekick.p2obicanInput = KeyCode.O;
         triplekick.p2dirInput = "nista";
 
-        Air2Punch.p2obicanInput = KeyCode.I;
+        Air2Punch.p2obicanInput = KeyCode.P;
         Air2Punch.p2dirInput = "nista";
 
         AirSpin2Win.p2obicanInput = KeyCode.O;
         AirSpin2Win.p2dirInput = "nista";
 
-        
+        PunchKickAir.p1obicanInput = KeyCode.O;
+        PunchKickAir.p1dirInput = "napred";
 
 
         punch.ComboNapadi.Add(uppercut);
