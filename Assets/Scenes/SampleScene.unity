@@ -589,7 +589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrounded: 1
-  JumpForce: 12
+  JumpForce: 15
   JumpTime: 0.2
   TimeSinceJump: 0
   canDoubleJump: 0
