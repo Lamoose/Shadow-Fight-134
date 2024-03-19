@@ -40,7 +40,7 @@ public class AnimCon2 : MonoBehaviour
     void KomboajNapad(Attack napad)
     {
 
-        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.O) || Gamepad.current.buttonWest.wasPressedThisFrame || Gamepad.current.buttonSouth.wasPressedThisFrame)
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.O) || Gamepad.current.buttonWest.wasPressedThisFrame && CheckGamepad() || Gamepad.current.buttonSouth.wasPressedThisFrame && CheckGamepad())
         {
           
             if (!p.isGrounded && horizontal() > 0 && !p.isTryingToCrouch)
@@ -102,15 +102,17 @@ public class AnimCon2 : MonoBehaviour
     void Update()
     {
 
-        if(Gamepad.current.buttonWest.wasPressedThisFrame)
+        if (CheckGamepad())
         {
-            trenutniKey = KeyCode.P;
+            if (Gamepad.current.buttonWest.wasPressedThisFrame)
+            {
+                trenutniKey = KeyCode.P;
+            }
+            if (Gamepad.current.buttonSouth.wasPressedThisFrame)
+            {
+                trenutniKey = KeyCode.O;
+            }
         }
-        if(Gamepad.current.buttonSouth.wasPressedThisFrame)
-        {
-            trenutniKey = KeyCode.O;
-        }
-
 
         #region Napadi na stack
         if (canOnStack)
@@ -218,39 +220,40 @@ public class AnimCon2 : MonoBehaviour
         {
             if (horizontal() > 0)
             {
-                if (Input.GetKeyDown(KeyCode.O) && !p.isGrounded || Gamepad.current.buttonWest.wasPressedThisFrame && !p.isGrounded)
+                if (Input.GetKeyDown(KeyCode.O) && !p.isGrounded || CheckGamepad() && Gamepad.current.buttonWest.wasPressedThisFrame && !p.isGrounded)
                 {
                     PunchKickAir();
                 }
+
             }
             if (horizontal() == 0)
             {
-                if (Input.GetKeyDown(KeyCode.P) && !p.isGrounded && !p.isTryingToCrouch || Gamepad.current.buttonWest.wasPressedThisFrame && !p.isGrounded && !p.isTryingToCrouch)
+                if (Input.GetKeyDown(KeyCode.P) && !p.isGrounded && !p.isTryingToCrouch || CheckGamepad() && Gamepad.current.buttonWest.wasPressedThisFrame && !p.isGrounded && !p.isTryingToCrouch)
                 {
                     Air2Punch();
                 }
 
-                else if (Input.GetKeyDown(KeyCode.O) && !p.isGrounded && !p.isTryingToCrouch || Gamepad.current.buttonSouth.wasPressedThisFrame && !p.isGrounded && !p.isTryingToCrouch)
+                else if (Input.GetKeyDown(KeyCode.O) && !p.isGrounded && !p.isTryingToCrouch || CheckGamepad()&& Gamepad.current.buttonSouth.wasPressedThisFrame && !p.isGrounded && !p.isTryingToCrouch)
                 {
                     AirSpin2Win();
                 }
 
 
-                else if (Input.GetKeyDown(KeyCode.P) && p.isGrounded && !p.isTryingToCrouch || Gamepad.current.buttonWest.wasPressedThisFrame && p.isGrounded && !p.isTryingToCrouch)
+                else if (Input.GetKeyDown(KeyCode.P) && p.isGrounded && !p.isTryingToCrouch || CheckGamepad() && Gamepad.current.buttonWest.wasPressedThisFrame && p.isGrounded && !p.isTryingToCrouch)
                 {
                     punch();
                 }
 
-                else if (Input.GetKeyDown(KeyCode.O) && !p.isTryingToCrouch && p.isGrounded || Gamepad.current.buttonSouth.wasPressedThisFrame && !p.isTryingToCrouch && p.isGrounded)
+                else if (Input.GetKeyDown(KeyCode.O) && !p.isTryingToCrouch && p.isGrounded || CheckGamepad() && Gamepad.current.buttonSouth.wasPressedThisFrame && !p.isTryingToCrouch && p.isGrounded)
                 {
                     kick();
                 }
 
-                else if (Input.GetKeyDown(KeyCode.O) && p.isTryingToCrouch && p.isGrounded || Gamepad.current.buttonSouth.wasPressedThisFrame && p.isGrounded)
+                else if (Input.GetKeyDown(KeyCode.O) && p.isTryingToCrouch && p.isGrounded || CheckGamepad() && Gamepad.current.buttonSouth.wasPressedThisFrame && p.isGrounded)
                 {
                     sweep();
                 }
-                else if (Input.GetKeyDown(KeyCode.P) && p.isTryingToCrouch && p.isGrounded || Gamepad.current.buttonWest.wasPressedThisFrame && p.isTryingToCrouch && p.isGrounded)
+                else if (Input.GetKeyDown(KeyCode.P) && p.isTryingToCrouch && p.isGrounded || CheckGamepad() && Gamepad.current.buttonWest.wasPressedThisFrame && p.isTryingToCrouch && p.isGrounded)
                 {
                     uppercut();
                 }
@@ -349,7 +352,7 @@ public class AnimCon2 : MonoBehaviour
         #endregion
 
 
-        if (!p.isDashing && !inAttack && Input.GetButton(";") && (!p.isTryingToCrouch || !p.isCrouching) || !p.isDashing && !inAttack && Gamepad.current.leftTrigger.isPressed && (!p.isTryingToCrouch || !p.isCrouching))
+        if (!p.isDashing && !inAttack && Input.GetButton(";") && (!p.isTryingToCrouch || !p.isCrouching) || !p.isDashing && !inAttack && CheckGamepad() && Gamepad.current.leftTrigger.isPressed && (!p.isTryingToCrouch || !p.isCrouching))
         {
             overheadBlock = true;
         }
@@ -358,7 +361,7 @@ public class AnimCon2 : MonoBehaviour
             overheadBlock = false;
         }
 
-        if (!p.isDashing && !inAttack && Input.GetButton(";") && (p.isTryingToCrouch || p.isCrouching) || !p.isDashing && !inAttack && Gamepad.current.leftTrigger.isPressed && (p.isTryingToCrouch || p.isCrouching))
+        if (!p.isDashing && !inAttack && Input.GetButton(";") && (p.isTryingToCrouch || p.isCrouching) || !p.isDashing && !inAttack && CheckGamepad() && Gamepad.current.leftTrigger.isPressed && (p.isTryingToCrouch || p.isCrouching))
         {
             LowBlock = true;
         }
@@ -781,6 +784,12 @@ public class AnimCon2 : MonoBehaviour
         Hb.ResetHit();
     }
     #endregion
+
+    public bool CheckGamepad()
+    {
+        if (Gamepad.all.Count > 0) return true;
+        else return false;
+    }
 
     #endregion
 

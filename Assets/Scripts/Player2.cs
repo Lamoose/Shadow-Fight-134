@@ -49,22 +49,22 @@ public class Player2 : MonoBehaviour
     void Update()
     {
         #region crouch
-        if (Input.GetKeyDown(KeyCode.DownArrow) || Gamepad.current.dpad.down.isPressed)
+        if (Input.GetKeyDown(KeyCode.DownArrow) || anim.CheckGamepad() && Gamepad.current.dpad.down.isPressed)
         {
             isTryingToCrouch = true;
         }
-        else if (Input.GetKeyUp(KeyCode.DownArrow) || Gamepad.current.dpad.down.wasReleasedThisFrame)
+        else if (Input.GetKeyUp(KeyCode.DownArrow) || anim.CheckGamepad() && Gamepad.current.dpad.down.wasReleasedThisFrame)
         {
             isTryingToCrouch = false;
         }
         #endregion
 
         #region input i vreme
-        if (Gamepad.current.dpad.right.isPressed)
+        if (anim.CheckGamepad() && Gamepad.current.dpad.right.isPressed)
         {
             horizontalInput = 1f;
         }
-        else if (Gamepad.current.dpad.left.isPressed)
+        else if (anim.CheckGamepad() && Gamepad.current.dpad.left.isPressed)
         {
             horizontalInput = -1f;
         }
@@ -93,12 +93,12 @@ public class Player2 : MonoBehaviour
         #endregion
 
         #region jump i crouch
-        if (Input.GetKeyUp(KeyCode.DownArrow) || Gamepad.current.dpad.down.wasReleasedThisFrame)
+        if (Input.GetKeyUp(KeyCode.DownArrow) || anim.CheckGamepad() && Gamepad.current.dpad.down.wasReleasedThisFrame)
         {
             isCrouching = false;
         }
 
-        if (horizontalInput == 0 && !isGrounded || anim.disableMove && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
+        if (horizontalInput == 0 && !isGrounded || anim.CheckGamepad() && anim.disableMove && !isGrounded) // malo dodao da bih jumpovi bili malo precizniji
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y);
         }
@@ -117,19 +117,19 @@ public class Player2 : MonoBehaviour
 
             }
 
-            if (Input.GetKeyDown(KeyCode.K) && !isDashing && !dashed && TimeSinceDash >= dashCooldown && horizontalInput != 0f || Gamepad.current.rightTrigger.wasPressedThisFrame && !isDashing && !dashed && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
+            if (Input.GetKeyDown(KeyCode.K) && !isDashing && !dashed && TimeSinceDash >= dashCooldown && horizontalInput != 0f || anim.CheckGamepad() && Gamepad.current.rightTrigger.wasPressedThisFrame && !isDashing && !dashed && TimeSinceDash >= dashCooldown && horizontalInput != 0f)
             {
                 StartCoroutine(Dash(horizontalInput));
 
                 TimeSinceDash = 0f; //resetuje dash poslednje dash vreme
             }
 
-            if (Input.GetKeyDown(KeyCode.L) && !isDashing || Gamepad.current.dpad.up.wasPressedThisFrame && !isDashing)
+            if (Input.GetKeyDown(KeyCode.L) && !isDashing || anim.CheckGamepad() && Gamepad.current.dpad.up.wasPressedThisFrame && !isDashing)
             {
                 if (canDoubleJump) StartCoroutine(Jump());
             }
 
-            if (Input.GetKeyDown(KeyCode.DownArrow) || Gamepad.current.dpad.down.isPressed)
+            if (Input.GetKeyDown(KeyCode.DownArrow) || anim.CheckGamepad() && Gamepad.current.dpad.down.isPressed)
             {
                 isCrouching = true;
             }
