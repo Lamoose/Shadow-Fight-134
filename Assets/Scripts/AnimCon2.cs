@@ -35,12 +35,13 @@ public class AnimCon2 : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        trenutniKey = KeyCode.Q;
     }
 
     void KomboajNapad(Attack napad)
     {
 
-        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.O) || Gamepad.current.buttonWest.wasPressedThisFrame && CheckGamepad() || Gamepad.current.buttonSouth.wasPressedThisFrame && CheckGamepad())
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.O) || CheckGamepad() && Gamepad.current.buttonWest.wasPressedThisFrame || CheckGamepad() && Gamepad.current.buttonSouth.wasPressedThisFrame)
         {
           
             if (!p.isGrounded && horizontal() > 0 && !p.isTryingToCrouch)
